@@ -29,7 +29,7 @@ div{margin:0;padding:0;}
 .minion-1 .body{overflow:hidden;background:#fff500;width:437px;position:absolute;z-index:1;height:714px;border-radius:207px;}
 .minion-1 .glasses-type{height:52px;background:#1f1a17;width:100%;position:absolute;top:200px;z-index:1;}
 .minion-1 .glasses{z-index:2;position:absolute;background:#dededd;border:2px solid #1f1a17;width:150px;height:150px;border-radius:50%;top:140px;}
-.minion-1 .glasses.left-glasses{left:75%;margin-left:-90px;width:180px;height:180px;}
+.minion-1 .glasses.left-glasses{left:50%;margin-left:-90px;width:180px;height:180px;}
 .minion-1 .glasses.left-glasses .eye{width:150px;height:150px;}
 .minion-1 .glasses.left-glasses .eye .ball{-webkit-animation:eye 1.5s infinite ease;animation:eye 1.5s infinite ease;}
 .minion-1 .glasses.right-glasses{display:none;}
@@ -61,7 +61,7 @@ div{margin:0;padding:0;}
 .minion-1 .leg.right-leg{right:20%;}
 .minion-1 .leg.right-leg .footer{left:-2px;border-radius:0 100px 20px 0;}
 .minion-1 .leg .footer{background:#1f1a17;width:100px;height:50px;position:absolute;bottom:0;}
-.minion-2{z-index:1;top:5px;left:50%;width:380px;height:770px;position:absolute;margin-top:-100px;margin-left:-20px;-webkit-transform:scale(0.5,0.5);-ms-transform:scale(0.5,0.5);transform:scale(0.5,0.5);}
+.minion-2{z-index:1;top:5px;left:60%;width:380px;height:770px;position:absolute;margin-top:-100px;margin-left:-20px;-webkit-transform:scale(0.5,0.5);-ms-transform:scale(0.5,0.5);transform:scale(0.5,0.5);}
 .minion-2 .hairs{position:absolute;top:-40px;z-index:3;width:100%;}
 .minion-2 .hairs .hair{background:#000;width:2px;height:70px;position:absolute;}
 .minion-2 .hairs .hair1{background:#000;width:2px;height:70px;position:absolute;left:45%;-webkit-transform:rotate(-20deg);-ms-transform:rotate(-20deg);transform:rotate(-20deg);}
