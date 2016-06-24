@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<!--[if IE]>
+<style>
+.animate-item-box .lamp .abs-2{opacity:1!important;-ms-transform:scale(1)!important;}
+</style>
+<![endif]-->
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<link href="style/jquery.myCarousel.css" rel="stylesheet" type="text/css" />
+<link href="style/Font-Awesome-3.2.1/css/font-awesome.css" rel="stylesheet" type="text/css">
+<script src="javascript/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="javascript/base.js" type="text/javascript"></script>
+<script src="javascript/jquery.myCarousel.js" type="text/javascript"></script>
+<script>
+    $(function(){	
+	
+            $(".myCarousel").myCarousel({
+				onLeave:function(index){
+					$(".carousel-item").eq(index).find(".animate-item").each(function(inedx){
+							$(this).removeClass("show")
+					});
+					
+					if(index == 0){
+						$(".carousel-item").eq(index).find(".search").removeClass("show");
+						$(".carousel-item").eq(index).find(".line").removeClass("show");
+						$(".carousel-item").eq(index).find(".abs-3").removeClass("show");
+						$(".carousel-item").eq(index).find(".abs-2").removeClass("show");
+						$(".carousel-item").eq(index).find(".abs-1").removeClass("show");
+					}
+					
+					if(index == 2){
+						$(".carousel-item").eq(index).find(".animate-item-box").removeClass("show")
+					}
+
+				},
+				onEnter:function(index){
+					$(".carousel-item").eq(index).find(".animate-item").each(function(){
+						   var delayTime = $(this).attr("data-delay")+"s";
+							$(this).addClass("show").css({
+							  "-webkit-transition-delay":delayTime,
+							  "-moz-transition-delay":delayTime,
+							  "-ms-transition-delay":delayTime,
+							  "-o-transition-delay":delayTime,
+							  "transition-delay":delayTime
+							});
+					});
+					
+					if(index == 0){
+						$(".carousel-item").eq(index).find(".search").addClass("show");
+						$(".carousel-item").eq(index).find(".line").addClass("show");
+						$(".carousel-item").eq(index).find(".abs-3").addClass("show");
+						$(".carousel-item").eq(index).find(".abs-2").addClass("show");
+						$(".carousel-item").eq(index).find(".abs-1").addClass("show");
+					}
+					 
+					if(index == 2){
+						$(".carousel-item").eq(index).find(".animate-item-box").addClass("show")
+					}
+				}
+			});
+    });
+</script>
+<title>首页</title>
+</head>
+<body>
+
+
+<script>
+$(function(){
+
+		$(".carousel-item").eq(0).find(".search")
+											.animate({"opacity":0.5},100)
+											.animate({"opacity":1},100)
+											.animate({"opacity":0.5},100)
+											.animate({"opacity":1},100);
+			$(".carousel-item").eq(0).find(".line").addClass("show");
+			$(".carousel-item").eq(0).find(".abs-3").addClass("show");
+			$(".carousel-item").eq(0).find(".abs-2").addClass("show");
+			$(".carousel-item").eq(0).find(".abs-1").addClass("show");
+			
+		$(".carousel-item").eq(0).find(".animate-item").each(function(inedx){
+			   var delayTime = $(this).attr("data-delay")+"s";
+				$(this).addClass("show").css({
+				  "-webkit-transition-delay":delayTime,
+				  "-moz-transition-delay":delayTime,
+				  "-ms-transition-delay":delayTime,
+				  "-o-transition-delay":delayTime,
+				  "transition-delay":delayTime
+				});
+		});
+			
+
+	//滚动视差效果	
+     $(window).scroll(function(){
+         var scrollTop = $(this).scrollTop();
+         $('.myCarousel .wrap').css({
+             top:scrollTop*0.5
+         });
+         $('.hd.page-index').css({
+            opacity:1-scrollTop*0.01
+         });
+     }); 
+	 
+    $(".next-page").click(function(){
+         var wh = $(window).height();
+        $('html,body').animate({scrollTop:wh},500);
+    });
+    $(window).resize(function(){
+         var wh = $(window).height();
+         var scrollTop = $(window).scrollTop();
+        if(scrollTop>wh/2){
+            $('html,body').animate({scrollTop:wh},300);
+        }
+    });
+});    
+</script>
+<!--轮播-->
+<div class="myCarousel">
+    
+<!--首页通用页头    -->
+  <div class="hd page-index rel trans" style="z-index:10;">
+      <div class="center clear">
+         <h1 class="logo"><a href="#">美吉生物</a></h1>
+          <div class="hd-nv fr clear">
+                <ul class="nv clear">
+                    <li class="current"><a href="#">首页</a></li>
+                    <li><a href="#">关于美吉</a></li>
+                    <li class="server-product"><a href="javascript:;">服务与产品</a>
+    
+                    <div class="index-nv-menu abs">
+                        <div class="menu-wrap">
+                                    <div class="center">
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td>
+                                                    <div class="pic"><a href="#"><img src="images/pic_index_1.jpg" alt=""></a></div>
+                                                    <p><a href="#">基因组测序</a></p>
+                                                    <ul>
+                                                        <li><a href="">de novo基因组测序</a></li>
+                                                        <li><a href="">基因组重测序</a></li>
+                                                        <li><a href="">简化基因组测序</a></li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <div class="pic"><a href="#"><img src="images/pic_index_2.jpg" alt=""></a></div>
+                                                    <p><a href="#">基因表达调控</a></p>
+                                                    <ul>
+                                                        <li><a href="">转录组</a></li>
+                                                        <li><a href="">非编码RNA</a></li>
+                                                        <li><a href="">表观/调控</a></li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <div class="pic"><a href="#"><img src="images/pic_index_3.jpg" alt=""></a></div>
+                                                    <p><a href="#">微生物生态</a></p>
+                                                    <ul>
+                                                        <li><a href="">微生物多样性</a></li>
+                                                        <li><a href="">宏基因组测序</a></li>
+                                                        <li><a href="">宏转录组测序</a></li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <div class="pic"><a href="#"><img src="images/pic_index_4.jpg" alt=""></a></div>
+                                                    <p><a href="#">蛋白质和代谢组学</a></p>
+                                                    <ul>
+                                                        <li><a href="">定性蛋白质组学</a></li>
+                                                        <li><a href="">定量蛋白质组学</a></li>
+                                                        <li><a href="">修饰蛋白质组学</a></li>
+                                                        <li><a href="">蛋白质药物检测服务</a></li>
+                                                        <li><a href="">菲靶向代谢组学</a></li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <div class="pic"><a href="#"><img src="images/pic_index_5.jpg" alt=""></a></div>
+                                                    <p><a href="#">人基因组测序</a></p>
+                                                    <ul>
+                                                        <li><a href="">人基因组重测序</a></li>
+                                                        <li><a href="">外显子组测序</a></li>
+                                                        <li><a href="">目标区域捕获测序</a></li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <div class="pic"><a href="#"><img src="images/pic_index_6.jpg" alt=""></a></div>
+                                                    <p><a href="#">常规测序及其他服务</a></p>
+                                                    <ul>
+                                                        <li><a href="">Sanger测序服务</a></li>
+                                                        <li><a href="">分型检测服务</a></li>
+                                                        <li><a href="">微生物鉴定服务</a></li>
+                                                        <li><a href="">克隆服务</a></li>
+                                                        <li><a href="">合成服务</a></li>
+                                                        <li><a href="">其他服务</a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                        </div>
+                    </div>
+                    
+                    </li>
+                    <li><a href="#">市场活动</a></li>
+                    <li><a href="#">技术与支持</a></li>
+                    <li><a href="#">加入我们</a></li>
+                </ul>
+                <div class="search fr">
+                    <form action=""><input type="text"><button><i class="icon-search"></i></button></form>
+                </div>
+          </div>
+      </div>
+  </div>
+    
+       
+        <div class="carousel-item item-1">
+		      <div class="table">
+		      	<div class="tableCell">
+					<div class="center">
+							<table style="width:100%;">
+								<tr>
+									 <td class="left">
+										 <div class="animate-item" data-delay="0.12"><img src="images/animate_1/1.png" alt="" /></div>
+										 <div class="animate-item" data-delay="0.24"><img src="images/animate_1/2.png" alt="" /></div>
+										 <div class="animate-item" data-delay="0.36"><img src="images/animate_1/3.png" alt="" /></div>
+										 <div class="animate-item" data-delay="0.48"><img src="images/animate_1/4.png" alt="" /></div>
+										 <div class="animate-item" data-delay="0.60"><img src="images/animate_1/5.png" alt="" /></div>
+										 <div class="animate-item" data-delay="0.72" style="padding:0 0 0 70px;"><a href="#" class="link-detail">详情点击 <i class="icon-arrow-right"></i></a></div>
+									 </td>
+									 <td class="right">
+										  <div class="animate-item-box rel clear">
+										      <div class="lamp fr rel">
+													<img class="abs abs-1" src="images/animate_1/r-3.png" alt="" />
+													<img class="abs abs-2" src="images/animate_1/r-4.png" alt="" />
+													<img class="abs abs-3" src="images/animate_1/r-5.png" alt="" />
+											  </div>
+										      <div class="line abs"></div>
+											  <div class="search abs"><img src="images/animate_1/r-1.png" alt="" /></div>
+										  </div>
+									 </td>
+								</tr>
+							</table>
+					</div>
+				</div>
+		      </div>
+		</div>
+        <div class="carousel-item item-2">
+		      <div class="table">
+					<div class="tableCell">
+						<div class="center clear">
+								<table style="width:100%;">
+								     <tr>
+											<td class="left">
+												 <img class="animate-item" data-delay="0.36" src="images/animate_2/6.png" alt="" />
+											</td>
+											<td class="right">
+													 <div class="animate-item" data-delay="0.12"><img src="images/animate_2/1.png" alt="" /></div>
+													 <div class="animate-item" data-delay="0.24"><img src="images/animate_2/2.png" alt="" /></div>
+													 <div class="animate-item" data-delay="0.36"><img src="images/animate_2/3.png" alt="" /></div>
+													 <div class="animate-item" data-delay="0.48"><img src="images/animate_2/4.png" alt="" /></div>
+													 <div class="animate-item" data-delay="0.60"><a href="#" class="link-detail">详情点击 <i class="icon-arrow-right"></i></a></div>
+											</td>
+									 </tr>
+								</table>
+						</div>
+					</div>
+		       </div>
+		</div>
+        <div class="carousel-item item-3">
+		     <div class="table">
+		     	<div class="tableCell">
+		     		<div class="center">
+					      <table style="width:100%;">
+					      	<tr>
+					      		<td class="left">
+									 <div class="animate-item" data-delay="0.12"><img src="images/animate_3/1.png" alt="" /></div>
+									 <div class="animate-item" data-delay="0.24"><img src="images/animate_3/2.png" alt="" /></div>
+									 <div class="animate-item" data-delay="0.36"><img src="images/animate_3/3.png" alt="" /></div>
+									 <div class="animate-item" data-delay="0.48"><img src="images/animate_3/4.png" alt="" /></div>
+									 <div class="animate-item" data-delay="0.60"><a href="#" class="link-detail">详情点击 <i class="icon-arrow-right"></i></a></div>
+								</td>
+					      		<td class="right">
+									  <div class="animate-item-box">
+											<img class="animate-item" src="images/animate_3/7.png" alt="" />
+									  </div>
+								</td>
+					      	</tr>
+					      </table>
+		     		</div>
+		     	</div>
+		     </div>
+		</div>
+		
+		<a href="javascript:void(0);" class="next-page abs"></a>
+</div>
+
+<div class="index-menu">
+    <div class="inner clear">
+	      <div class="menu-item item-1 rel">
+		     <a href="#">
+			       <span class="item-circle trans"></span>
+				   <span class="item-title">DNA</span>
+				   <span class="item-link"><i class="trans">MORE</i></span>
+			 </a>
+		  </div>
+	      <div class="menu-item item-2 rel">
+		     <a href="#">
+			       <span class="item-circle trans"></span>
+				   <span class="item-title">RNA</span>
+				   <span class="item-link"><i class="trans">MORE</i></span>
+			 </a>
+		  </div>
+	      <div class="menu-item item-3 rel">
+		     <a href="#">
+			       <span class="item-circle trans"></span>
+				   <span class="item-title">META</span>
+				   <span class="item-link"><i class="trans">MORE</i></span>
+			 </a>
+		  </div>
+	      <div class="menu-item item-4 rel">
+		     <a href="#">
+			       <span class="item-circle trans"></span>
+				   <span class="item-title">蛋白和代谢</span>
+				   <span class="item-link"><i class="trans">MORE</i></span>
+			 </a>
+		  </div>
+	      <div class="menu-item item-5 rel">
+		     <a href="#">
+			       <span class="item-circle trans"></span>
+				   <span class="item-title">人基因组测试</span>
+				   <span class="item-link"><i class="trans">MORE</i></span>
+			 </a>
+		  </div>
+	      <div class="menu-item item-6 rel">
+		     <a href="#">
+			       <span class="item-circle trans"></span>
+				   <span class="item-title">常规测序及其他服务</span>
+				   <span class="item-link"><i class="trans">MORE</i></span>
+			 </a>
+		  </div>
+	</div>
+</div>
+
+<!--首页列表-->
+<div class="center clear index-lists">
+    <div class="fl container">
+          <a href="#" class="circle circle-1">公司新闻</a>
+          <div class="container-lists rel">
+              <div class="rel pic-box"><img src="images/pic_index_7.jpg" alt=""></div>
+              <ul class="rel">
+                  <li><a href="#">美吉生物邀您参加第二届肠道微......</a><span>2016-04-22</span></li>
+                  <li><a href="#">美吉生物邀您参加第二届肠道微......</a><span>2016-04-22</span></li>
+                  <li><a href="#">美吉生物邀您参加第二届肠道微......</a><span>2016-04-22</span></li>
+                  <li><a href="#">美吉生物邀您参加第二届肠道微......</a><span>2016-04-22</span></li>
+                  <li><a href="#">美吉生物邀您参加第二届肠道微......</a><span>2016-04-22</span></li>
+                 <a href="#" class="more"></a>
+              </ul>
+          </div>
+    </div>
+    <div class="fl container">
+          <a href="#" class="circle circle-2">公司动态</a>
+          <div class="container-lists rel">
+              <div class="rel pic-box"><img src="images/pic_index_8.jpg" alt=""></div>
+              <ul class="rel">
+                  <li><a href="#">美吉生物邀您参加第二届肠道微......</a><span>2016-04-22</span></li>
+                  <li><a href="#">美吉生物邀您参加第二届肠道微......</a><span>2016-04-22</span></li>
+                  <li><a href="#">美吉生物邀您参加第二届肠道微......</a><span>2016-04-22</span></li>
+                  <li><a href="#">美吉生物邀您参加第二届肠道微......</a><span>2016-04-22</span></li>
+                  <li><a href="#">美吉生物邀您参加第二届肠道微......</a><span>2016-04-22</span></li>
+                 <a href="#" class="more"></a>
+              </ul>
+          </div>
+    </div>
+    <div class="fl container">
+          <a href="#" class="circle circle-3">发表文章</a>
+          <div class="container-lists rel">
+              <div class="rel pic-box"><img src="images/pic_index_9.jpg" alt=""></div>
+              <ul class="rel">
+                  <li><a href="#">美吉生物邀您参加第二届肠道微......</a><span>2016-04-22</span></li>
+                  <li><a href="#">美吉生物邀您参加第二届肠道微......</a><span>2016-04-22</span></li>
+                  <li><a href="#">美吉生物邀您参加第二届肠道微......</a><span>2016-04-22</span></li>
+                  <li><a href="#">美吉生物邀您参加第二届肠道微......</a><span>2016-04-22</span></li>
+                  <li><a href="#">美吉生物邀您参加第二届肠道微......</a><span>2016-04-22</span></li>
+                 <a href="#" class="more"></a>
+              </ul>
+          </div>
+    </div>
+</div>
+ 
+
+<!--通用页脚    -->   
+   <div class="ft">
+        <div class="ft-top">
+            <div class="center clear">
+            <div class="logo"><a href="#"><img src="images/logo-ft.png" alt=""></a></div>
+            <div class="cont clear">
+                <div class="fr cont-contact">
+                    <div class="qr-code">
+                        <a href="#" class="qr-wb"><span>美吉生物微博</span></a>
+                        <a href="#" class="qr-wx"><span>美吉生物微信</span></a>
+                    </div>
+                    <ul class="contact">
+                            <li class="email">邮箱：marketing@majorbio.com</li>
+                            <li class="web">网址：www.majorbio.com</li>
+                            <li class="fax">传真：021-20987730</li>
+                            <li class="tel">服务热血：400-660-1216</li>
+                    </ul>
+                    <div class="icon-groups">
+                        <a href="" class="icon-wx"></a>
+                        <a href="" class="icon-wb"></a>
+                        <a href="" class="icon-qq"></a>
+                        <a href="" class="icon-email"></a>
+                    </div>
+                </div>
+                
+                <div class="fr cont-list">
+                    <ul>
+                        <h3>关于美吉</h3>
+                        <li><a href="">美吉简介</a></li>
+                        <li><a href="">公司新闻</a></li>
+                        <li><a href="">公司荣誉</a></li>
+                        <li><a href="">人才招聘</a></li>
+                    </ul>
+                    <ul>
+                        <h3>服务与产品</h3>
+                        <li><a href="">测序平台</a></li>
+                        <li><a href="">计算平台</a></li>
+                    </ul>
+                    <ul>
+                        <h3>市场活动</h3>
+                        <li><a href="">测序平台介绍</a></li>
+                        <li><a href="">发表文章</a></li>
+                        <li><a href="">科研动态</a></li>
+                        <li><a href="">常见问题 </a></li>
+                        <li><a href="">电子刊</a></li>
+                        <li><a href="">电子订单下载</a></li>
+                        <li><a href="">在线咨询</a></li>
+                    </ul>
+                    <ul>
+                        <h3>技术与支持</h3>
+                        <li><a href="">动植物基因组测序</a></li>
+                        <li><a href="">微生物基因组测序</a></li>
+                        <li><a href="">疾病诊断</a></li>
+                        <li><a href="">常规测序及其他服务</a></li>
+                    </ul>
+                    <ul>
+                        <h3>加入我们</h3>
+                        <li><a href="">各地实验室/分公司</a></li>
+                        <li><a href="">办事处&代理商</a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="ft-bottom">
+                    <div class="center clear">
+                        <p>
+                            <span>友情链接：</span>
+                            <span><a href="#" class="link-01">美吉生物</a></span>
+                            <span><a href="#" class="link-02">美吉医学</a></span>
+                            <span><a href="#" class="link-03">美吉逾华</a></span>
+                        </p>
+                        <p>COPYRIGHT@2016-2018MAJORBIO 上海美吉生物医药科技有限公司 沪 ICP 备 12031824 号-1</p>
+                    </div>
+        </div>
+   </div>
+</body>
+</html>

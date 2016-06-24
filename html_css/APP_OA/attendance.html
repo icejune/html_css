@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<head>
+	<link href="css/oa.css" rel="stylesheet" type="text/css" />
+	<script src="js/circleProgress.js" type="text/javascript"></script>
+	<script src="js/base.js" type="text/javascript"></script>
+</head>
+<html>
+<body class="attendance">
+	<header>
+		<h2><i class="arrow_left"></i><span>考勤系统</span></h2>
+	</header>
+	<div class="container">
+		<div class="attendance_top">
+			<h3>星期五</h3>
+			<span class="time">2015年12月11日</span>
+		</div>
+		<div class="attendance_con">
+			<ul class="attendance_list clear">
+				<li>
+					<div class="office_hour">上班<span>08:30</span></div>
+					<div class="act"><span class="btn btn_green btn_bigger">签到</span></div>
+					<div class="act_info">
+						<span class="time">08:38</span>						
+					</div>
+				</li>
+				<li>
+					<div class="office_hour">下班<span>17:30</span></div>
+					<div class="act"><span class="btn btn_green btn_bigger">签到</span></div>
+					<div class="act_info">
+						<span class="time">17:38</span>						
+					</div>
+				</li>
+				<!-- 已签到 start-->
+				<li class="finished">
+					<div class="office_hour">上班<span>08:30</span></div>
+					<div class="act"><span class="color_gray">已签到</span></div>
+					<div class="act_info">
+						<span class="time">08:38</span>
+						<span class="address">电脑端：58.247.154.102</span>
+					</div>
+				</li>
+				<!-- 签到有异常 end-->
+				<!-- 签到有异常 start-->
+				<li class="finished">
+					<div class="office_hour">上班<span>08:30</span></div>
+					<div class="act"><span class="btn btn_red btn_bigger">申述</span></div>
+					<div class="act_info">
+						<span class="time color_red">08:38</span>
+						<span class="address">移动端：上海市浦东新区周浦镇康新公路3399号</span>
+					</div>
+				</li>
+				<!-- 签到有异常 end-->
+			</ul>
+			<div class="note clear">
+				<div class="l">备注：</div>
+				<div class="r">
+					<p>呵呵</p>
+					<span class="edit">[编辑]</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

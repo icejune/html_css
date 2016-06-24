@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<link href="style/report.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="js/base.js" type="text/javascript"></script>
+<title>公共组件</title>
+</head>
+<body>
+<div class="top_bar">
+	<div class="logo"><h1>美吉生物</h1><h2>您身边的测序专家</h2></div>
+</div>
+<div class="main">
+	<div class="main_left">
+		<div class="search"><i class="ico ico_search"></i><input type="text" value="搜索" /></div>
+		<ul class="nav">
+			<li class="help"><a href="" class="link"><i class="ico ico_help"></i>帮助</a></li>
+			<li><a href="" class="link">raw data statistic<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="">测序数据统计</a></li>
+					<li><a href="">数据优化统计</a></li>
+				</ul>
+			</li>
+			<li><a href="" class="link">OTU cluster<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="OTU聚类_OTU表格.html">OTU表格</a></li>
+					<li><a href="">OTU Venn diagram</a></li>
+					<li><a href="">core- and pan-OTUs</a></li>
+					<li><a href="">OTU statistic</a></li>
+				</ul>
+			</li>
+			<li><a href="" class="link">analysis of taxonomic composition<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="">taxonomic tables</a></li>
+					<li><a href="">community composition</a></li>
+				</ul>
+			</li>
+			<li class="current"><a href="alpha多样性研究.html" class="link">Alpha多样性研究<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="alpha多样性研究_多样性指数多样化展示.html">多样性指数多样化展示</a></li>
+					<li><a href="alpha多样性研究_稀释性曲线.html">稀释性曲线</a></li>
+					<li><a href="alpha多样性研究_Rank-Abundance曲线.html">Rank-AbundanRce曲线</a></li>
+					<li><a href="alpha多样性研究_OTU物种累积曲线.html">OTU物种累积曲线</a></li>
+				</ul>
+			</li>
+			<li><a href="" class="link">beta diversity<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="">distance analysis</a></li>
+					<li><a href="">multivariate analysis</a></li>
+				</ul>
+			</li>
+			<li><a href="" class="link">differential abundance analysis<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="">differential abundance analysis</a></li>
+					<li><a href="丰度差异分析_Ternary三元相图.html">Ternary三元相图</a></li>
+				</ul>
+			</li>
+			<li><a href="" class="link">network<i class="ico ico_arrow"></i></a></li>
+		</ul>
+	</div>
+	<div class="main_right">
+		<div class="set_group clear">
+			<label class="s_title">样品分组：</label>
+			<div class="select_bar">
+				<div class="select_input">
+					<input type="text" value="请选择" />
+					<a href="" class="r"><i class="arrow arrow_down"></i></a>
+				</div>
+				<div class="popup">
+					<ul class="normal_list">						
+						<li><a href=""><span title="group1">group1</span><i class="ico ico_edit"></i></a></li>
+						<li><a href=""><span title="group2">group2</span></span><i class="ico ico_edit"></i></a></li>
+						<li><a href=""><span title="group3">group3</span><i class="ico ico_edit"></i></a></li>
+						<li><a href=""><span title="group4">group4</span><i class="ico ico_edit"></i></a></li>
+					</ul>
+					<div class="btn_area"><a href="" class="btn btn_red"><i class="ico ico_add"></i>新建分组</a></div>
+				</div>
+			</div>
+		</div>
+		<fieldset class="public_filter">
+			<legend>创建OTU table</legend>
+			<ul class="edit_data list_inline">
+				<li>选择OTU table：<select><option>源表格</option></select></li>
+				<li>选择Taxon Level：<select><option>门</option></select></li>
+			</ul>
+			<!-- 以下为筛选/合并公共组件 start -->
+			<div class="filter_option">
+				<div class="filter_option_tab clear">
+					<ul class="tab clear"><li class="current"><a href="">筛选</a></li><li><a href="">合并</a></li></ul>
+				</div>
+				<div class="filter_option_contain">
+					<ul class="edit_data clear">
+						<li>
+							<div class="w_1">OTU/物种查找：</div>
+							<div class="w_2"><span class="tag_control hover"><a href="" class="tag">A</a><i class="ico ico_del"></i></span><span class="tag_control"><a href="" class="tag">B</a><i class="ico ico_del"></i></span><a href="" class="act_border"><i>+</i></a><div class="find_item"><input type="text" value="输入名称"><div class="popup"><ul class="normal_list"><li><a href="">名称1</a></li><li><a href="">名称2</a></li><li><a href="">名称3</a></li></ul></div></div></div>
+						</li>
+						<li>
+							<div class="w_1">条件查找：</div>
+							<div class="w_2"><select><option>按行</option><option>按列</option></select><div class="find_item"><input type="text" value="输入名称"><div class="popup"><ul class="normal_list"><li><a href="">名称1</a></li><li><a href="">名称2</a></li><li><a href="">名称3</a></li></ul></div></div><select><option>大于</option><option>等于</option><option>不等于</option><option>大于</option><option>大于或等于</option><option>小于</option><option>小于或等于</option></select>：<div class="add_condition"><input type="text" value=""><a href="" class="btn btn_blue">+添加条件</a></div></div>
+						</li>
+						<li>
+							<div class="w_1">筛选方式：</div>
+							<div class="w_2"><label><input type="radio" />保留</label><label><input type="radio" />去除</label></div>
+						</li>
+					</ul>
+					<div class="btn_area"><a href="" class="btn btn_blue btn_bigger">确定</a><a href="">样品太多？尝试下合并吧！</a></div>		
+				</div>
+				<!-- 以下切换到选项卡：合并 start -->
+				<div class="filter_option_contain">				
+					<ul class="edit_data list_inline">
+						<li><div class="w_1">样品分组：</div>
+							<div class="w_2">
+								<div class="select_bar">
+									<div class="select_input">
+										<input type="text" value="请选择" />
+										<a href="" class="r"><i class="arrow arrow_down"></i></a>
+									</div>
+									<div class="popup">
+										<ul class="normal_list">						
+											<li><a href=""><span title="group1">group1</span><i class="ico ico_edit"></i></a></li>
+											<li><a href=""><span title="group2">group2</span></span><i class="ico ico_edit"></i></a></li>
+											<li><a href=""><span title="group3">group3</span><i class="ico ico_edit"></i></a></li>
+											<li><a href=""><span title="group4">group4</span><i class="ico ico_edit"></i></a></li>
+										</ul>
+										<div class="btn_area"><a href="" class="btn btn_red"><i class="ico ico_add"></i>新建分组</a></div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li><div class="w_1">合并方式：</div>
+							<div class="w_2">
+								<select><option>计算总和</option><option>计算均值</option><option>最大值</option><option>最小值</option><option>中位数</option></select>
+							</div>
+						</li>
+					</ul>
+					<div class="btn_area"><a href="" class="btn btn_blue btn_bigger">确定</a></div>
+				</div>
+				<!-- 以上切换到选项卡：合并 end -->
+			</div>
+			<!-- 以上为筛选/合并公共组件 end -->
+			<div class="result_area">
+				<div class="result_title"><h6>结果输出区域</h6></div>
+				<div class="result_contain">					
+					<div class="top_act clear"><h3><span class="color_gray">Table名称：</span>源table</h3></div>
+					<div class="table_box">
+						<div class="table_contain">
+							<table class="common_table">
+								<tbody><tr><th>ID</th><th><input type="checkbox" />S1</th><th><input type="checkbox" />S2</th><th><input type="checkbox" />S3</th><th><input type="checkbox" />S4</th><th><input type="checkbox" />Sum</th><th><input type="checkbox" />Taxon</th></tr>
+								<tr>
+									<td><input type="checkbox" />OTU1</td><td>1</td><td>6</td><td>7</td><td>0</td><td>14</td><td>bacteria</td>
+								</tr>
+								<tr>							
+									<td><input type="checkbox" />OTU2</td><td>1</td><td>6</td><td>7</td><td>0</td><td>14</td><td>bacteria</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" />OTU3</td><td>1</td><td>6</td><td>7</td><td>0</td><td>14</td><td>bacteria</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" />OTU4</td><td>1</td><td>6</td><td>7</td><td>0</td><td>14</td><td>bacteria</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" />OTU5</td><td>1</td><td>6</td><td>7</td><td>0</td><td>14</td><td>bacteria</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" />OTU6</td><td>1</td><td>6</td><td>7</td><td>0</td><td>14</td><td>bacteria</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" />OTU7</td><td>1</td><td>6</td><td>7</td><td>0</td><td>14</td><td>bacteria</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" />OTU8</td><td>1</td><td>6</td><td>7</td><td>0</td><td>14</td><td>bacteria</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" />OTU9</td><td>1</td><td>6</td><td>7</td><td>0</td><td>14</td><td>bacteria</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" />OTU10</td><td>1</td><td>6</td><td>7</td><td>0</td><td>14</td><td>bacteria</td>
+								</tr>
+							</tbody></table>
+						</div>
+						<div class="bottom_act clear">
+							<div class="btn_area"><a href="" class="btn">撤销</a><a href="" class="btn btn_green">保存</a><!-- <a href="" class="btn btn_gray disabled">保存</a> --><a href="" class="btn btn_red">下载此表格</a></div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</fieldset>
+	</div>
+</div>
+</body>
+</html>

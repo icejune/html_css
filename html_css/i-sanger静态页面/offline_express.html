@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/project.css" rel="stylesheet" type="text/css" />
+<script src="javascript/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="javascript/base.js" type="text/javascript"></script>
+<title>i-sanger线下快递</title>
+</head>
+<body>
+<div class="header clear">
+	<h1><a href="">i-sanger</a></h1>
+	<ul class="menu left_menu">
+		<li>
+			<a href="" class="link"><span>项目</span><i class="ico_arrow"></i></a>
+			<div class="popup_item">
+				<ul class="sub_menu">
+					<li><a href="">我的第一个项目</a></li>
+					<li><i class="ico_creat">&nbsp;</i><a href="">新建项目</a></li>
+					<li><i class="ico_view">&nbsp;</i><a href="">查看所有项目</a></li>
+				</ul>
+			</div>
+		</li>
+		<li>
+			<a href="" class="link link_2"><span>工作流</span><i class="ico_arrow">&nbsp;</i></a>
+			<div class="popup_item">
+				<ul class="sub_menu">
+					<li><a href="">我的工作流</a></li>
+					<li><a href="">公众工作流</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="last"><a href="" class="link link_3"><span>帮助中心</span></a></li>
+	</ul>
+	<ul class="menu right_menu">
+		<li>
+			<a href="" class="link"><span>&nbsp;</span><i class="ico_invite">&nbsp;</i><i class="ico_arrow">&nbsp;</i></a>
+			<div class="popup_item">
+				<div class="item_info invite_info">
+					<div class="title"><h6>邀请朋友加入桑格</h6></div>
+					<div class="contain clear">
+						<div class="list">
+							<label for="">你想邀请谁？</label>
+							<input id="" type="text" maxlength="75" name="invitation_email">
+						</div>
+						<div class="list">
+							<label for="">添加备注</label>
+							<textarea id="" cols="40" maxlength="500" name="invitation_text" rows="10"></textarea>
+						</div>
+					</div>
+					<div class="con_footer"><a href="" class="btn">退出账号</a></div>
+				</div>	
+			</div>
+		</li>
+		<li>
+			<a href="" class="link"><span>&nbsp;</span><i class="ico_msg">&nbsp;</i><em class="new_num">5</em></a>
+		</li>
+		<li>
+			<a href="" class="link"><em class="avatar_wrap"><img src="images/global/avatar_u.gif" width="30" height="30"/></em><u>冰蓝之玄</u><i class="ico_arrow">&nbsp;</i></a>
+			<div class="popup_item">
+				<div class="item_info user_info">
+					<div class="contain clear">
+						<ul>
+							<li><a href="">个人信息</a></li>
+							<li><a href="">账户信息</a></li>
+							<li><a href="">我的项目</a></li>
+						</ul>						
+					</div>
+					<div class="con_footer"><a href="" class="btn btn_bigest">退出账号</a></div>
+				</div>		
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="main offline_express">
+	<div class="box_shadow">
+		<div class="title"><h2>线下快递</h2></div>
+		<div class="contain">
+			<div class="block">
+				<div class="t clear"><i class="ico_express"></i><h3>默认寄送地址</h3></div>
+				<div class="con">
+					<div class="con_wrap">
+						<table class="table_simple">
+							<tr class="title">
+								<th>寄送单位</th>
+								<th>详细地址</th>
+								<th>收件人</th>
+								<th>邮编</th>
+								<th>电话</th>
+								<th>传真</th>
+							</tr>
+							<tr>
+								<td>上海超级计算中心</td>
+								<td>时炜</td>
+								<td>上海浦东张江高科技园区郭守敬路585号</td>
+								<td>201203</td>
+								<td>021-61872222</td>
+								<td>021-61872288</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="block block_detail">
+				<div class="t clear">
+					<ul class="express_tab">
+						<li class="current"><a href=""><i class="ico_express ico_express2"></i>选择文件</a></li>
+						<li><a href=""><i class="ico_express ico_express3"></i>填写快递单号</a></li>
+						<li><a href=""><i class="ico_express ico_express4"></i>硬盘寄回地址</a></li>
+					</ul>
+				</div>
+				<div class="con">
+					<div class="con_wrap">
+						<div class="box_list">
+							<table class="table_simple">
+								<tbody><tr>
+										<td><label><input type="file" name="file" /></label></td>
+									</tr>
+									<tr>
+										<td><label><input type="file" name="file" /></label><a class="btn btn_green" href="">新增</a></td>
+									</tr>
+									<tr>
+										<td><label><strong>备注信息：</strong></label><br /><textarea></textarea></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--以下以box_list为模块切换 start-->
+						<div class="box_list">
+							<ul class="express_list clear">
+								<li><a href=""><img src="images/project/express/st_logo.gif" /></a></li>
+								<li><a href=""><img src="images/project/express/yd_logo.gif" /></a></li>
+								<li><a href=""><img src="images/project/express/yt_logo.gif" /></a></li>
+								<li><a href=""><img src="images/project/express/zt_logo.gif" /></a></li>
+								<li><a href=""><img src="images/project/express/ems_logo.gif" /></a></li>
+								<li><a href=""><img src="images/project/express/sf_logo.gif" /></a></li>
+								<li><a href=""><img src="images/project/express/htky_logo.gif" /></a></li>
+								<li><a href=""><img src="images/project/express/tt_logo.gif" /></a></li>
+								<li><a href=""><img src="images/project/express/zjs_logo.gif" /></a></li>
+								<li><a href=""><img src="images/project/express/yzgn_logo.gif" /></a></li>
+								<li><a href=""><img src="images/project/express/dbwl_logo.gif" /></a></li>
+								<li><a href=""><img src="images/project/express/qfkd_logo.gif" /></a></li>
+							</ul>
+							<ul class="edit_data clear">
+								<li><div class="w_1">快递公司：</div><div class="w_2"><input type="text" /></div></li>
+								<li><div class="w_1">快递单号：</div><div class="w_2"><input type="text" /></div></li>
+							</ul>
+						</div>
+						<!--以下以box_list为模块切换 end-->
+						<!--以下以box_list为模块切换 start-->
+						<div class="box_list">
+							<ul class="edit_data clear">
+								<li><div class="w_1">所在地：</div><div class="w_2"><select><option>--省份--</option></select>&nbsp;省&nbsp;&nbsp;<select><option>--城市--</option></select>&nbsp;市&nbsp;&nbsp;<select><option>--城市--</option></select>&nbsp;区</div></li>
+								<li class="error"><div class="w_1">详细地址：</div><div class="w_2"><textarea>不需要重复填写省市区，必须大于5个字符，小于120个字符。</textarea></div><div class="tip"><i class="ico_error"></i>详细地址未填</div></li>
+								<li><div class="w_1">邮政编码：</div><div class="w_2"><input type="text" value="" /></div></li>
+								<li><div class="w_1"><strong class="mandatory">*</strong>收货人姓名：</div><div class="w_2"><input type="text" value="" /></div></li>
+								<li><div class="w_1">单位名称：</div><div class="w_2"><input type="text" value="" /></div></li>
+								<li><div class="w_1">手机号码：</div><div class="w_2"><input type="text" value="电话号码、手机号码必须填一项" /></div></li>
+								<li><div class="w_1">电话号码：</div><div class="w_2"><input type="text" value="区号" style="width:50px;" /> - <input type="text" value="电话号码" style="width:50px;" /> - <input type="text" value="分机" style="width:50px;" /></div></li>
+							</ul>
+						</div>
+						<!--以下以box_list为模块切换 end-->
+					</div>
+				</div>
+			</div>
+			<div class="btn_area clear"><a href="" class="btn btn_red btn_bigest">确认无误，提交</a></div>		
+		</div>
+	</div>
+</div>
+<div class="footer_simple"><p>Copyright@2003-2013,SeaBig Inc. All Rights Reserved . 隐私保护 联系 版权 条款</p></div>
+</body>
+</html>

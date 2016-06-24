@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<link href="style/report.css" rel="stylesheet" type="text/css" />
+<link href="style/layer.css" rel="stylesheet" type="text/css" />
+<title>弹出层</title>
+</head>
+<body style="background:#f2f2f9;">
+<!--项目信息 start-->
+<div class="layer" style="width:600px;position:static;">
+	<div class="layer_wrap">
+		<div class="layer_title"><h3>分组</h3><i class="close"></i></div>
+		<div class="layer_contain">
+			<div class="set_group">
+				<ul class="edit_data clear">
+					<li><div class="w_1">分组名称：</div><div class="w_2"><input type="text" value="" /><span class="intro">(分组名称用于选择分组分案)</span></div></li>
+					<li><div class="w_1">添加类别：</div><div class="w_2"><span class="tag_control hover"><a class="tag" href="">A</a><i class="ico ico_del"></i></span><span class="tag_control"><a class="tag" href="">B</a><i class="ico ico_del"></i></span><a class="act_border btn_add" href=""><i>+</i></a><input type="text" value="输入类别" /></div>
+					</li>
+					<li>
+						<div class="w_1">选择样本：</div>
+						<div class="w_2">
+							<dl class="choose_sample">
+								<dt>A<a href="" class="btn btn_green"><i class="ico ico_add"></i>添加样本</a></dt>
+								<dd>
+									<div class="diy_group clear">
+										<div class="popup_left">
+											<ul class="sample_list">
+												<li class="select"><a href="">S1</a></li>
+												<li><a href="">S1</a></li>
+												<li><a href="">S1</a></li>
+												<li><a href="">S1</a></li>
+												<li><a href="">S1</a></li>
+												<li><a href="">S1</a></li>
+												<li><a href="">S1</a></li>
+												<li class="select"><a href="">S1</a></li>
+												<li><a href="">S1</a></li>
+												<li><a href="">S1</a></li>
+												<li><a href="">S1</a></li>
+												<li class="select"><a href="">S1</a></li>
+												<li><a href="">S1</a></li>
+												<li><a href="">S1</a></li>
+											</ul>
+										</div>
+										<div class="popup_center">
+											<ul>
+												<li><a class="btn" href="">添加&gt;</a></li>
+												<li><a class="btn" href="">&lt;删除</a></li>
+											</ul>
+										</div>
+										<div class="popup_right">
+											<ul class="sample_list">
+												<li class="select"><a href="">S1</a></li>
+												<li><a href="">S1</a></li>
+												<li><a href="">S1</a></li>
+												<li><a href="">S1</a></li>
+												<li><a href="">S1</a></li>
+											</ul>
+										</div>
+									</div>
+								</dd>
+								<div class="btn_area"><a href="" class="btn btn_blue">保存</a></div>
+							</dl>
+							<dl class="choose_sample">
+								<dt>A<a href="" class="btn btn_green"><i class="ico ico_add"></i>添加样本</a></dt>
+								<dd>
+									<p class="no_data">暂无样本</p>
+								</dd>
+							</dl>
+							<dl class="choose_sample">
+								<dt>B<a href="" class="btn btn_green"><i class="ico ico_add"></i>添加样本</a></dt>
+								<dd>
+									<ul class="clear"><li><span class="tag_control hover"><a class="tag" href="">S1</a><i class="ico ico_del"></i></span><span class="tag_control"><a class="tag" href="">S2</a><i class="ico ico_del"></i></span><span class="tag_control"><a class="tag" href="">S3</a><i class="ico ico_del"></i></span></li></ul>
+								</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="con_footer clear"><div class="con_footer_wrap"><input type="submit" class="btn btn_bigger" value="放弃" /><input type="submit" class="btn btn_blue btn_bigger" value="确定" /></div></div>
+	</div>
+</div>
+<!--项目信息 end-->
+<!--选择 start-->
+<div class="layer" style="width:600px;position:static;">
+	<div class="layer_wrap">
+		<div class="layer_title"><h3>选择</h3><i class="close"></i></div>
+		<div class="layer_contain">
+			<p class="t_c"><span class="color_gray">通过DCA分析显示Lengths of gradient轴一值为：2</span><br /><br /><strong>理论上适合选择RDA分析方法。</strong></p>
+			<div class="btn_area t_c" style="margin-top:20px;"><a href="" class="btn btn_red btn_bigger">仍然选择CCA分析</a>&nbsp;&nbsp;<a href="" class="btn btn_blue btn_bigger">选择RDA分析</a></div>
+		</div>
+		<div class="con_footer clear"><div class="con_footer_wrap"><input type="submit" class="btn btn_bigger" value="放弃" /><input type="submit" class="btn btn_blue btn_bigger" value="确定" /></div></div>
+	</div>
+</div>
+<!--选择 end-->
+</body>
+</html>

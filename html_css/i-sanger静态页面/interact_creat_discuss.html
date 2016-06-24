@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/interact.css" rel="stylesheet" type="text/css" />
+<script src="javascript/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="javascript/base.js" type="text/javascript"></script>
+<script src="javascript/interact.js" type="text/javascript"></script>
+<title>i-sanger互动专题_发起讨论/文章</title>
+</head>
+<body>
+<div class="top_bar">
+	<div class="con clear">
+		<ul class="contact">
+			<li>客服热线：400-660-1216</li>
+			<li><a href=""><i class="ico_qq"></i>在线客服</a></li>
+			<li><a href=""><i class="ico_email"></i>marketing@majorbio.com</a></li>
+		</ul>
+		<ul class="login">
+			<li><a href="">登录</a></li>
+			<li class="last"><a href="">注册</a></li>
+		</ul>
+	</div>
+</div>
+<div class="interact">
+	<div class="subnav clear">
+		<div class="con">
+			<div class="center_logo"><h1><a href="">i-sanger</a></h1><h2><a href="">互动专题</a></h2></div>
+			<ul class="subnav_list">
+				<li><a href="">发现</a></li>
+				<li><a href="">话题</a></li>
+				<li class="current"><a href="">动态<em class="arrow arrow_up"></em></a></li>
+				<li><a href="">讨论</a></li>
+				<li><a href="">文章</a></li>
+			</ul>
+			<div class="search_bar">
+				<input type="text" value="请输入搜索问题" />
+				<a href="" class="ico_search">点此搜索</a>
+			</div>
+			<ul class="btn_area">
+				<li class="creat">
+					<a href="" class="link"><i></i>发起<em class="arrow arrow_down"></em></a>
+					<div class="popup_choose">
+						<ul>
+							<li><a href="">讨论</a></li>
+							<li><a href="">文章</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="my">
+					<a href="" class="link"><i></i>我的<em class="arrow arrow_down"></em></a>
+					<div class="popup_choose">
+						<ul>
+							<li><a href=""><i class="ico_draft"></i>我的草稿</a></li>
+							<li><a href=""><i class="ico_att_people"></i>我关注的人</a></li>
+							<li><a href=""><i class="ico_att_topic"></i>我关注的话题</a></li>
+							<li><a href=""><i class="ico_creat_topic"></i>我发起的话题</a></li>
+							<li><a href=""><i class="ico_creat_article"></i>我发起的文章</a></li>
+							<li><a href=""><i class="ico_invite"></i>邀请我回答的问题</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>	
+	<div class="main clear">
+		<div class="main_left">
+			<div class="box creat">
+				<div class="title"><i></i><h3>发起</h3><ul class=""><li class="current"><a href="">讨论</a></li><li class="last"><a href="">文章</a></li></ul></div>
+				<div class="contain">
+					<dl class="creat_list">
+						<dt>讨论标题：</dt>
+						<dd><input type="text" value="请输入标题..." /></dd>
+						<dt>讨论内容：<em class="color_gray">(可选)</em></dt>
+						<dd>
+							<div class="aw-mod aw-editor-box">
+								<div class="mod-head">
+									<div class="wmd-panel">
+							            <div id="wmd-button-bar"><div id="wmd-button-row" class="btn-toolbar"><div class="btn-group wmd-button-group1" id="wmd-button-group1"><button class="btn" id="wmd-bold-button" title="" data-original-title="加粗 - Ctrl+B"><i class="icon icon-bold"></i></button><button class="btn" id="wmd-italic-button" title="" data-original-title="斜体 - Ctrl+I"><i class="icon icon-italic"></i></button><button class="btn" id="wmd-heading-button" title="" data-original-title="标题 - Ctrl+H"><i class="icon icon-h"></i></button></div><div class="btn-group wmd-button-group2" id="wmd-button-group2"><button class="btn" id="wmd-olist-button" title="" data-original-title="数字列表 - Ctrl+O"><i class="icon icon-ol"></i></button><button class="btn" id="wmd-ulist-button" title="" data-original-title="普通列表 - Ctrl+U"><i class="icon icon-ul"></i></button></div><div class="btn-group wmd-button-group4" id="wmd-button-group4"><button class="btn" id="wmd-quote-button" title="" data-original-title="引用 - Ctrl+Y"><i class="icon icon-quote"></i></button><button class="btn" id="wmd-code-button" title="" data-original-title="代码 - Ctrl+K"><i class="icon icon-code"></i></button></div><div class="btn-group wmd-button-group3" id="wmd-button-group3"><button class="btn" id="wmd-image-button" title="" data-original-title="图片 - Ctrl+G"><i class="icon icon-image"></i></button><button class="btn" id="wmd-video-button" title="" data-original-title="视频 - Ctrl+E"><i class="icon icon-video"></i></button><button class="btn" id="wmd-link-button" title="" data-original-title="链接 - Ctrl+L"><i class="icon icon-bind"></i></button></div><div class="btn-group wmd-button-group5" id="wmd-button-group5"><button class="btn" id="wmd-undo-button" title="" data-original-title="撤销 - Ctrl+Z"><i class="icon icon-undo"></i></button><button class="btn" id="wmd-redo-button" title="" data-original-title="重做 - Ctrl+Y" disabled=""><i class="icon icon-redo"></i></button></div><div class="btn-group wmd-button-group6 pull-right" id="wmd-button-group6"><button class="btn" id="wmd-quote-button" title="" data-original-title="开关预览模式"><i class="icon icon-preview"></i></button><button class="btn active" id="wmd-quote-button" title="" data-original-title="编辑器语法帮助"><i class="icon icon-help"></i></button></div></div><div class="wmd-helper hide" style="display: block;"><ul class="clearfix"><li class="active">标题 / 粗斜体</li><li class="">代码片段</li><li>超链接 / 图片 / 视频</li><li>列表 / 引用</li></ul><div class="content"><div class="tab-pane active" style="display: block;"><p>文章内容较多时，可以用标题分段 : </p><pre>## 大标题 <br>### 小标题</pre><p>斜体 / 粗体 : </p><pre>**粗体** <br>*斜体* <br>***粗斜体*** </pre></div><div class="tab-pane hide" style="display: none;"><p>代码片段 : </p><pre>{{{<br>代码片段<br>}}}</pre></div><div class="tab-pane hide" style="display: none;"><p>超链接 : </p><pre>[链接文字](链接地址) 例: [百度](http://www.baidu.com)</pre><p>图片 : </p><pre>![图片说明](图片地址) 例: ![百度logo](http://www.baidu.com/img/bdlogo.gif)</pre><p>视频 : </p><pre>!![视频说明](视频地址) 例: !![优酷视频](http://youku.com)</pre></div><div class="tab-pane hide" style="display: none;"><p>有序列表 : </p><pre>1. 123<br>2. 123<br>3. 123</pre><p>无序列表 : </p><pre>- 123<br>- 123<br>- 123<br></pre><p>引用 : ( 双回车后结束引用 )</p><pre>&gt; 引用内容<br>引用内容<br>引用内容</pre></div></div></div></div>
+							            <textarea name="question_detail" rows="15" id="wmd-input" class="wmd-input form-control autosize" style="overflow: hidden; word-wrap: break-word; resize: none; height: 329px;">收复失地第三附属##标题## </textarea>
+							        </div>
+								</div>
+								<div class="mod-body">
+									<span id="question_detail_message" class="pull-right text-color-999">已保存草稿, 13:57:46 <a onclick="$('textarea#advanced_editor').attr('value', ''); AWS.User.delete_draft(1, 'question'); $(this).parent().html(' '); return false;" href="#">删除草稿</a></span>
+									<div class="aw-upload-box">
+										<a class="btn btn-default"><form enctype="multipart/form-data" method="post" id="upload-form" action="http://www.knowgene.com/publish/ajax/attach_upload/id-question__attach_access_key-6c3b6c35157d2d7cb91021dc27ff4701" target="ajaxUpload"><input type="submit" class="submit"><input type="file" class="file-input" name="aws_upload_file" multiple="multiple"></form>上传附件</a>
+										<div class="upload-container"><ul class="upload-list"></ul></div>
+										<span class="text-color-999 aw-upload-tips hidden-xs">允许 : jpg,jpeg,png,gif,zip,doc,docx,rar,pdf,psd</span>
+									</div>
+								</div>
+								<div class="mod-footer">
+									<div class="wmd-panel wmd-preview" id="wmd-preview" style="display: none;"><p>收复失地第三附属## </p><p>标题</p><h2><em>斜体文字</em></h2></div>
+								</div>
+							</div>
+						</dd>
+						<dt>添加话题：</dt>
+						<dd><input type="text" value="创建或搜索新话题..." id="inputCreat" /><a href="" class="btn btn_blue" id="btnAdd">添加</a><a href="" class="btn" id="btnCancel">取消</a></dd></dd>
+						<dt>最近话题：</dt>
+						<dd><a href="" class="tag_topic">乳腺癌</a><a href="" class="tag_topic">乳腺癌</a></dd>
+					</dl>
+					<div class="clear"><div class="btn_area"><label><input type="checkbox"  />匿名</label><a href="" class="btn btn_aqua btn_bigger">确认发起</a></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="main_right">
+			<div class="box article">
+				<div class="title"><h3>讨论发起指南</h3></div>
+				<div class="contain">
+					<div class="guide_info">
+						<ul class="clear">
+							<li><i class="ico_article"></i>讨论标题：请用准确的语言描述您发布的讨论思想</li>
+							<li><i class="ico_article"></i>讨论内容：详细补充您的讨论内容，并提供一些相关的素材以供参与者更多的了您讨论的主题思想</li>
+							<li><i class="ico_article"></i>讨论内容：详细补充您的讨论内容，并提供一些相关的素材以供参与者更多的了您讨论的主题思想</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer_simple"><p>Copyright@2003-2013,SeaBig Inc. All Rights Reserved . 隐私保护 联系 版权 条款</p></div>
+<div class="fixed_case"><a href="" class="feedback"></a></div>
+</body>
+</html>

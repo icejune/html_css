@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<link href="style/report.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="js/base.js" type="text/javascript"></script>
+<title>报告_数据质控_样本的reads长度分布</title>
+</head>
+<body>
+<div class="top_bar">
+	<div class="logo"><h1>美吉生物</h1><h2>您身边的测序专家</h2></div>
+</div>
+<div class="main">
+	<div class="main_left">
+		<div class="search"><i class="ico ico_search"></i><input type="text" value="搜索" /></div>
+		<ul class="nav">
+			<li class="help"><a href="" class="link"><i class="ico ico_help"></i>帮助</a></li>
+			<li class="current"><a href="数据质控.html" class="link">数据质控<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="数据质控_样本信息统计.html">样本信息统计</a></li>
+					<li><a href="数据质控_样本碱基分布.html">样本碱基分布</a></li>
+					<li class="current"><a href="数据质控_样本的reads长度分布.html">样本的reads长度分布</a></li>
+				</ul>
+			</li>
+			<li><a href="OTU聚类.html" class="link">OTU聚类<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="OTU聚类_OTU表格.html">OTU表格</a></li>
+					<li><a href="OTU聚类_OTU venn分析.html">OTU Venn分析</a></li>
+					<li><a href="OTU聚类_pan-OTU and core-OTU.html">pan-OTU and core-OTU</a></li>
+					<li><a href="OTU聚类_OTU组分图.html">OTU组分图</a></li>
+				</ul>
+			</li>
+			<li><a href="alpha多样性研究.html" class="link">Alpha多样性研究<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="alpha多样性研究_多样性指数多样化展示.html">多样性指数多样化展示</a></li>
+					<li><a href="alpha多样性研究_稀释性曲线.html">稀释性曲线</a></li>
+					<li><a href="alpha多样性研究_Rank-Abundance曲线.html">Rank-AbundanRce曲线</a></li>
+					<li><a href="alpha多样性研究_OTU物种累积曲线.html">OTU物种累积曲线</a></li>
+				</ul>
+			</li>
+			<li><a href="beta多样性研究.html" class="link">beta多样性研究<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="beta多样性研究_距离矩阵及可视化.html">距离矩阵及可视化</a></li>
+					<li><a href="beta多样性研究_多元分析及可视化.html">多元分析及可视化</a></li>
+				</ul>
+			</li>
+			<li><a href="丰度差异分析.html" class="link">丰度差异分析<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="丰度差异分析_丰度差异可视化.html">丰度差异可视化</a></li>
+					<li><a href="丰度差异分析_Ternary三元相图.html">Ternary三元相图</a></li>
+					<li><a href="丰度差异分析_Lesfe分析.html">Lesfe分析</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="main_right">
+		<div class="report_detail">
+			<div class="set_option">
+				<div class="choose_box">
+					<ul class="edit_data">
+						<li><div class="w_1">样品分组：</div>
+							<div class="w_2">
+								<div class="select_bar">
+									<div class="select_input">
+										<input type="text" value="请选择" />
+										<a href="" class="r"><i class="arrow arrow_down"></i></a>
+									</div>
+									<div class="popup">
+										<ul class="normal_list">						
+											<li><a href=""><span title="group1">group1</span><i class="ico ico_edit"></i></a></li>
+											<li><a href=""><span title="group2">group2</span></span><i class="ico ico_edit"></i></a></li>
+											<li><a href=""><span title="group3">group3</span><i class="ico ico_edit"></i></a></li>
+											<li><a href=""><span title="group4">group4</span><i class="ico ico_edit"></i></a></li>
+										</ul>
+										<div class="btn_area"><a href="" class="btn btn_red"><i class="ico ico_add"></i>新建分组</a></div>
+									</div>
+								</div>
+								<strong class="required">*</strong>
+								<div class="group_division">
+									<label><input type="checkbox" />组A</label>
+									<label><input type="checkbox" />组B</label>
+									<label><input type="checkbox" />组C</label>
+									<label><input type="checkbox" />组D</label>
+									<label><input type="checkbox" />组E</label>
+								</div>
+							</div>
+						</li>
+						<li><div class="w_1">选择步长：</div>
+							<div class="w_2">
+								<select><option>1</option><option>20</option><option>50</option><option>100</option></select>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="btn_area"><a class="btn btn_blue btn_bigger" href="">确定</a></div>
+			</div>			
+			<div class="result_area">
+				<div class="result_title"><h6>结果输出区域</h6></div>
+				<div class="result_contain">
+					<div class="top_act clear"><h3><span class="color_gray">Table名称：</span>reads的长度分布表_未命名</h3><div class="btn_area"><a href="" class="act_border"><em class="arrow arrow_up"><i></i></em>收起表格<!-- <em class="arrow arrow_down"><i></i></em>展开表格 --></a></div></div>
+					<div class="table_box">
+						<div class="table_contain">
+							<table class="common_table">
+							  <tr>
+							  	<th>步长<i title="变为反序" class="arrow arrow_down"></i><!-- <i title="变为正序" class="arrow arrow_up"></i> --></th>
+							    <th>1-100<i title="变为反序" class="arrow arrow_down"></i><!-- <i title="变为正序" class="arrow arrow_up"></i> --></th>
+							    <th>101-200<i title="变为反序" class="arrow arrow_down"></i><!-- <i title="变为正序" class="arrow arrow_up"></i> --></th>
+							    <th>201-300<i title="变为反序" class="arrow arrow_down"></i><!-- <i title="变为正序" class="arrow arrow_up"></i> --></th>
+							    <th>301-400<i title="变为反序" class="arrow arrow_down"></i><!-- <i title="变为正序" class="arrow arrow_up"></i> --></th>
+							    <th>统计<i title="变为反序" class="arrow arrow_down"></i><!-- <i title="变为正序" class="arrow arrow_up"></i> --></th>
+							  </tr>
+							  <tr>
+							    <td>样本1</td>
+							    <td>0</td>
+							    <td>0</td>
+							    <td>800</td>
+							    <td>1200</td>
+							    <td>2000</td>
+							  </tr>
+							  <tr>
+							   <td>样本2</td>
+							    <td>0</td>
+							    <td>0</td>
+							    <td>800</td>
+							    <td>1200</td>
+							    <td>2000</td>
+							  </tr>
+							  <tr>
+							    <td>样本3</td>
+							    <td>0</td>
+							    <td>0</td>
+							    <td>800</td>
+							    <td>1200</td>
+							    <td>2000</td>
+							  </tr>
+							  <tr>
+							    <td>样本4</td>
+							    <td>0</td>
+							    <td>0</td>
+							    <td>800</td>
+							    <td>1200</td>
+							    <td>2000</td>
+							  </tr>
+							  <tr>
+							    <td>样本5</td>
+							    <td>0</td>
+							    <td>0</td>
+							    <td>800</td>
+							    <td>1200</td>
+							    <td>2000</td>
+							  </tr>
+							</table>
+						</div>
+						<div class="bottom_act clear">
+							<div class="btn_area"><a href="" class="btn btn_red">下载此表格</a></div></div>
+						</div>
+					</div>
+					<div class="result_chart clear">
+						<div class="chart_l">
+							<img src="images/example/img_25.png">
+						</div>
+						<div class="chart_r">
+							<ul class="edit_data">
+								<li><select><option>箱线图</option><option>折线图</option></select></li>
+								<li><select><option>选择颜色方案</option><option>方案一</option><option>方案二</option></select></li>
+								<li><label><input type="checkbox" />显示数值</label></li>
+							</ul>
+							<div class="btn_area"><a class="btn btn_red" href="">保存图片</a></div>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+</div>
+</body>
+</html>

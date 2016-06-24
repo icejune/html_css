@@ -1,0 +1,484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/project.css" rel="stylesheet" type="text/css" />
+<link href="style/layer.css" rel="stylesheet" type="text/css" />
+<script src="javascript/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="javascript/base.js" type="text/javascript"></script>
+<title>i-sanger弹出层</title>
+</head>
+<body style="background:green;">
+<!--新建项目 start-->
+<div class="layer" style="width:760px;position:static;">
+	<div class="layer_wrap">
+		<div class="layer_title"><h3>新建项目</h3><i class="close"></i></div>
+		<div class="layer_contain">
+			<div class="creat_project">
+				<ul class="edit_data clear">
+					<li class="error"><div class="w_1">项目名称：</div><div class="w_2"><input type="text" value="" /></div><div class="tip"><i class="ico_error"></i>项目名称未填</div></li>
+					<li><div class="w_1">项目描述：</div><div class="w_2"><div class="textarea_wrap"><textarea></textarea></div></div></li>	
+				</ul>
+				<dl class="tag_list">
+					<dt>物种标签：</dt>
+					<dd>
+						<div class="tag"><a href="" class="color_1">古菌 Archaea</a><a href="" class="color_2 checked">古菌 Archaea</a><a href="" class="color_3">古菌 Archaea</a><a href="" class="color_4">古菌 Archaea</a><a href="" class="color_5">古菌 Archaea</a><a href="" class="color_6">古菌 Archaea</a></div>
+					</dd>
+					<dt>领域标签：</dt>
+					<dd>
+						<div class="tag"><a href="" class="color_1">外显子 Exome</a><a href="" class="color_2 checked">外显子 Exome</a><a href="" class="color_3">外显子 Exome</a><a href="" class="color_4">外显子 Exome</a><a href="" class="color_5">外显子 Exome</a><a href="" class="color_6">外显子 Exome</a><a href="" class="color_1">外显子 Exome</a><a href="" class="color_2 checked">外显子 Exome</a><a href="" class="color_3">外显子 Exome</a><a href="" class="color_4">外显子 Exome</a><a href="" class="color_5">外显子 Exome</a><a href="" class="color_6">外显子 Exome</a></div>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="con_footer clear"><div class="con_footer_wrap"><input type="submit" class="btn btn_bigger" value="放弃" /><input type="submit" class="btn btn_blue btn_bigger" value="确定" /></div></div>
+	</div>
+</div>
+<!--新建项目 end-->
+<!--修改项目信息 start-->
+<div class="layer" style="position:static;">
+	<div class="layer_wrap">
+		<div class="layer_title"><h3>修改项目信息</h3><i class="close"></i></div>
+		<div class="layer_contain">
+			<div class="project_option">
+				<ul class="edit_data clear">
+					<li><div class="w_1">项目名称：</div><div class="w_2"><input type="text" value="我的第一个项目" /></div></li>
+					<li><div class="w_1">创建人：</div><div class="w_2"><input type="text" value="冰蓝之玄" class="disabled" disabled="disabled" /></div></li>
+					<li><div class="w_1">创建时间：</div><div class="w_2"><input type="text" value="2014-10-10 15:12:22" class="disabled" disabled="disabled" /></div></li>
+					<li><div class="w_1">计费组织：</div><div class="w_2"><select><option>某某团队</option></select>&nbsp;&nbsp;<a href="">查看计费组织</a></div></li>
+					<li><div class="w_1">项目描述：</div><div class="w_2"><div class="textarea_wrap"><textarea>这个示例项目包含数据,完成分析和结果。外显子组分析的一个例子,RNA-Seq读取对齐和FASTQ质量控制。打开它看看。这是最快的方法,学习如何完成工作</textarea></div></div></li>
+				</ul>
+				<div class="delete_area"><a href="" class="btn">删除此项目</a>&nbsp;&nbsp;<span class="color_gray size_12">如果你删除这个项目,你将不再获得任何资源的内部使用它!</span></div>
+			</div>
+		</div>
+		<div class="con_footer clear"><div class="con_footer_wrap"><input type="submit" class="btn btn_bigger" value="放弃" /><input type="submit" class="btn btn_blue btn_bigger" value="确定" /></div></div>
+	</div>
+</div>
+<!--新建项目 end-->
+<!--上传文件 start-->
+<div class="layer" style="position:static;">
+	<div class="layer_wrap">
+		<div class="layer_title"><h3>上传文件</h3><i class="close"></i></div>
+		<div class="layer_contain">
+			<div class="uploading_file">
+				<div class="uploading_area">
+					<div class="t"><h3>请浏览本地文件进行上传</h3><span>（文件尺寸：大小不限制 格式要求：不限制）</span></div>
+					<div class="con"><label><input type="file" name="file" /></label><input type="submit" class="btn btn_blue" value="上传" /></div>
+				</div>
+				<table class="table_simple">
+					<tr>
+						<th>文件名</th>
+						<th>大小</th>
+						<th>上传速度</th>
+						<th>操作</th>
+					</tr>
+					<tr>
+						<td>控件.txt</td>
+						<td>0.05KB</td>
+						<td><div class="task_status"><a href="" class="task_running"><em class="percent_bar" style="width:50%;">正在运行</em></a>50%</div></td>
+						<td><a href="" class="act_border"><i class="ico_delete"></i></a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="con_footer clear"><div class="con_footer_wrap"><input type="submit" class="btn btn_bigger" value="放弃" /><input type="submit" class="btn btn_blue btn_bigger" value="确定" /></div></div>
+	</div>
+</div>
+<!--上传文件 end-->
+<!--发送站内信 start-->
+<div class="layer" style="position:static;">
+	<div class="layer_wrap">
+		<div class="layer_title"><h3>发送站内信</h3><i class="close"></i></div>
+		<div class="layer_contain">
+			<div class="send_letter">
+				<ul class="edit_data clear">
+					<li>
+						<div class="w_1">发送给：</div>
+						<div class="w_2">
+							<div class="find_user">
+								<input type="text" value="binglanzhixuan" />
+								<div class="popup_choose" style="display:block;">
+									<ul>
+										<li><a href=""><img src="images/global/avatar_u.gif" width="30" height="30" />binglanzhixuan1</a></li>
+										<li><a href=""><img src="images/global/avatar_u.gif" width="30" height="30" />binglanzhixuan1</a></li>
+										<li><a href=""><img src="images/global/avatar_u.gif" width="30" height="30" />binglanzhixuan1</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="w_1">标题：</div>
+						<div class="w_2"><input type="text" value="标题" /></div>
+					</li>
+					<li><div class="w_1">内容：</div><div class="w_2"><div class="textarea_wrap"><textarea></textarea></div></div></li>
+				</ul>
+			</div>
+		</div>
+		<div class="con_footer clear"><div class="con_footer_wrap"><input type="submit" class="btn btn_bigger" value="放弃" /><input type="submit" class="btn btn_blue btn_bigger" value="确定" /></div></div>
+	</div>
+</div>
+<!--发送站内信 end-->
+<!--创建新的工作流 start-->
+<div class="layer" style="position:static;">
+	<div class="layer_wrap">
+		<div class="layer_title"><h3>创建新的工作流</h3><i class="close"></i></div>
+		<div class="layer_contain">
+			<div class="creat_pp">
+				<dl class="base_dl">
+					<dt>工作流名称：</dt>
+					<dd><input type="text" value="" /></dd>
+					<dt>备注：</dt>
+					<dd><div class="textarea_wrap"><textarea></textarea></div></dd>
+				</dl>
+				<div class="act_area clear">
+					<ul class="act_list">
+						<li><label><input type="radio" />对组织内公开</label>
+							<div class="popup_choose" style="display:block;">
+								<h6>选择在以下组织中公开</h6>
+								<ul>
+									<li><a href="">我的第一个组织</a></li>
+									<li><a href="">我的第二个组织</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><label><input type="radio" />对平台公开</label></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="con_footer clear"><div class="con_footer_wrap"><input type="submit" class="btn btn_bigger" value="放弃" /><input type="submit" class="btn btn_blue btn_bigger" value="确定" /></div></div>
+	</div>
+</div>
+<!--创建新的工作流 end-->
+<!--复制文件到项目 start-->
+<div class="layer" style="width:1000px;position:static;">
+	<div class="layer_wrap">
+		<div class="layer_title"><h3>复制文件到项目</h3><i class="close"></i></div>
+		<div class="layer_contain">
+			<div class="add_pp clear">
+				<div class="left">
+					<ul class="pp_type_list clear">
+						<li><a href="">公共工作流</a></li>
+						<li class="current"><a href="">我的工作流</a></li>
+					</ul>
+					<div class="project_box">
+						<h3>项目</h3>
+						<div class="search_bar">
+							<input type="text" value="搜索名字或标签">
+							<a class="ico_search" href="">点此搜索</a>
+						</div>
+						<ul class="pp_type_list">
+							<li class="hover"><a href="">我的第一个项目</a></li>
+							<li><a href="">我的第二个项目</a></li>
+						</ul>
+						<div class="popup_type">
+							<ul>
+								<li><a href="">&gt;&nbsp;输入</a></li>
+								<li class="last"><a href="">&gt;&nbsp;输出</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="show_page clear">
+						<div class="search_bar">
+							<input type="text" value="搜索名字或标签">
+							<a class="ico_search" href="">点此搜索</a>
+						</div>		
+					</div>
+					<div class="all_files">
+						<div class="tab_simple">
+							<ul>
+								<li class="current"><a href="">我收藏的</a></li>
+								<li><a href="">我创建的</a></li>
+							</ul>
+						</div>
+						<div class="contain">
+							<div class="crumb"><a href="">我的第一个项目</a><strong class="interval">&gt;</strong>输入</div>
+							<div class="act_area clear">
+								<ul class="act_list">
+									<li class="list_checkbox"><input type="checkbox" checked="checked" />已选中<strong class="num">2</strong>个</li>
+									<li><span class="line"></span></li>
+									<li><a href="" class="btn">刷新</a></li>
+									<li><span class="line"></span></li>
+									<li><a href="" class="btn">复制到<i class="arrow arrow_down">点击复制到项目</i></a></li>
+								</ul>
+							</div>
+							<table class="table_simple">
+								<tr>
+									<th>工作流名称</th>
+									<th>创建用户</th>
+									<th>创建日期</th>
+								</tr>
+								<tr>
+									<td><input type="checkbox" checked="checked" /><a href="">我的工作流我的工作流</a><em class="version">V1.0</em></td>
+									<td><a href="">binglanzhixuan</a></td>
+									<td>2014-10-17 16:03:46</td>
+								</tr>
+								<tr class="bg">
+									<td><input type="checkbox" checked="checked" /><a href="">我的工作流我的工作流</a><em class="version">V1.0</em></td>
+									<td><a href="">binglanzhixuan</a></td>
+									<td>2014-10-17 16:03:46</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" checked="checked" /><a href="">我的工作流我的工作流</a><em class="version">V1.0</em></td>
+									<td><a href="">binglanzhixuan</a></td>
+									<td>2014-10-17 16:03:46</td>
+								</tr>
+								<tr class="bg">
+									<td><input type="checkbox" checked="checked" /><a href="">我的工作流我的工作流</a></td>
+									<td><a href="">binglanzhixuan</a></td>
+									<td>2014-10-17 16:03:46</td>
+								</tr>
+							</table>
+							<div class="page_area clear">
+								<div class="page_area_wrap">
+									<div class="show_num">
+										<span>显示</span>
+										<select><option>25</option><option>50</option></select>
+									</div>
+									<div class="page">
+										<a href="">1</a><a href="" class="current">2</a><a href="">3</a><a href="">4</a><a href="">5</a><span class="ellipsis">...</span><a href="">10</a><a href="">下一页</a><input type="text" value="跳转到" /><a href="" class="btn">GO</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="con_footer clear"><div class="con_footer_wrap"><input type="submit" class="btn btn_bigger" value="放弃" /><input type="submit" class="btn btn_blue btn_bigger" value="确定" /></div></div>
+	</div>
+</div>
+<!--复制文件到项目 end-->
+<!--添加工作流 start-->
+<div class="layer" style="width:1000px;position:static;">
+	<div class="layer_wrap">
+		<div class="layer_title"><h3>添加工作流</h3><i class="close"></i></div>
+		<div class="layer_contain">
+			<div class="add_pp clear">
+				<div class="left">
+					<ul class="pp_type_list">
+						<li><a href="">公共工作流</a></li>
+						<li class="current"><a href="">我的工作流</a></li>
+					</ul>
+				</div>
+				<div class="right">
+					<div class="show_page clear">
+						<div class="search_bar">
+							<input type="text" value="搜索名字或标签">
+							<a class="ico_search" href="">点此搜索</a>
+						</div>		
+					</div>
+					<div class="all_files all_pp">
+						<div class="tab_simple">
+							<ul>
+								<li class="current"><a href="">我收藏的</a></li>
+								<li><a href="">我创建的</a></li>
+							</ul>
+						</div>
+						<div class="contain">
+							<div class="act_area clear">
+								<ul class="act_list">
+									<li class="list_checkbox"><input type="checkbox" checked="checked" />已选中<strong class="num">2</strong>个</li>
+									<li><span class="line"></span></li>
+									<li><a href="" class="btn">刷新</a></li>
+									<li><span class="line"></span></li>
+									<li><a href="" class="btn">复制到<i class="arrow arrow_down">点击复制到项目</i></a></li>
+								</ul>
+							</div>
+							<table class="table_simple">
+								<tr>
+									<th>工作流名称</th>
+									<th>创建用户</th>
+									<th>创建日期</th>
+								</tr>
+								<tr>
+									<td><input type="checkbox" checked="checked" /><a href="">我的工作流我的工作流</a><em class="version">V1.0</em></td>
+									<td><a href="">binglanzhixuan</a></td>
+									<td>2014-10-17 16:03:46</td>
+								</tr>
+								<tr class="bg">
+									<td><input type="checkbox" checked="checked" /><a href="">我的工作流我的工作流</a><em class="version">V1.0</em></td>
+									<td><a href="">binglanzhixuan</a></td>
+									<td>2014-10-17 16:03:46</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" checked="checked" /><a href="">我的工作流我的工作流</a><em class="version">V1.0</em></td>
+									<td><a href="">binglanzhixuan</a></td>
+									<td>2014-10-17 16:03:46</td>
+								</tr>
+								<tr class="bg">
+									<td><input type="checkbox" checked="checked" /><a href="">我的工作流我的工作流</a></td>
+									<td><a href="">binglanzhixuan</a></td>
+									<td>2014-10-17 16:03:46</td>
+								</tr>
+							</table>
+							<div class="page_area clear">
+								<div class="page_area_wrap">
+									<div class="show_num">
+										<span>显示</span>
+										<select><option>25</option><option>50</option></select>
+									</div>
+									<div class="page">
+										<a href="">1</a><a href="" class="current">2</a><a href="">3</a><a href="">4</a><a href="">5</a><span class="ellipsis">...</span><a href="">10</a><a href="">下一页</a><input type="text" value="跳转到" /><a href="" class="btn">GO</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="con_footer clear"><div class="con_footer_wrap"><input type="submit" class="btn btn_bigger" value="放弃" /><input type="submit" class="btn btn_blue btn_bigger" value="确定" /></div></div>
+	</div>
+</div>
+<!--添加工作流 end-->
+<!--再次确认 start-->
+<div class="layer" style="position:static;">
+	<div class="layer_wrap">
+		<div class="layer_title"><h3>确认</h3><i class="close"></i></div>
+		<div class="layer_contain">
+			<p style="padding:50px 0;" class="size_14 t_c">你确定将选择的文件拷贝到“我的自建项目”中吗？</p>
+		</div>
+		<div class="con_footer clear"><div class="con_footer_wrap"><input type="submit" class="btn btn_bigger" value="放弃" /><input type="submit" class="btn btn_blue btn_bigger" value="确定" /></div></div>
+	</div>
+</div>
+<!--再次确认 end-->
+<!--邀请TA参与项目 start-->
+<div class="layer" style="position:static;">
+	<div class="layer_wrap">
+		<div class="layer_title"><h3>邀请TA参与项目</h3><i class="close"></i></div>
+		<div class="layer_contain">
+			<div class="invite_join">
+				<h3>邀请朋友加入桑格</h3>
+				<dl class="base_dl">
+					<dt>你想邀请谁？</dt>
+					<dd><input type="text" value="输入TA的邮件地址" /></dd>
+					<dt>添加备注：</dt>
+					<dd><div class="textarea_wrap"><textarea>备注TA的个人信息</textarea></div></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="con_footer clear"><div class="con_footer_wrap"><input type="submit" class="btn btn_bigger" value="放弃" /><input type="submit" class="btn btn_blue btn_bigger" value="确定" /></div></div>
+	</div>
+</div>
+<!--邀请TA参与项目 end-->
+<!--获得下载地址 start-->
+<div class="layer" style="position:static;">
+	<div class="layer_wrap">
+		<div class="layer_title"><h3>下载地址</h3><i class="close"></i></div>
+		<div class="layer_contain">
+			<div class="textarea_wrap"><textarea>https://sbg-main.s3.amazonaws.com/1000G_omni2.5.b37.vcf%2B761871dd-315c-4797-acf7-da5ba22710c4?response-content-type=application%2Foctet-stream&Expires=1414139577&response-content-disposition=attachment%3Bfilename%3D1000G_omni2.5.b37.vcf&AWSAccessKeyId=AKIAI7HL6YBXRKY73MKA&Signature=DSuV6%2Fd59mfcFX8LJWpVwqtD%2Bsw%3D</textarea></div>
+		</div>
+		<div class="con_footer clear"><div class="con_footer_wrap"><input type="submit" class="btn btn_bigger" value="放弃" /><input type="submit" class="btn btn_blue btn_bigger" value="确定" /></div></div>
+	</div>
+</div>
+<!--获得下载地址 end-->
+<!--扩容成功 start-->
+<div class="layer" style="width:500px;position:static;">
+	<div class="layer_wrap">
+		<div class="layer_title"><h3>扩容成功</h3><i class="close"></i></div>
+		<div class="layer_contain">
+			<div class="enlarge_success">
+				<h4>扩容成功！</h4>
+				<div class="balance clear"><h6>账户总余额：</h6><div class="balance_num"><strong>￥66666</strong><em>.00</em>可用</div></div>
+				<div class="space_info">
+					<ul class="base_data">
+						<li><div class="w_1">购买容量：</div>15G</li>
+						<li><div class="w_1">有效期：</div>2014-11-13 至 2015-11-13</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="con_footer clear"><div class="con_footer_wrap"><input type="submit" class="btn btn_bigger" value="放弃" /><input type="submit" class="btn btn_blue btn_bigger" value="确定" /></div></div>
+	</div>
+</div>
+<!--扩容成功 end-->
+<!--添加项目成员 start-->
+<div class="layer" style="width:700px;position:static;">
+	<div class="layer_wrap">
+		<div class="layer_title"><h3>添加项目成员</h3><i class="close"></i></div>
+		<div class="layer_contain">
+			<ul class="select_member_list clear">
+				<li class="current">
+					<input type="checkbox" class="input_select" /><div class="user_info"><div class="left_info"><div class="img_box img_50"><img width="50" height="50" src="images/global/avatar_u.gif" /></div></div><div class="right_info"><strong>冰蓝之玄</strong><p>binglanzhixuan</p></div></div>
+				</li>
+				<li>
+					<input type="checkbox" class="input_select" /><div class="user_info"><div class="left_info"><div class="img_box img_50"><img width="50" height="50" src="images/global/avatar_u.gif" /></div></div><div class="right_info"><strong>冰蓝之玄</strong><p>binglanzhixuan</p></div></div>
+				</li>
+				<li>
+					<input type="checkbox" class="input_select" /><div class="user_info"><div class="left_info"><div class="img_box img_50"><img width="50" height="50" src="images/global/avatar_u.gif" /></div></div><div class="right_info"><strong>冰蓝之玄</strong><p>binglanzhixuan</p></div></div>
+				</li>
+				<li>
+					<input type="checkbox" class="input_select" /><div class="user_info"><div class="left_info"><div class="img_box img_50"><img width="50" height="50" src="images/global/avatar_u.gif" /></div></div><div class="right_info"><strong>冰蓝之玄</strong><p>binglanzhixuan</p></div></div>
+				</li>
+				<li>
+					<input type="checkbox" class="input_select" /><div class="user_info"><div class="left_info"><div class="img_box img_50"><img width="50" height="50" src="images/global/avatar_u.gif" /></div></div><div class="right_info"><strong>冰蓝之玄</strong><p>binglanzhixuan</p></div></div>
+				</li>
+				<li>
+					<input type="checkbox" class="input_select" /><div class="user_info"><div class="left_info"><div class="img_box img_50"><img width="50" height="50" src="images/global/avatar_u.gif" /></div></div><div class="right_info"><strong>冰蓝之玄</strong><p>binglanzhixuan</p></div></div>
+				</li>
+				<li>
+					<input type="checkbox" class="input_select" /><div class="user_info"><div class="left_info"><div class="img_box img_50"><img width="50" height="50" src="images/global/avatar_u.gif" /></div></div><div class="right_info"><strong>冰蓝之玄</strong><p>binglanzhixuan</p></div></div>
+				</li>
+			</ul>
+		</div>
+		<div class="con_footer clear"><div class="con_footer_wrap"><input type="submit" class="btn btn_bigger" value="放弃" /><input type="submit" class="btn btn_blue btn_bigger" value="确定" /></div></div>
+	</div>
+</div>
+<!--添加项目成员 end-->
+<!--发送站内留言 start-->
+<div class="layer" style="position:static;">
+	<div class="layer_wrap">
+		<div class="layer_title"><h3>意见反馈</h3><i class="close"></i></div>
+		<div class="layer_contain">
+			<div class="feedback">
+				<h6>hi,你好，欢迎你为我们提供产品意见和建议</h6>
+				<ul class="edit_data clear">
+					<li><div class="w_1"><strong class="must">*</strong>反馈：</div><div class="w_2"><div class="textarea_wrap"><textarea>500个汉字之内</textarea></div></div></li>
+					<li><div class="w_1">上传图片：</div><div class="w_2"><img src="images/global/avatar_u.gif" /><i class="ico_add"></i><input type="file" name="file" class="file_form" /></div><div class="tip"><span class="color_gray">最多上传3张</span></div></li>
+					<li><div class="w_1">手机号码：</div><div class="w_2"><input type="text" style="width:150px;" /></div><div class="tip"><span class="color_gray">方便我们更快向你反馈，我们将严格保护你的隐私</span></div></li>
+				</ul>
+			</div>
+		</div>
+		<div class="con_footer clear"><div class="con_footer_wrap"><input type="submit" class="btn btn_bigger" value="放弃" /><input type="submit" class="btn btn_blue btn_bigger" value="确定" /></div></div>
+	</div>
+</div>
+<!--发送站内留言 end-->
+<!--浏览器版本升级 start-->
+<div class="layer" style="position:static;">
+	<div class="layer_wrap">
+		<div class="layer_title"><h3>温馨提示</h3><i class="close"></i></div>
+		<div class="layer_contain">
+			<div class="update_browser">
+				<h6>你目前的浏览器版本不能完美呈现桑格生信平台，我们建议你更新到更新版本。仍要继续，请<a href="">点击这里</a></h6>
+				<ul class="browser_list">
+					<li><a href=""><i class="ico_chrome">chrome</i></a></li>
+					<li><a href=""><i class="ico_safari">safari</i></a></li>
+					<li><a href=""><i class="ico_firefox">firefox</i></a></li>
+					<li><a href=""><i class="ico_ie">ie</i></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="con_footer clear"><div class="con_footer_wrap"><input type="submit" class="btn btn_bigger" value="放弃" /><input type="submit" class="btn btn_blue btn_bigger" value="确定" /></div></div>
+	</div>
+</div>
+<!--浏览器版本升级 end-->
+<!--领取任务 start-->
+<div class="layer" style="position:static;">
+	<div class="layer_wrap">
+		<div class="layer_title"><h3>领取任务</h3><i class="close"></i></div>
+		<div class="layer_contain">
+			<div class="update_browser">
+				<h6 style="color:#009900;font-size:28px;font-family:Microsoft YaHei;">你已成功领取此任务！</h6>
+				<div class="btn_area"  style="margin:30px 0;"><a href="" style="margin: 0 10px;" class="btn btn_bigger btn_blue">进入任务列表</a><a href="" style="margin: 0 10px;" class="btn btn_bigger">确定</a></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--领取任务 end-->
+</body>
+</html>

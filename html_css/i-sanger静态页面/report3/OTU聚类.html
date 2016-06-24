@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<link href="style/report.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="js/base.js" type="text/javascript"></script>
+<title>报告_OTU聚类</title>
+</head>
+<body>
+<div class="top_bar">
+	<div class="logo"><h1>美吉生物</h1><h2>您身边的测序专家</h2></div>
+</div>
+<div class="main">
+	<div class="main_left">
+		<div class="search"><i class="ico ico_search"></i><input type="text" value="搜索" /></div>
+		<ul class="nav">
+			<li class="help"><a href="" class="link"><i class="ico ico_help"></i>帮助</a></li>
+			<li><a href="数据质控.html" class="link">数据质控<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="数据质控_样本信息统计.html">样本信息统计</a></li>
+					<li><a href="数据质控_样本碱基分布.html">样本碱基分布</a></li>
+					<li><a href="数据质控_样本的reads长度分布.html">样本的reads长度分布</a></li>
+				</ul>
+			</li>
+			<li class="current"><a href="OTU聚类.html" class="link">OTU聚类<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="OTU聚类_OTU表格.html">OTU表格</a></li>
+					<li><a href="OTU聚类_OTU venn分析.html">OTU Venn分析</a></li>
+					<li><a href="OTU聚类_pan-OTU and core-OTU.html">pan-OTU and core-OTU</a></li>
+					<li><a href="OTU聚类_OTU组分图.html">OTU组分图</a></li>
+				</ul>
+			</li>
+			<li><a href="alpha多样性研究.html" class="link">Alpha多样性研究<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="alpha多样性研究_多样性指数多样化展示.html">多样性指数多样化展示</a></li>
+					<li><a href="alpha多样性研究_稀释性曲线.html">稀释性曲线</a></li>
+					<li><a href="alpha多样性研究_Rank-Abundance曲线.html">Rank-AbundanRce曲线</a></li>
+					<li><a href="alpha多样性研究_OTU物种累积曲线.html">OTU物种累积曲线</a></li>
+				</ul>
+			</li>
+			<li><a href="beta多样性研究.html" class="link">beta多样性研究<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="beta多样性研究_距离矩阵及可视化.html">距离矩阵及可视化</a></li>
+					<li><a href="beta多样性研究_多元分析及可视化.html">多元分析及可视化</a></li>
+				</ul>
+			</li>
+			<li><a href="丰度差异分析.html" class="link">丰度差异分析<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="丰度差异分析_丰度差异可视化.html">丰度差异可视化</a></li>
+					<li><a href="丰度差异分析_Ternary三元相图.html">Ternary三元相图</a></li>
+					<li><a href="丰度差异分析_Lesfe分析.html">Lesfe分析</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="main_right">
+		<div class="report_intro">
+			<h2>OTU聚类</h2>
+			<h4>简介：</h4>
+			<p>OTU（Operational Taxonomic Units）是在系统发生学或群体遗传学研究中，为了便于进行分析，人为给某一个分类单元（品系，属，种、分组等）设置的同一标志。要了解一个样品测序结果中的菌种、菌属等数目信息，就需要对序列进行归类操作（cluster）。通过归类操作，将序列按照彼此的相似性分归为许多小组，一个小组就是一个OTU。可根据不同的相似度水平，对所有序列进行OTU划分，通常在97%的相似水平下的OTU进行生物信息统计分析。</p>
+			<p>为了得到每个OTU对应的物种分类信息，采用RDP classifier贝叶斯算法对97%相似水平的OTU代表序列进行分类学分析。</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<script src="https://code.jquery.com/jquery-2.1.3.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(timeLine);
+function timeLine(){
+	var nav=$('.nav'),
+		li=nav.find('li'),
+		wrap_con=$('.item_wrap ul'),
+		li_width=li.width(),
+		pre=$('.nav .ico_pre'),
+		next=$('.nav .ico_next'),
+		max=li.length-1;
+	li.find('a').click(function(e){
+		e.preventDefault();
+	})
+	init();	
+	function init(){
+		$('.nav li:eq(-3)').addClass('current');
+		var li_cur=nav.find('.current'),
+			cur_index=li_cur.index();
+		li.eq(cur_index-2).prevAll().hide();
+		next.addClass('disabed_next');
+	}
+	function timeToggle(){
+		var cur_index=nav.find('.current').index();
+		li.show();
+		li.eq(cur_index-2).prevAll().hide();
+		li.eq(cur_index+2).nextAll().hide();
+	}
+	li.click(function(){
+		var self=$(this);
+			cur_index=nav.find('.current').index();
+		if(self.hasClass('blank')) return false;
+		self.addClass('current').siblings().removeClass('current');
+		if(cur_index>1&&cur_index<=(max-1)){
+			timeToggle();				
+			next.removeClass('disabed_next');
+		}
+		else{
+			pre.addClass('disabed_pre');
+		}
+	})
+	pre.click(
+		function(){
+			var cur_index=nav.find('.current').index();
+			cur_index--;	
+			if(cur_index>1&&cur_index<=(max-1)){				
+				nav.find('.current').prev().addClass('current').siblings().removeClass('current');
+				timeToggle();				
+				next.removeClass('disabed_next');				
+			}
+			else{
+				pre.addClass('disabed_pre');
+			}
+		}
+	)
+	next.click(
+		function(){
+			var cur_index=nav.find('.current').index();
+			cur_index++;
+			if(cur_index<=(max-2)){				
+				nav.find('.current').next().addClass('current').siblings().removeClass('current');
+				timeToggle();
+				pre.removeClass('disabed_pre');
+			}
+			else{
+				next.addClass('disabed_next');
+			}
+		}
+	)
+	
+}
+</script>
+<style type="text/css">
+*{margin: 0;padding: 0;}
+ul li{list-style: none;}
+a{color:#00a4ed;text-decoration:none;}
+a:hover{color:#579d1e;}
+body{text-align:center;background:#fff;font:12px/20px Microsoft YaHei,Arial,Helvetica,sans-serif;color:#333;}
+.clear:after{content:".";display:block;clear:both;height:0px;visibility:hidden;}
+.clear{zoom:1;}
+.ico_pre,.ico_next,.ico_dot{-moz-inline-stack;display:inline-block;*display:inline;*zoom:1;width:28px;height:48px;vertical-align:middle;background:url(images/ico.gif) 0 -48px no-repeat;text-indent:-5000px;_text-indent:0;overflow:hidden;}
+.ico_dot{width:15px;height:15px;background-position:-14px 0;}
+.nav{position:relative;width: 750px;margin:50px auto;border-bottom:1px solid #e7e7e7;}
+.nav .ico_pre,.nav .ico_next{position:absolute;left:50px;top:10px;width:10px;height:20px;cursor:pointer;}
+.nav .ico_pre{background-position:-3px -66px;}
+.nav .ico_next{left:auto;right:50px;background-position:-32px -66px;}
+.nav .disabed_pre{background-position:-3px -41px;cursor:auto;}
+.nav .disabed_next{background-position:-32px -41px;cursor:auto;}
+.nav .item_wrap{float:left;margin-left:90px;display:inline;width:580px;overflow:hidden;position:relative;top:8px;}
+.nav ul{float:left;width:5000px;position:relative;}
+.nav li{float:left;position:relative;width:86px;height:50px;text-align:center;}
+.nav li a{color:#333;font-weight:bold;}
+.nav li a:hover{color:#ff6600;}
+.nav li .ico_dot{position:absolute;bottom:0;left:50%;margin-left:-7px;}
+.nav li.current{width:220px;}
+.nav li.current a{color:#00a6e9;font-size:24px;}
+.nav li.current .ico_dot{background-position:-14px -19px;}
+.nav li.blank a{color:#c9c9c9;cursor:auto;}
+.nav li.blank .ico_dot{background-position:-32px 0;}
+</style>
+<title>时间轴</title>
+</head>
+<body>
+	<div class="nav clear">
+		<i class="ico_pre"></i>
+		<div class="item_wrap">
+			<ul>
+				<li class="blank"><a href="">……<i class="ico_dot"></i></a></li>
+				<li class="blank"><a href="">2010<i class="ico_dot"></i></a></li>
+				<li><a href="">2011<i class="ico_dot"></i></a></li>
+				<li><a href="">2012<i class="ico_dot"></i></a></li>
+				<li><a href="">2013<i class="ico_dot"></i></a></li>
+				<li><a href="">2014<i class="ico_dot"></i></a></li>
+				<li><a href="">2015<i class="ico_dot"></i></a></li>
+				<li class="blank"><a href="">2016<i class="ico_dot"></i></a></li>
+				<li class="blank"><a href="">……<i class="ico_dot"></i></a></li>
+			</ul>
+		</div>
+		<i class="ico_next"></i>
+	</div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<head>
+	<link href="css/oa.css" rel="stylesheet" type="text/css" />
+</head>
+<html>
+<body>
+	<header>
+		<h2><i class="ico ico_my"></i>消息中心</h2>
+		<ul class="act_list">
+			<li><i class="ico ico_action"></i></li>
+		</ul>
+		<div class="popup" style="display: block;">
+			<i class="arrow"></i>
+			<div class="popup_wrap">
+				<ul class="popup_list">
+					<li>新建任务</li>
+					<li>上传文档</li>
+					<li>新建流程</li>
+					<li>发布日报</li>
+					<li>创建目标</li>
+					<li>创建日程</li>
+					<li>发微信</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="container beside_all">
+		<div class="msg">
+			<ul class="msg_list clear">
+				<li>
+					<div class="left_img"><i class="ico ico_blog"></i><strong class="new_num">1</strong></div>
+					<div class="right_info">
+						<h6>未读日报</h6>
+					</div>
+				</li>			
+				<li>
+					<div class="left_img"><i class="ico ico_task"></i></div>
+					<div class="right_info">
+						<h6>未读任务</h6>
+					</div>
+				</li>
+				<li>
+					<div class="left_img"><i class="ico ico_project"></i></div>
+					<div class="right_info">
+						<h6>未读项目</h6>
+					</div>
+				</li>
+				<li>
+					<div class="left_img"><i class="ico ico_file"></i></div>
+					<div class="right_info">
+						<h6>未读文档</h6>
+					</div>
+				</li>
+				<li>
+					<div class="left_img"><i class="ico ico_report"></i></div>
+					<div class="right_info">
+						<h6>未读报告</h6>
+					</div>
+				</li>
+				<li>
+					<div class="left_img"><i class="ico ico_blog"></i></div>
+					<div class="right_info">
+						<h6>日报反馈</h6>
+					</div>
+				</li>
+				<li>
+					<div class="left_img"><i class="ico ico_task"></i></div>
+					<div class="right_info">
+						<h6>任务反馈</h6>
+					</div>
+				</li>
+				<li>
+					<div class="left_img"><i class="ico ico_project"></i></div>
+					<div class="right_info">
+						<h6>项目反馈</h6>
+					</div>
+				</li>
+				<li>
+					<div class="left_img"><i class="ico ico_file"></i></div>
+					<div class="right_info">
+						<h6>文档反馈</h6>
+					</div>
+				</li>
+				<li>
+					<div class="left_img"><i class="ico ico_report"></i></div>
+					<div class="right_info">
+						<h6>报告反馈</h6>
+					</div>
+				</li>
+				<li>
+					<div class="left_img"><img src="images/avatar_man.gif" class="avatar" /></div>
+					<div class="right_info">
+						<h6>某某人</h6>
+					</div>
+				</li>
+				<li>
+					<div class="left_img"><i class="ico ico_chatgroup"></i></div>
+					<div class="right_info">
+						<h6>某某群组</h6>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<footer>
+		<ul>
+			<li>
+				<i class="ico ico_msg_big"></i>消息
+			</li><li>
+				<i class="ico ico_blog_big"></i>日报
+			</li><li>
+				<i class="ico ico_task_big"></i>任务
+			</li><li>
+				<i class="ico ico_project_big"></i>项目
+			</li><li id="more" onclick="moreClick();">
+				<i class="ico ico_more_big"></i>更多
+			</li>
+		</ul>		
+		<div class="more_item">			
+			<ul>
+				<li><i class="ico ico_blog"></i><p>日报</p></li>
+				<li><i class="ico ico_project"></i><p>项目</p></li>
+				<li><i class="ico ico_task"></i><p>任务</p></li>
+				<li><i class="ico ico_file"></i><p>文档</p></li>
+				<li><i class="ico ico_flow"></i><p>流程</p></li>
+				<li><i class="ico ico_schedule"></i><p>日程</p></li>	
+				<li><i class="ico ico_report"></i><p>报告</p></li>	
+				<li><i class="ico ico_chart"></i><p>报表</p></li>
+			</ul>
+		</div>
+	</footer>
+<script type="text/javascript">
+	var btn_more=document.getElementById('more'),
+		more_item=document.getElementsByClassName('more_item')[0],
+		body_mask=document.getElementsByClassName('body_mask')[0];
+	more.onclick=function(){
+		more_item.style.display='block';
+		body_mask.style.display="block";
+		return false;
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>搜索条件</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="allWidth clearfix" style="margin:50px auto; width:1000px;">
+	<div class="searchSort searchSort2" id="lineSearch">
+		<div class="selectOpt" id="selectOpt">
+			<a class="del" href="#">全部清除</a>
+		</div>
+        <dl class="clearfix">
+            <dt>生信APP</dt>
+            <dd>
+                <a href="#" class="hover">所有</a> <a href="#">统计作图(1)</a> <a href="#">物种注释(1)</a> <a href="#">多元分析(1)</a> <a href="#">统计检验(1)</a> <a href="#">聚类分析(1)</a> <a href="#">微生物多样性(1)</a>
+            </dd>
+        </dl>
+        <dl class="clearfix">
+            <dt>生信Tool</dt>
+            <dd>
+                <a href="#" class="hover">所有</a> <a href="#">序列比对(2)</a> <a href="#">物种注释(1)</a> <a href="#">细菌(1)</a> <a href="#">真菌(1)</a> <a href="#">进化分析(1)</a> <a href="#">序列处理(1)</a>
+            </dd>
+        </dl>
+        <div class="sortWay"><a href="#">更新时间</a> <a href="#" class="accur">热度<i class="up"></i></a></div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+function filterItem() {
+	var wrap = $('#lineSearch'), // 最外层
+		list = wrap.find('dd a'), // 取出所有dd里的a
+		selected = $('#selectOpt'), // 显示选择
+		del = selected.find('.del'); // 全清除
+
+	// dd里的a加事件
+	list.click(function() {
+		var self = $(this),// 缓存当前元素
+			text = self.text(), // 取得他的文本
+			dl = self.closest('dl'); // 获取包含它的dl
+		insertItem(text, dl);
+		if(selected.is(':hidden')) {// 如果是隐藏则显示出来
+			selected.show();
+		}
+		return false; // 防止冒泡和阻止默认事件
+	});
+
+	// text代表文本
+	// obj为保存当前dl，方便点击删除
+	function insertItem(text, obj) {
+		// 创建元素
+		var item = $('<span><label>' + text+'</label><em>' + text + '</em><i>&times;</i></span>');
+		item.data('target', obj); // 把obj缓存到item
+		del.before(item); // 插入到清除按钮前面
+		obj.hide(); // 隐藏当前dl
+	}
+
+	// 全部清除
+	del.click(function() {
+		var spans = $(this).prevAll('span');// 取得它前面所有span
+		spans.click();
+		return false; // 防止冒泡和阻止默认事件
+	});
+
+	// 为selected加时时点击事件
+	selected.on('click', 'span', function() {
+		var self = $(this),
+			target = self.data('target'),
+			prevLen = del.prevAll('span').length; // 获取全清除按钮前的span个数
+		self.remove(); // 删除当前
+		target.show(); // 对应dl显示
+		if(prevLen <= 1) {
+			selected.hide();
+		}
+	})
+
+}
+
+$(function() {
+	filterItem();
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<link href="style/report.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="js/base.js" type="text/javascript"></script>
+<title>报告_alpha多样性研究_多样性指数多样化展示</title>
+</head>
+<body>
+<div class="top_bar">
+	<div class="logo"><h1>美吉生物</h1><h2>您身边的测序专家</h2></div>
+</div>
+<div class="main">
+	<div class="main_left">
+		<div class="search"><i class="ico ico_search"></i><input type="text" value="搜索" /></div>
+		<ul class="nav">
+			<li class="help"><a href="" class="link"><i class="ico ico_help"></i>帮助</a></li>
+			<li><a href="数据质控.html" class="link">数据质控<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="数据质控_样本信息统计.html">样本信息统计</a></li>
+					<li><a href="数据质控_样本碱基分布.html">样本碱基分布</a></li>
+					<li><a href="数据质控_样本的reads长度分布.html">样本的reads长度分布</a></li>
+				</ul>
+			</li>
+			<li><a href="OTU聚类.html" class="link">OTU聚类<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="OTU聚类_OTU表格.html">OTU表格</a></li>
+					<li><a href="OTU聚类_OTU venn分析.html">OTU Venn分析</a></li>
+					<li><a href="OTU聚类_pan-OTU and core-OTU.html">pan-OTU and core-OTU</a></li>
+					<li><a href="OTU聚类_OTU组分图.html">OTU组分图</a></li>
+				</ul>
+			</li>
+			<li class="current"><a href="alpha多样性研究.html" class="link">Alpha多样性研究<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li class="current"><a href="alpha多样性研究_多样性指数多样化展示.html">多样性指数多样化展示</a></li>
+					<li><a href="alpha多样性研究_稀释性曲线.html">稀释性曲线</a></li>
+					<li><a href="alpha多样性研究_Rank-Abundance曲线.html">Rank-AbundanRce曲线</a></li>
+					<li><a href="alpha多样性研究_OTU物种累积曲线.html">OTU物种累积曲线</a></li>
+				</ul>
+			</li>
+			<li><a href="beta多样性研究.html" class="link">beta多样性研究<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="beta多样性研究_距离矩阵及可视化.html">距离矩阵及可视化</a></li>
+					<li><a href="beta多样性研究_多元分析及可视化.html">多元分析及可视化</a></li>
+				</ul>
+			</li>
+			<li><a href="丰度差异分析.html" class="link">丰度差异分析<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="丰度差异分析_丰度差异可视化.html">丰度差异可视化</a></li>
+					<li><a href="丰度差异分析_Ternary三元相图.html">Ternary三元相图</a></li>
+					<li><a href="丰度差异分析_Lesfe分析.html">Lesfe分析</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="main_right">
+		<div class="report_detail">
+			<div class="introduction"><p>多样性指数有很多种，比如用来计算菌群丰度的chao指数，用来计算菌群物种多样性的shannon指数等等（各指数意义见帮助），将各种用来反映物种丰度和多样性的指数制作成表格，再以各种形式的图形象化展现物种丰度和多样性。</p></div>
+			<div class="set_option">
+				<div class="choose_index">
+					<div class="title"><h6>指数类型：</h6><span>(可多选)</span></div>
+					<ul>
+						<li><input type="checkbox" />全选</li><li><input type="checkbox" />chao指数</li><li><input type="checkbox" />shannon指数</li><li><input type="checkbox" />simpson指数</li><li><input type="checkbox" />Ace指数</li><li><input type="checkbox" />evenness指数</li><li><input type="checkbox" />coverage指数</li>
+					</ul>
+				</div>
+				<div class="choose_box">
+					<div class="select_bar">
+						<div class="select_input">
+							<input type="text" value="table" />
+							<a href="" class="r"><i class="arrow arrow_down"></i></a>
+						</div>
+						<div class="popup">
+							<ul class="normal_list">
+								<li><a href=""><span title="源table">源table</span></a></li>
+								<li><a href=""><span title="table1">table1</span><i class="ico ico_edit"></i></a></li>
+								<li><a href=""><span title="table2">table2</span><i class="ico ico_edit"></i></a></li>
+							</ul>
+							<div class="btn_area"><a href="" class="btn btn_red"><i class="ico ico_add"></i>新建</a></div>
+						</div>
+					</div>
+					<div class="select_bar">
+						<div class="select_input">
+							<input type="text" value="level" />
+							<a href="" class="r"><i class="arrow arrow_down"></i></a>
+						</div>
+						<div class="popup">
+							<ul class="normal_list">						
+								<li><a href=""><span title="table1">OTU(默认)</span></a></li>
+								<li><a href=""><span title="种">种</span></a></li>
+								<li><a href=""><span title="属">属</span></a></li>
+								<li><a href=""><span title="科">科</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="select_bar">
+						<div class="select_input">
+							<input type="text" value="分组方案" />
+							<a href="" class="r"><i class="arrow arrow_down"></i></a>
+						</div>
+						<div class="popup">
+							<ul class="normal_list">						
+								<li><a href=""><span title="group1">group1</span><i class="ico ico_edit"></i></a></li>
+								<li><a href=""><span title="group2">group2</span><i class="ico ico_edit"></i></a></li>
+								<li><a href=""><span title="group3">group3</span><i class="ico ico_edit"></i></a></li>
+								<li><a href=""><span title="group4">group4</span><i class="ico ico_edit"></i></a></li>
+							</ul>
+							<div class="btn_area"><a href="" class="btn btn_red"><i class="ico ico_add"></i>新建分组</a></div>
+						</div>
+					</div>
+					<div class="select_bar">
+						<div class="select_input">
+							<input type="text" value="展示方式" />
+							<a href="" class="r"><i class="arrow arrow_down"></i></a>
+						</div>
+						<div class="popup">
+							<ul class="normal_list">						
+								<li><a href=""><span title="group1">指数表</span><i class="ico ico_edit"></i></a></li>
+								<li><a href=""><span title="group2">柱状图</span><i class="ico ico_edit"></i></a></li>
+								<li><a href=""><span title="group3">T检验</span><i class="ico ico_edit"></i></a></li>
+							</ul>
+						</div>
+					</div>					
+				</div>
+				<!-- 选择T检验选项时出现 start -->
+				<div class="choose_index">
+					<div class="title"><h6>请选择T检验组：</h6></div>
+					<ul>
+						<li><input type="checkbox" />Group1</li><li><input type="checkbox" />Group2</li><li><input type="checkbox" />Group3</li>
+					</ul>
+				</div>
+				<!-- 选择T检验选项时出现 end -->
+				<div class="btn_area"><a href="" class="btn btn_blue btn_bigger">确定</a></div>
+			</div>
+			<div class="result_area">
+				<div class="result_title"><h6>结果输出区域</h6></div>
+				<div class="result_contain">
+					<div class="top_act clear"><h3><span class="color_gray">Table名称：</span>源table</h3></div>
+					<div class="table_box">
+						<div class="table_contain">
+							<table class="common_table">
+								<tr><th>样本<i class="arrow arrow_up" title="变为正序"></i></th><th>Shannon指数<i class="arrow arrow_down" title="变为反序"></i></th><th>Simpson指数<i class="arrow arrow_down" title="变为反序"></i></th><th>Chao指数<i class="arrow arrow_down" title="变为反序"></i></th><th>Ace指数<i class="arrow arrow_down" title="变为反序"></i></th><th>evenness<i class="arrow arrow_down" title="变为反序"></i></th><th>Coverage<i class="arrow arrow_down" title="变为反序"></i></th></tr>
+								<tr>
+									<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+								</tr>
+							</table>
+						</div>					
+						<div class="bottom_act clear">
+							<div class="btn_area"><a href="" class="btn">撤销</a><a href="" class="btn btn_green">保存</a><!-- <a href="" class="btn btn_gray disabled">保存</a> --><a href="" class="btn btn_red">下载此表格</a></div>
+						</div>
+					</div>
+					<!-- 客户选择了chao、shannon和evenness三种指数，则默认展示的是chao指数的柱状图 start -->
+					<div class="result_chart clear">
+						<div class="chart_l">
+							<img src="images/example/img_1.png" />
+						</div>
+						<div class="chart_r">
+							<ul class="edit_data">
+								<li><select><option>指数类型</option><option>chao指数</option><option>shannon指数</option><option>evenness指数</option></select></li>
+								<li><select><option>选择颜色方案</option><option>方案一</option><option>方案二</option></select></li>
+							</ul>
+							<div class="btn_area"><a href="" class="btn btn_red">保存图片</a></div>
+						</div>
+					</div>
+					<!-- 客户选择了chao、shannon和evenness三种指数，则默认展示的是chao指数的柱状图 end -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

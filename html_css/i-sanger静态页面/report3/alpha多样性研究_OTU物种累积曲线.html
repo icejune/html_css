@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<link href="style/report.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="js/base.js" type="text/javascript"></script>
+<title>报告_alpha多样性研究_OTU物种累积曲线</title>
+</head>
+<body>
+<div class="top_bar">
+	<div class="logo"><h1>美吉生物</h1><h2>您身边的测序专家</h2></div>
+</div>
+<div class="main">
+	<div class="main_left">
+		<div class="search"><i class="ico ico_search"></i><input type="text" value="搜索" /></div>
+		<ul class="nav">
+			<li class="help"><a href="" class="link"><i class="ico ico_help"></i>帮助</a></li>
+			<li><a href="数据质控.html" class="link">数据质控<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="数据质控_样本信息统计.html">样本信息统计</a></li>
+					<li><a href="数据质控_样本碱基分布.html">样本碱基分布</a></li>
+					<li><a href="数据质控_样本的reads长度分布.html">样本的reads长度分布</a></li>
+				</ul>
+			</li>
+			<li><a href="OTU聚类.html" class="link">OTU聚类<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="OTU聚类_OTU表格.html">OTU表格</a></li>
+					<li><a href="OTU聚类_OTU venn分析.html">OTU Venn分析</a></li>
+					<li><a href="OTU聚类_pan-OTU and core-OTU.html">pan-OTU and core-OTU</a></li>
+					<li><a href="OTU聚类_OTU组分图.html">OTU组分图</a></li>
+				</ul>
+			</li>
+			<li class="current"><a href="alpha多样性研究.html" class="link">Alpha多样性研究<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="alpha多样性研究_多样性指数多样化展示.html">多样性指数多样化展示</a></li>
+					<li><a href="alpha多样性研究_稀释性曲线.html">稀释性曲线</a></li>
+					<li><a href="alpha多样性研究_Rank-Abundance曲线.html">Rank-AbundanRce曲线</a></li>
+					<li class="current"><a href="alpha多样性研究_OTU物种累积曲线.html">OTU物种累积曲线</a></li>
+				</ul>
+			</li>
+			<li><a href="beta多样性研究.html" class="link">beta多样性研究<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="beta多样性研究_距离矩阵及可视化.html">距离矩阵及可视化</a></li>
+					<li><a href="beta多样性研究_多元分析及可视化.html">多元分析及可视化</a></li>
+				</ul>
+			</li>
+			<li><a href="丰度差异分析.html" class="link">丰度差异分析<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="丰度差异分析_丰度差异可视化.html">丰度差异可视化</a></li>
+					<li><a href="丰度差异分析_Ternary三元相图.html">Ternary三元相图</a></li>
+					<li><a href="丰度差异分析_Lesfe分析.html">Lesfe分析</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="main_right">
+		<div class="report_detail">
+			<div class="introduction">
+				<p>物种累积曲线( species accumulation curves)是用于描述随着样品量的加大物种增加的状况，是调查样品的物种组成和预测样品中物种丰度的有效工具，在生物多样性和群落调查中，被广泛用于样品量是否充分的判断以及物种丰富度( species richness) 的估计。因此，通过物种累积曲线不仅可以判断样品量是否充分，在样品量充分的前提下，运用物种累积曲线还可以对物种丰富度进行预测。<br />下图为OTU物种累积曲线示例图：</p>
+				<div class="demo"><img src="images/demo/Alpha-4-1.png" /><p class="demo_num">图4-1</p><div class="tip"><p>注：横坐标：样本量；纵坐标：抽样后OTU数目。结果反映了持续抽样下新OTU（新物种）出现的速率。在一定范围内，随着样本量的加大，若曲线表现为急剧上升则表示群落中有大量物种被发现；当曲线趋于平缓，则表示此环境中的物种并不会随样本量的增加而显著增多。利用物种累积曲线可以作为对样本量是否充分的判断，曲线急剧上升表明样本量不足，需要增加抽样量；反之，则表明抽样充分，可以进行数据分析。</p></div>
+			</div>
+			<div class="set_option">
+				<div class="choose_box">
+					<div class="select_bar">
+						<div class="select_input">
+							<input type="text" value="table" />
+							<a href="" class="r"><i class="arrow arrow_down"></i></a>
+						</div>
+						<div class="popup">
+							<ul class="normal_list">
+								<li><a href=""><span title="源table">源table</span></a></li>
+								<li><a href=""><span title="table1">table1</span><i class="ico ico_edit"></i></a></li>
+								<li><a href=""><span title="table2">table2</span><i class="ico ico_edit"></i></a></li>
+							</ul>
+							<div class="btn_area"><a href="" class="btn btn_red"><i class="ico ico_add"></i>新建</a></div>
+						</div>
+					</div>
+					<div class="select_bar">
+						<div class="select_input">
+							<input type="text" value="level" />
+							<a href="" class="r"><i class="arrow arrow_down"></i></a>
+						</div>
+						<div class="popup">
+							<ul class="normal_list">						
+								<li><a href=""><span title="table1">OTU(默认)</span></a></li>
+								<li><a href=""><span title="种">种</span></a></li>
+								<li><a href=""><span title="属">属</span></a></li>
+								<li><a href=""><span title="科">科</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<a href="" class="btn btn_blue btn_bigger">确定</a>
+				</div>
+			</div>
+			<div class="result_area">
+				<div class="result_title"><h6>结果输出区域</h6></div>
+				<div class="result_contain">
+					<div class="result_chart clear">
+						<div class="chart_l">
+							<img src="images/example/img_1.png" />
+						</div>
+						<div class="chart_r">
+							<ul class="edit_data">
+								<li><select><option>纵坐标</option><option>序列数</option><option>序列数百分含量</option></select></li>
+								<li>
+									<div class="select_bar">
+										<div class="select_input">
+											<input type="text" value="显示" />
+											<a href="" class="r"><i class="arrow arrow_down"></i></a>
+										</div>
+										<div class="popup">
+											<form>
+											<ul class="normal_list multiselect_list">						
+												<li><label><input type="checkbox" />全选</label></li>
+												<li><label><input type="checkbox" />MJ01</label></li>
+												<li><label><input type="checkbox" />MJ02</label></li>
+											</ul>
+											</form>
+										</div>
+									</div>			
+								</li>
+								<li><select><option>选择颜色方案</option><option>方案一</option><option>方案二</option></select></li>
+							</ul>
+							<div class="btn_area"><a href="" class="btn btn_red btn_bigest">保存图片</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

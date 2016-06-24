@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <script charset="utf-8"  type="text/javascript" src="javascript/jquery-2.1.1.min.js"></script>
+    <script charset="utf-8"  type="text/javascript" src="javascript/index.js"></script>
+    <script charset="utf-8"  type="text/javascript" src="javascript/jquery.form.js"></script>
+    <link rel="stylesheet" href="style/index.css">
+    <title>检测人信息页</title>
+</head>
+<body>
+<!--通用头部   开始    -->
+   <div class="header gray">
+        <div class="center clear">
+              <h1 class="logo fl"><a href="#">家基因</a></h1>
+              <ul class="nv clear">
+                  <li><a href="#">首页</a></li>
+                  <li class="current"><a href="#">获取查询码</a></li>
+                  <li><a href="#">示例报告</a></li>
+                  <li><a href="#">应用场景</a></li>
+                  <li><a href="#">平台指南</a></li>
+              </ul>
+              <a class="user" href="#">1861237XXXX</a>
+        </div>
+    </div>
+    
+<!--通用头部   结束    -->
+    
+    
+       
+ <div class="userpage report-manage user clear">
+    <ul class="list">
+        <li><a href="#">报告展示</a></li>
+        <li class="current"><a href="#">检测人信息</a></li>
+        <li><a href="#">站内信</a></li>
+    </ul>
+    <div class="cont">
+            <div class="top">
+                 <select name="" id="">
+                     <option value="">选择报告</option>
+                 </select>
+            </div>
+
+                   <div class="user-info">
+                           <h2>为了享受更详细的服务，请您填写全受检者个人信息</h2>
+                            <table border="0" cellpadding="0"cellspacing="0">
+                                    <tr>
+                                        <td>
+                                               <p class="clear">
+                                                       <span>检测人姓：</span>
+                                                       <span class="sel-d clear">
+                                                              <input type="text" size="13" name="user[]" form="user_info"/>
+                                                              <input type="hidden" name="info-protect[]"  value="0" form="user_info" class="info-protect"/>
+                                                              <a href="javascript:;" class="btn">隐私设置</a>
+                                                               <label class="menu">
+                                                                   <i data="0">公开</i>
+                                                                   <i data="1">保密</i>
+                                                               </label>
+                                                       </span>
+                                                </p>
+                                                <p class="clear"><span>检测人名：</span>
+                                                       <span class="sel-d clear">
+                                                              <input type="text" size="13" name="user[]" form="user_info"/>
+                                                              <input type="hidden" name="info-protect[]"  value="0" form="user_info" class="info-protect"/>
+                                                              <a href="javascript:;" class="btn">隐私设置</a>
+                                                               <label class="menu">
+                                                                   <i data="0">公开</i>
+                                                                   <i data="1">保密</i>
+                                                               </label>
+                                                       </span>
+                                                </p>
+                                                <p class="clear"><span>检测人生日：</span>
+                                                       <span class="sel-d clear">
+                                                              <input type="text" size="13" name="user[]" form="user_info"/>
+                                                              <input type="hidden" name="info-protect[]"  value="0" form="user_info" class="info-protect"/>
+                                                              <a href="javascript:;" class="btn">隐私设置</a>
+                                                               <label class="menu">
+                                                                   <i data="0">公开</i>
+                                                                   <i data="1">保密</i>
+                                                               </label>
+                                                       </span>
+                                                </p>
+                                                <p class="clear"><span>籍   贯：</span>
+                                                       <span class="sel-d clear">
+                                                              <input type="text" size="13" name="user[]" form="user_info"/>
+                                                              <input type="hidden" name="info-protect[]"  value="0" form="user_info" class="info-protect"/>
+                                                              <a href="javascript:;" class="btn">隐私设置</a>
+                                                               <label class="menu">
+                                                                   <i data="0">公开</i>
+                                                                   <i data="1">保密</i>
+                                                               </label>
+                                                       </span>
+                                                </p>
+                                                <p class="clear"><span>手   机：</span>
+                                                       <span class="sel-d clear">
+                                                              <input type="text" size="13" name="user[]" form="user_info"/>
+                                                              <input type="hidden" name="info-protect[]"  value="0" form="user_info" class="info-protect"/>
+                                                              <a href="javascript:;" class="btn">隐私设置</a>
+                                                               <label class="menu">
+                                                                   <i data="0">公开</i>
+                                                                   <i data="1">保密</i>
+                                                               </label>
+                                                       </span>
+                                                </p>
+                                        </td>
+                                        <td>
+                                                <p class="clear"><span>上传头像：</span>
+                                                       <span class="sel-d clear">
+                                                              <input type="hidden" name="info-protect[]"  value="0" form="user_info" class="info-protect"/>
+                                                              <a href="javascript:;" class="btn">隐私设置</a>
+                                                               <label class="menu">
+                                                                   <i data="0">公开</i>
+                                                                   <i data="1">保密</i>
+                                                               </label>
+                                                       </span>
+                                                </p>
+                                               
+                                                    <div class="upload-img">
+                                                        浏览上传
+                                                      <form action=""><input type="file" name="upload" class="upload"></form>
+                                                    </div>
+                                  
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                           <form action="#" id="user_info">
+                                                <button>保存</button>
+                                           </form>
+                                        </td>
+                                    </tr>
+                            </table>
+                   </div>
+
+    </div>
+ </div>                                 
+                                       
+ <script>
+$(".upload-img .upload").change(function(){
+    $(this).parent().ajaxSubmit({
+        type:'post',
+        success:function(){
+            
+        }
+    });
+});    
+</script>        
+
+      
+                                        
+<!--通用页脚   结束    -->                           
+<div class="footer">
+    <div class="center">Copyright © 2004-2015 美吉Majorbio.com 版权所有</div>
+</div>                
+
+</body>
+</html>

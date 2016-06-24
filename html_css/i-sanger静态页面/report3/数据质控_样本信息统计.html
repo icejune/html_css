@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<link href="style/report.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="js/base.js" type="text/javascript"></script>
+<title>报告_数据质控_样本信息统计</title>
+</head>
+<body>
+<div class="top_bar">
+	<div class="logo"><h1>美吉生物</h1><h2>您身边的测序专家</h2></div>
+</div>
+<div class="main">
+	<div class="main_left">
+		<div class="search"><i class="ico ico_search"></i><input type="text" value="搜索" /></div>
+		<ul class="nav">
+			<li class="help"><a href="" class="link"><i class="ico ico_help"></i>帮助</a></li>
+			<li class="current"><a href="数据质控.html" class="link">数据质控<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li class="current"><a href="数据质控_样本信息统计.html">样本信息统计</a></li>
+					<li><a href="数据质控_样本碱基分布.html">样本碱基分布</a></li>
+					<li><a href="数据质控_样本的reads长度分布.html">样本的reads长度分布</a></li>
+				</ul>
+			</li>
+			<li><a href="OTU聚类.html" class="link">OTU聚类<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="OTU聚类_OTU表格.html">OTU表格</a></li>
+					<li><a href="OTU聚类_OTU venn分析.html">OTU Venn分析</a></li>
+					<li><a href="OTU聚类_pan-OTU and core-OTU.html">pan-OTU and core-OTU</a></li>
+					<li><a href="OTU聚类_OTU组分图.html">OTU组分图</a></li>
+				</ul>
+			</li>
+			<li><a href="alpha多样性研究.html" class="link">Alpha多样性研究<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="alpha多样性研究_多样性指数多样化展示.html">多样性指数多样化展示</a></li>
+					<li><a href="alpha多样性研究_稀释性曲线.html">稀释性曲线</a></li>
+					<li><a href="alpha多样性研究_Rank-Abundance曲线.html">Rank-AbundanRce曲线</a></li>
+					<li><a href="alpha多样性研究_OTU物种累积曲线.html">OTU物种累积曲线</a></li>
+				</ul>
+			</li>
+			<li><a href="beta多样性研究.html" class="link">beta多样性研究<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="beta多样性研究_距离矩阵及可视化.html">距离矩阵及可视化</a></li>
+					<li><a href="beta多样性研究_多元分析及可视化.html">多元分析及可视化</a></li>
+				</ul>
+			</li>
+			<li><a href="丰度差异分析.html" class="link">丰度差异分析<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="丰度差异分析_丰度差异可视化.html">丰度差异可视化</a></li>
+					<li><a href="丰度差异分析_Ternary三元相图.html">Ternary三元相图</a></li>
+					<li><a href="丰度差异分析_Lesfe分析.html">Lesfe分析</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="main_right">
+		<div class="report_detail">
+			<div class="result_area">
+				<div class="result_title"><h6>样本信息统计</h6></div>
+				<div class="result_contain">
+					<div class="top_act clear"><h3><span class="color_gray">Table名称：</span>样本信息总览表</h3><div class="btn_area"><a href="" class="act_border"><em class="arrow arrow_up"><i></i></em>收起表格<!-- <em class="arrow arrow_down"><i></i></em>展开表格 --></a></div></div>
+					<div class="table_box">
+						<div class="table_contain">
+							<table class="common_table">
+								<tr><th>测序平台</th><th>测序区域</th><th>样本来源</th><th>样本数目</th><th>合同测序量</th><th>实际测序量</th></tr>
+								<tr>
+									<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="result_contain">
+					<div class="top_act clear"><h3><span class="color_gray">Table名称：</span>样本信息统计表</h3><div class="btn_area"><a href="" class="act_border"><em class="arrow arrow_up"><i></i></em>收起表格<!-- <em class="arrow arrow_down"><i></i></em>展开表格 --></a></div></div>
+					<div class="table_box">
+						<div class="table_contain">
+							<table class="common_table">
+								<tr><th>&nbsp;</th><th>reads数<i title="变为反序" class="arrow arrow_down"></i><!-- <i title="变为正序" class="arrow arrow_up"></i> --></th><th>碱基数<i title="变为反序" class="arrow arrow_down"></i><!-- <i title="变为正序" class="arrow arrow_up"></i> --></th><th>平均长度<i title="变为反序" class="arrow arrow_down"></i><!-- <i title="变为正序" class="arrow arrow_up"></i> --></th><th>最短序列长度<i title="变为反序" class="arrow arrow_down"></i><!-- <i title="变为正序" class="arrow arrow_up"></i> --></th><th>最长序列长度<i title="变为反序" class="arrow arrow_down"></i><!-- <i title="变为正序" class="arrow arrow_up"></i> --></th><th width="40">操作<i title="变为反序" class="arrow arrow_down"></i><!-- <i title="变为正序" class="arrow arrow_up"></i> --></th></tr>
+								<tr>
+									<td>样本1</td><td>2000</td><td>230000</td><td>260</td><td>200</td><td>280</td><td><div class="act_area"><a href="" class="act_border" title="下载该样本的序列"><i class="ico ico_download_black"></i></a></div></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+</div>
+</body>
+</html>

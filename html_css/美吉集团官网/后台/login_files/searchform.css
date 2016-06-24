@@ -1,0 +1,111 @@
+@CHARSET "UTF-8";
+#boss-content{
+	padding: 0px 20px 20px 20px
+}
+#boss-content .search-form{
+	padding: 0 5px ;
+	margin : 0px;
+	background-color: #FBFBFB;
+}
+
+#boss-content .grid-view {
+	padding: 5px 0;
+}
+.clr {
+	clear: both;
+	overflow: hidden;
+	height: 0;
+}
+.flt {
+	clear:left;
+	float:left;
+	padding:0 10px;
+}
+.frt {
+	clear:right;
+	float:right;
+	padding:0 10px;
+}
+
+div.form fieldset.searchform {
+	border: 1px #ccc solid;
+	padding: 5px;
+	text-align: left;
+	background-color: #F4F4F4;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin: 5px;
+	overflow: hidden;
+	float: left;
+	width:98%;
+}
+
+div.form .searchform input.disabled {
+	background-color: #F0F0F0;
+}
+
+div.form .searchform input.button {
+	cursor: pointer;
+}
+
+div.form .searchform input:focus,
+div.form .searchform select:focus,
+div.form .searchform textarea:focus {
+	background-color: #ffd;
+}
+
+div.form fieldset.searchform label{
+	float: left;
+	clear: left;
+	display:block;
+	margin: 5px 0;
+	font-size: 1em;
+	width: 80px;
+	min-width: 100px;
+	padding: 0 10px 0 0;
+}
+
+div.search-form input,
+div.search-form textarea,
+div.search-form select,
+div.search-form img,
+div.search-form button {
+	float: left;
+	width: auto;
+	font-size: 0.909em;
+	border: 1px solid silver;
+	background: #fff;
+	margin: 5px 5px 5px 0px;
+}
+div.yy.a button,
+div.yy.a input.btn,
+div.search-form .search-form-opt input.button,
+div.search-form .search-form-opt button {
+	border: 1px solid ;
+	min-width: 50px;
+	min-height: 25px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+div.form fieldset.searchform fieldset{
+	width:350px; border: 0; float: left; padding: 0; margin: 0 30px 5px 0;
+}
+div.form fieldset.searchform fieldset div.btnl label{
+	width: 60px;
+	min-width: 40px;
+	padding-left: 5px;
+	padding-right: 10px;
+	float: left;
+	clear: none;
+	display: inline;
+	text-align: left;
+}
+div.search-form .search-form-opt{
+	text-align: right;
+}
+.summary{
+	float: left;
+}

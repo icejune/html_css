@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<script src="https://code.jquery.com/jquery-2.1.3.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(bannerSlide);
+function bannerSlide() {
+	var banner = $('.banner'), // 外围banner
+		slideHandels = banner.find('.slide_list li'), // 下面点
+		max = slideHandels.length - 1, // 长度,数组是从0开始的
+		bgBanner = banner.find('.banner_img'), // 大banner背景图
+		count = 0, // 坐标
+		setInterval_time = 4000,
+		imgArr = ['images/banner_1.jpg','images/banner_2.jpg','images/banner_3.jpg','images/banner_4.jpg'],
+		setInter_elem; // 用于保存setInterval返回的id
+
+	if(!banner.length) return;
+
+	// 初始化
+	init();		
+
+	function init() {
+		preImg(); // 预加载大图片
+
+		// 去掉a里的默认事件
+		banner.find('a').click(function(e) {
+			e.preventDefault()
+		});
+
+		// 设置时间调用
+		// setInterval第一个函数最好用匿名函数
+		// 因为他会挂在全局，很有可以会跟别的重名而造成问题
+		setInter_elem = setInterval(function() {
+			imgChange();
+		}, setInterval_time);
+
+		// 点绑定事件
+		handlesEvent();
+
+		// 初始化时从第一个开始
+		slideHandels.first().click();
+	}
+
+	// 预加载大图片
+	function preImg() {
+		var i = 0,
+			img;
+		for( ; i < max; i++) {
+			img = new Image();
+			img.src = imgArr[i];
+		};
+	};		
+	// handles添加事件
+	function handlesEvent() {
+		slideHandels.click(function() {
+			var self = $(this);  
+			if(self.hasClass('current')) return ;
+			count = self.index();
+			--count;
+			imgChange();
+		})
+	}
+	// 图片切换
+	function imgChange() {
+		count ++;
+		if(count > max) { // 超过最大值则设置为第一个
+			count = 0;
+		};
+		bgBanner.css('background-image','url(' + imgArr[count] + ')');
+		slideHandels.removeClass('current').eq(count).addClass('current');
+	};
+	//鼠标移上去图片停止轮播
+	bgBanner.hover(
+		function(){
+			clearInterval(setInter_elem)
+		}, 
+		function(){
+			setInter_elem=setInterval(function(){imgChange()},setInterval_time);
+		}
+	);
+}			
+</script>
+<style type="text/css">
+*{margin: 0;padding: 0;}
+ul li{list-style: none;}
+a{color:#00a4ed;text-decoration:none;}
+a:hover{color:#579d1e;}
+body{text-align:center;background:#fff;font:12px/20px Microsoft YaHei,Arial,Helvetica,sans-serif;color:#333;}
+.banner{position:relative;width:100%;height:500px;}
+.banner_img{display:block;width:100%;height:500px;background-repeat:no-repeat;background-position:50% 50%;}
+.slide_list{position:absolute;left:50%;bottom:10px;margin-left:-48px;z-index:500;}
+.slide_list li{-moz-inline-stack;display:inline-block;*display:inline;*zoom:1;margin:0 5px;}
+.slide_list li a{border:1px solid #000;border-radius:50%;display:inline-block;width:13px;height:13px;transition:all 0.5s ease-out 0s;}
+.slide_list li.current a{background-color:#000;}
+</style>
+<title>banner轮播图</title>
+</head>
+<body>
+<div class="banner">
+	<a href="" class="banner_img"></a>
+	<ul class="slide_list">
+		<li><a href=""></a></li>
+		<li><a href=""></a></li>
+		<li><a href=""></a></li>
+		<li><a href=""></a></li>
+	</ul>
+</div>
+</body>
+</html>

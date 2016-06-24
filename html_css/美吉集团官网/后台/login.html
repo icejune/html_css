@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="language" content="zh-CN">
+
+	<!-- blueprint CSS framework -->
+	<link rel="stylesheet" type="text/css" href="login_files/screen.css" media="screen, projection">
+	<link rel="stylesheet" type="text/css" href="login_files/print.css" media="print">
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="/css/admin/ie.css" media="screen, projection" />
+	<![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="login_files/main.css">
+	<link rel="stylesheet" type="text/css" href="login_files/form.css">
+	<link rel="stylesheet" type="text/css" href="login_files/searchform.css">
+
+	<link rel="stylesheet" type="text/css" href="login_files/mbmenu.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="login_files/new_add.css" media="screen">
+<script type="text/javascript" src="login_files/jquery.js"></script>
+<script type="text/javascript" src="login_files/jquery_002.js"></script>
+<title>美吉生物管理系统 - 登录</title>
+</head>
+<body class="passport">
+	<div class="passport_main">
+		<i class="ico_zs1"></i>
+		<div class="welcome">
+			<h2>欢迎进入<strong>美吉生物管理系统</strong><i class="ico_zs2"></i></h2>
+
+		</div>
+		<div class="wide form">
+			<form id="login-form" action="/admin.php/mjmanage/system/login.html" method="post">
+				<div class="row success">
+					<label for="LoginForm_username" class="required">登录用户名 <span class="required">*</span></label>		<input value="admin" name="LoginForm[username]" id="LoginForm_username" type="text">		<div class="errorMessage" id="LoginForm_username_em_" style="display:none"></div>	</div>
+
+				<div class="row success">
+					<label for="LoginForm_password" class="required">密码 <span class="required">*</span></label>		<input name="LoginForm[password]" id="LoginForm_password" type="password">		<div class="errorMessage" id="LoginForm_password_em_" style="display:none"></div>		<p class="hint">
+						注意：用户名和密码都是区分大小写的。
+					</p>
+				</div>
+					<div class="row">
+					<label style="vertical-align:middle" for="LoginForm_verifyCode" class="required">验证码 <span class="required">*</span></label>		<input style="width:100px;vertical-align:middle" name="LoginForm[verifyCode]" id="LoginForm_verifyCode" type="text">		<img alt="点击换图" title="点击换图" style="cursor:pointer;vertical-align:middle" id="yw0" src="login_files/551e5b4a292ee.png">		<div class="errorMessage" id="LoginForm_verifyCode_em_" style="display:none"></div>	</div>
+					
+				
+				
+				<div class="row buttons">
+					<input name="yt0" value="登录" type="submit">	</div>
+
+			</form>
+		</div><!-- form -->
+	</div>
+</body></html>

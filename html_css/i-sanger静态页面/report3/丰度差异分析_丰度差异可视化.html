@@ -1,0 +1,556 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<link href="style/report.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="js/base.js" type="text/javascript"></script>
+<title>报告_丰度差异分析_丰度差异可视化</title>
+</head>
+<body>
+<div class="top_bar">
+	<div class="logo"><h1>美吉生物</h1><h2>您身边的测序专家</h2></div>
+</div>
+<div class="main">
+	<div class="main_left">
+		<div class="search"><i class="ico ico_search"></i><input type="text" value="搜索" /></div>
+		<ul class="nav">
+			<li class="help"><a href="" class="link"><i class="ico ico_help"></i>帮助</a></li>
+			<li><a href="数据质控.html" class="link">数据质控<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="数据质控_样本信息统计.html">样本信息统计</a></li>
+					<li><a href="数据质控_样本碱基分布.html">样本碱基分布</a></li>
+					<li><a href="数据质控_样本的reads长度分布.html">样本的reads长度分布</a></li>
+				</ul>
+			</li>
+			<li><a href="OTU聚类.html" class="link">OTU聚类<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="OTU聚类_OTU表格.html">OTU表格</a></li>
+					<li><a href="OTU聚类_OTU venn分析.html">OTU Venn分析</a></li>
+					<li><a href="OTU聚类_pan-OTU and core-OTU.html">pan-OTU and core-OTU</a></li>
+					<li><a href="OTU聚类_OTU组分图.html">OTU组分图</a></li>
+				</ul>
+			</li>
+			<li><a href="alpha多样性研究.html" class="link">Alpha多样性研究<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="alpha多样性研究_多样性指数多样化展示.html">多样性指数多样化展示</a></li>
+					<li><a href="alpha多样性研究_稀释性曲线.html">稀释性曲线</a></li>
+					<li><a href="alpha多样性研究_Rank-Abundance曲线.html">Rank-AbundanRce曲线</a></li>
+					<li><a href="alpha多样性研究_OTU物种累积曲线.html">OTU物种累积曲线</a></li>
+				</ul>
+			</li>
+			<li><a href="beta多样性研究.html" class="link">beta多样性研究<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="beta多样性研究_距离矩阵及可视化.html">距离矩阵及可视化</a></li>
+					<li><a href="beta多样性研究_多元分析及可视化.html">多元分析及可视化</a></li>
+				</ul>
+			</li>
+			<li class="current"><a href="丰度差异分析.html" class="link">丰度差异分析<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li class="current"><a href="丰度差异分析_丰度差异可视化.html">丰度差异可视化</a></li>
+					<li><a href="丰度差异分析_Ternary三元相图.html">Ternary三元相图</a></li>
+					<li><a href="丰度差异分析_Lesfe分析.html">Lesfe分析</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="main_right">
+		<div class="report_detail">
+			<div class="switch">
+				<div class="filter_option">
+					<div class="filter_option_tab clear">
+						<ul class="tab">
+							<li class="current"><a href="">multiple groups</a></li>
+							<li><a href="">two groups</a></li>
+							<li><a href="">two samples</a></li>
+						</ul>
+					</div>
+					<div class="filter_option_contain">
+						<ul class="edit_data list_style1 clear">
+							<li>
+								<div class="w_1">method option：</div>
+								<div class="w_2">
+									<div class="select_bar">
+										<div class="select_input">
+											<input type="text" value="请选择">
+											<a class="r" href=""><i class="arrow arrow_down"></i></a>
+										</div>
+										<div class="popup">
+											<ul class="normal_list">						
+												<li><a href=""><span title="one-way ANOVA">one-way ANOVA</span><i class="ico ico_info"></i></a></li>
+												<li><a href=""><span title="Kruskal-Wallis H-test">Kruskal-Wallis H-test</span><i class="ico ico_info"></i></a></li>
+												<li><a href=""><span title="Ternary三元相图">Ternary三元相图</span><i class="ico ico_info"></i></a></li>
+												<li><a href=""><span title="Lesfe分析">Lesfe分析</span><i class="ico ico_info"></i></a></li>
+											</ul>
+										</div>
+									</div>
+									<strong class="required">*</strong>
+								</div>
+							</li>
+							<li class="long">
+								<div class="w_1">Post-hoc test：</div>
+								<div class="w_2">
+									<select><option>Games-Howell</option><option>Scheffe</option><option>Tukey-Kranmer</option><option>	Welch’s (uncorrected)</option></select>
+									<select><option>0.90</option><option>0.90</option><option>0.95</option><option>0.98</option><option>0.99</option><option>0.999</option></select>
+									<i class="ico ico_info"></i>
+								</div>
+							</li>
+							<li>
+								<div class="w_1">group option：</div>
+								<div class="w_2">
+									<div class="select_bar">
+										<div class="select_input">
+											<input type="text" value="请选择">
+											<a class="r" href=""><i class="arrow arrow_down"></i></a>
+										</div>
+										<div class="popup">
+											<ul class="normal_list">						
+												<li><a href=""><span title="group1">group1</span><i class="ico ico_edit"></i></a></li>
+												<li><a href=""><span title="group2">group2</span><i class="ico ico_edit"></i></a></li>
+												<li><a href=""><span title="group3">group3</span><i class="ico ico_edit"></i></a></li>
+												<li><a href=""><span title="group4">group4</span><i class="ico ico_edit"></i></a></li>
+											</ul>
+											<div class="btn_area"><a class="btn btn_red" href=""><i class="ico ico_add"></i>新建分组</a></div>
+										</div>
+									</div>
+									<strong class="required">*</strong>
+								</div>
+							</li>
+							<li class="long">
+								<div class="w_1">Multiple test correction：</div>
+								<div class="w_2">
+									<select><option>Benjamini-Hochberg FDR</option><option>Bonferroni</option><option>No correction</option><option>Sidak</option><option>Storey’s FDR</option></select>
+									<i class="ico ico_info"></i>
+								</div>
+							</li>
+						</ul>
+						<div class="btn_area"><a class="btn btn_blue btn_bigger" href="">确定</a></div>					
+					</div>
+					<!-- 以下切换到选项卡：two groups start -->
+					<div class="filter_option_contain">
+						<ul class="edit_data list_style1 clear">
+							<li>
+								<div class="w_1">method option：</div>
+								<div class="w_2">
+									<div class="select_bar">
+										<div class="select_input">
+											<input type="text" value="请选择">
+											<a class="r" href=""><i class="arrow arrow_down"></i></a>
+										</div>
+										<div class="popup">
+											<ul class="normal_list">						
+												<li><a href=""><span title="non-parametric t-test(metastat)">non-parametric t-test(metastat)</span><i class="ico ico_info"></i></a></li>
+												<li><a href=""><span title="Student’s t-test(equal variance)">Student’s t-test(equal variance)</span><i class="ico ico_info"></i></a></li>
+												<li><a href=""><span title="Welch’s t-test(unknow variance)">Welch’s t-test(unknow variance)</span><i class="ico ico_info"></i></a></li>
+												<li><a href=""><span title="Mann-Whitney U test or Wilcoxon rank-sum test">Mann-Whitney U test or Wilcoxon rank-sum test</span><i class="ico ico_info"></i></a></li>
+												<li><a href=""><span title="Lesfe分析">Lesfe分析</span><i class="ico ico_info"></i></a></li>
+											</ul>
+										</div>
+									</div>
+									<strong class="required">*</strong>
+								</div>
+							</li>
+							<li class="long">
+								<div class="w_1">type：</div>
+								<div class="w_2"><select><option>One-sided</option><option>Two-sided</option></select></div>
+							</li>
+							<li>
+								<div class="w_1">group option：</div>
+								<div class="w_2">
+									<div class="select_bar">
+										<div class="select_input">
+											<input type="text" value="请选择">
+											<a class="r" href=""><i class="arrow arrow_down"></i></a>
+										</div>
+										<div class="popup">
+											<ul class="normal_list">						
+												<li><a href=""><span title="group1">group1</span><i class="ico ico_edit"></i></a></li>
+												<li><a href=""><span title="group2">group2</span><i class="ico ico_edit"></i></a></li>
+												<li><a href=""><span title="group3">group3</span><i class="ico ico_edit"></i></a></li>
+												<li><a href=""><span title="group4">group4</span><i class="ico ico_edit"></i></a></li>
+											</ul>
+											<div class="btn_area"><a class="btn btn_red" href=""><i class="ico ico_add"></i>新建分组</a></div>
+										</div>
+									</div>
+									<strong class="required">*</strong>
+								</div>
+							</li>
+							<li class="long">
+								<div class="w_1">Mutiple test correction：</div>
+								<div class="w_2"><select><option>Benjamini-Hochberg FDR</option><option>Bonferroni</option><option>Sidak</option><option>Storey’s FDR</option><option>No correction</option></select></div>
+							</li>
+						</ul>
+						<div class="btn_area"><a class="btn btn_blue btn_bigger" href="">确定</a></div>					
+					</div>
+					<!-- 以上切换到选项卡：two groups end -->
+					<!-- 以下切换到选项卡：two sample start -->
+					<div class="filter_option_contain">
+						<ul class="edit_data list_style2 clear">
+							<li>
+								<div class="w_1">method option：</div>
+								<div class="w_2">
+									<div class="select_bar">
+										<div class="select_input">
+											<input type="text" value="请选择">
+											<a class="r" href=""><i class="arrow arrow_down"></i></a>
+										</div>
+										<div class="popup">
+											<ul class="normal_list">						
+												<li><a href=""><span title="chi-square test">chi-square test</span><i class="ico ico_info"></i></a></li>
+												<li><a href=""><span title="Fisher’exact test">Fisher’exact test</span><i class="ico ico_info"></i></a></li>
+											</ul>
+										</div>
+									</div>
+									<strong class="required">*</strong>
+								</div>
+							</li>
+							<li class="long">
+								<div class="w_1">type：</div>
+								<div class="w_2"><select><option>One-sided</option><option>Two-sided</option></select><strong class="required">*</strong></div>
+							</li>
+							<li>
+								<div class="w_1">Post-hoc test：</div>
+								<div class="w_2">
+									<select><option>Games-Howell</option><option>Scheffe</option><option>Tukey-Kranmer</option><option>	Welch’s (uncorrected)</option></select>
+									<select><option>0.90</option><option>0.90</option><option>0.95</option><option>0.98</option><option>0.99</option><option>0.999</option></select>								
+								</div>
+							</li>
+							<li class="long">
+								<div class="w_1">Mutiple test correction：</div>
+								<div class="w_2"><select><option>Benjamini-Hochberg FDR</option><option>Bonferroni</option><option>Sidak</option><option>Storey’s FDR</option><option>No correction</option></select><i class="ico ico_info"></i></div>
+							</li>
+							<li>
+								<div class="w_1">Sample 1：</div>
+								<div class="w_2">
+									<div class="find_item"><input type="text" value="输入名称"><div class="popup"><ul class="normal_list"><li><a href="">名称1</a></li><li><a href="">名称2</a></li><li><a href="">名称3</a></li></ul></div></div>
+								</div>
+							</li>
+							<li class="long">
+								<div class="w_1">Sample 1：</div>
+								<div class="w_2">
+									<div class="find_item"><input type="text" value="输入名称"><div class="popup"><ul class="normal_list"><li><a href="">名称1</a></li><li><a href="">名称2</a></li><li><a href="">名称3</a></li></ul></div></div>
+								</div>
+							</li>
+						</ul>
+						<div class="btn_area"><a class="btn btn_blue btn_bigger" href="">确定</a></div>					
+					</div>
+					<!-- 以上切换到选项卡：two sample end -->
+				</div>
+				<div class="switch_contain">					
+					<div class="result_area">
+						<div class="result_title"><h6>结果输出区域</h6></div>
+						<div class="result_contain">
+							<div class="top_act clear"><h3><span class="color_gray">Table名称：</span>多组样品分析结果数据表_未命名</h3><div class="btn_area"><a href="" class="act_border"><em class="arrow arrow_up"><i></i></em>收起表格<!-- <em class="arrow arrow_down"><i></i></em>展开表格 --></a></div></div>
+							<div class="table_box">
+								<div class="table_contain">
+									<table class="common_table">
+									  <tr>
+									  	<th>Feature<i title="变为反序" class="arrow arrow_down"></i><!-- <i title="变为正序" class="arrow arrow_up"></i> --></th>
+									    <th>Eta-squared</th>
+									    <th>p-value</th>
+									    <th>Corrected p-value</th>
+									  </tr>
+									  <tr>
+									    <td>g_Acidiphilium</td>
+									    <td>-307.448</td>
+									    <td>107.1212</td>
+									    <td>-12.212</td>
+									  </tr>
+									  <tr>
+									    <td>g_Acidithiobacillus</td>
+									    <td>-307.448</td>
+									    <td>107.1212</td>
+									    <td>-12.212</td>
+									  </tr>
+									  <tr>
+									    <td>g_Acidovorax</td>
+									    <td>-307.448</td>
+									    <td>107.1212</td>
+									    <td>-12.212</td>
+									  </tr>
+									  <tr>
+									    <td>Acinetobacter</td>
+									    <td>-307.448</td>
+									    <td>107.1212</td>
+									    <td>-12.212</td>
+									  </tr>
+									  <tr>
+									    <td>Actinotalea</td>
+									    <td>-307.448</td>
+									    <td>107.1212</td>
+									    <td>-12.212</td>
+									  </tr>
+									</table>
+								</div>
+								<div class="bottom_act clear">
+									<div class="btn_area"><a href="" class="btn">撤销</a><a href="" class="btn btn_green">保存</a><!-- <a href="" class="btn btn_gray disabled">保存</a> --><a href="" class="btn btn_red">下载此表格</a></div>
+								</div>
+							</div>
+							<div class="result_chart clear">
+								<div class="chart_l">
+									<img src="images/example/img_12.png" />
+								</div>
+								<div class="chart_r">
+									<ul class="edit_data">
+										<li><select><option>-显示方式-</option><option>Bar plot</option><option>Box plot</option><option>Post-hoc plot</option></select></li>
+										<li><select><option>选择颜色方案</option><option>方案一</option><option>方案二</option></select></li>
+									</ul>
+									<div class="btn_area"><a href="" class="btn btn_red">保存图片</a></div>
+								</div>
+							</div>
+							<!-- select中选中Bar plot切换图片及参数  start -->
+							<div class="result_chart clear">
+								<div class="chart_l">
+									<img src="images/example/img_13.png" />									
+									<!-- 复选框选中情况下图片变换  start -->
+									<img src="images/example/img_14.png" />
+									<!-- 复选框选中情况下图片变换  end -->
+								</div>
+								<div class="chart_r">
+									<ul class="edit_data">
+										<li><select><option>-显示方式-</option><option>Bar plot</option><option>Box plot</option><option>Post-hoc plot</option></select></li>
+										<li><select><option>选择颜色方案</option><option>方案一</option><option>方案二</option></select></li>
+										<li><input type="checkbox" />Show average of each group</li>
+									</ul>
+									<div class="btn_area"><a href="" class="btn btn_red">保存图片</a></div>
+								</div>
+							</div>
+							<!-- select中选中Bar plot切换图片及参数  end -->
+						</div>						
+					</div>
+				</div>
+				<!-- 以下切换到选项卡two groups下的内容 start-->
+				<div class="switch_contain">
+					<div class="set_option special_option">
+						<div class="choose_box">
+							<ul class="edit_data">
+								<li><div class="w_1">样品分组：</div>
+									<div class="w_2">
+										<div class="select_bar">
+											<div class="select_input">
+												<input type="text" value="请选择" />
+												<a href="" class="r"><i class="arrow arrow_down"></i></a>
+											</div>
+											<div class="popup">
+												<ul class="normal_list">						
+													<li><a href=""><span title="group1">group1</span><i class="ico ico_edit"></i></a></li>
+													<li><a href=""><span title="group2">group2</span></span><i class="ico ico_edit"></i></a></li>
+													<li><a href=""><span title="group3">group3</span><i class="ico ico_edit"></i></a></li>
+													<li><a href=""><span title="group4">group4</span><i class="ico ico_edit"></i></a></li>
+												</ul>
+												<div class="btn_area"><a href="" class="btn btn_red"><i class="ico ico_add"></i>新建分组</a></div>
+											</div>
+										</div>
+										<div class="group_division">
+											<label><input type="checkbox" />组A</label>
+											<label><input type="checkbox" />组B</label>
+											<label><input type="checkbox" />组C</label>
+											<label><input type="checkbox" />组D</label>
+											<label><input type="checkbox" />组E</label>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="btn_area"><a class="btn btn_blue btn_bigger" href="">确定</a></div>
+						</div>
+					</div>
+					<div class="result_area">
+						<div class="result_title"><h6>结果输出区域</h6></div>
+						<div class="result_contain">
+							<div class="top_act clear"><h3><span class="color_gray">Table名称：</span>多组样品分析结果数据表_未命名</h3><div class="btn_area"><a href="" class="act_border"><em class="arrow arrow_up"><i></i></em>收起表格<!-- <em class="arrow arrow_down"><i></i></em>展开表格 --></a></div></div>
+							<div class="table_box">
+								<div class="table_contain">
+									<table class="common_table">
+									  <tr>
+									  	<th>Feature<i title="变为反序" class="arrow arrow_down"></i><!-- <i title="变为正序" class="arrow arrow_up"></i> --></th>
+									    <th>Eta-squared</th>
+									    <th>p-value</th>
+									    <th>Corrected p-value</th>
+									  </tr>
+									  <tr>
+									    <td>g_Acidiphilium</td>
+									    <td>-307.448</td>
+									    <td>107.1212</td>
+									    <td>-12.212</td>
+									  </tr>
+									  <tr>
+									    <td>g_Acidithiobacillus</td>
+									    <td>-307.448</td>
+									    <td>107.1212</td>
+									    <td>-12.212</td>
+									  </tr>
+									  <tr>
+									    <td>g_Acidovorax</td>
+									    <td>-307.448</td>
+									    <td>107.1212</td>
+									    <td>-12.212</td>
+									  </tr>
+									  <tr>
+									    <td>Acinetobacter</td>
+									    <td>-307.448</td>
+									    <td>107.1212</td>
+									    <td>-12.212</td>
+									  </tr>
+									  <tr>
+									    <td>Actinotalea</td>
+									    <td>-307.448</td>
+									    <td>107.1212</td>
+									    <td>-12.212</td>
+									  </tr>
+									</table>
+								</div>
+								<div class="bottom_act clear">
+									<div class="btn_area"><a href="" class="btn">撤销</a><a href="" class="btn btn_green">保存</a><!-- <a href="" class="btn btn_gray disabled">保存</a> --><a href="" class="btn btn_red">下载此表格</a></div>
+								</div>
+							</div>
+							<div class="result_chart clear">
+								<div class="chart_l">
+									<img src="images/example/img_15.png" />
+								</div>
+								<div class="chart_r">
+									<ul class="edit_data">
+										<li><select><option>-显示方式-</option><option>Bar plot</option><option>Box plot</option><option>Post-hoc plot</option></select></li>
+										<li><select><option>选择颜色方案</option><option>方案一</option><option>方案二</option></select></li>
+									</ul>
+									<div class="btn_area"><a href="" class="btn btn_red">保存图片</a></div>
+								</div>
+							</div>
+							<!-- 以下是select中选中Bar plot切换图片及参数  start -->
+							<div class="result_chart clear">
+								<div class="chart_l">
+									<img src="images/example/img_16.png" />	
+								</div>
+								<div class="chart_r">
+									<ul class="edit_data">
+										<li><select><option>-显示方式-</option><option>Bar plot</option><option>Box plot</option><option>Post-hoc plot</option></select></li>
+										<li><select><option>选择颜色方案</option><option>方案一</option><option>方案二</option></select></li>
+										<li><input type="checkbox" />Show average of each group</li>
+									</ul>
+									<div class="btn_area"><a href="" class="btn btn_red">保存图片</a></div>
+								</div>
+							</div>
+							<!-- 以上是select中选中Bar plot切换图片及参数  end -->
+							<!-- 以下是select中选中Box plot切换图片及参数  start -->
+							<div class="result_chart clear">
+								<div class="chart_l">
+									<img src="images/example/img_17.png" />	
+								</div>
+								<div class="chart_r">
+									<ul class="edit_data">
+										<li><select><option>-显示方式-</option><option>Bar plot</option><option>Box plot</option><option>Post-hoc plot</option></select></li>
+										<li><select><option>选择颜色方案</option><option>方案一</option><option>方案二</option></select></li>
+										<li><input type="checkbox" />Show average of each group</li>
+									</ul>
+									<div class="btn_area"><a href="" class="btn btn_red">保存图片</a></div>
+								</div>
+							</div>
+							<!-- 以上是select中选中Box plot切换图片及参数  end -->
+						</div>
+					</div>
+				</div>
+				<!-- 以上切换到选项卡two groups下的内容 end-->
+				<!-- 以下切换到选项卡two samples下的内容 start-->
+				<div class="switch_contain">
+					<div class="result_area">
+						<div class="result_title"><h6>结果输出区域</h6></div>
+						<div class="result_contain">
+							<div class="top_act clear"><h3><span class="color_gray">Table名称：</span>多组样品分析结果数据表_未命名</h3><div class="btn_area"><a href="" class="act_border"><em class="arrow arrow_up"><i></i></em>收起表格<!-- <em class="arrow arrow_down"><i></i></em>展开表格 --></a></div></div>
+							<div class="table_box">
+								<div class="table_contain">
+									<table class="common_table">
+									  <tr>
+									  	<th>Feature<i title="变为反序" class="arrow arrow_down"></i><!-- <i title="变为正序" class="arrow arrow_up"></i> --></th>
+									    <th>Eta-squared</th>
+									    <th>p-value</th>
+									    <th>Corrected p-value</th>
+									  </tr>
+									  <tr>
+									    <td>g_Acidiphilium</td>
+									    <td>-307.448</td>
+									    <td>107.1212</td>
+									    <td>-12.212</td>
+									  </tr>
+									  <tr>
+									    <td>g_Acidithiobacillus</td>
+									    <td>-307.448</td>
+									    <td>107.1212</td>
+									    <td>-12.212</td>
+									  </tr>
+									  <tr>
+									    <td>g_Acidovorax</td>
+									    <td>-307.448</td>
+									    <td>107.1212</td>
+									    <td>-12.212</td>
+									  </tr>
+									  <tr>
+									    <td>Acinetobacter</td>
+									    <td>-307.448</td>
+									    <td>107.1212</td>
+									    <td>-12.212</td>
+									  </tr>
+									  <tr>
+									    <td>Actinotalea</td>
+									    <td>-307.448</td>
+									    <td>107.1212</td>
+									    <td>-12.212</td>
+									  </tr>
+									</table>
+								</div>
+								<div class="bottom_act clear">
+									<div class="btn_area"><a href="" class="btn">撤销</a><a href="" class="btn btn_green">保存</a><!-- <a href="" class="btn btn_gray disabled">保存</a> --><a href="" class="btn btn_red">下载此表格</a></div>
+								</div>
+							</div>
+							<div class="result_chart clear">
+								<div class="chart_l">
+									<img src="images/example/img_18.png" />
+									<!-- 复选框选中情况下图片变换  start -->
+									<img src="images/example/img_19.png" />
+									<!-- 复选框选中情况下图片变换  end -->
+								</div>
+								<div class="chart_r">
+									<ul class="edit_data">
+										<li><select><option>-显示方式-</option><option>Bar plot</option><option>Box plot</option><option>Extanded error bar</option></select></li>
+										<li><select><option>选择颜色方案</option><option>方案一</option><option>方案二</option></select></li>
+										<li><input type="checkbox" />Show average of each group</li>
+									</ul>
+									<div class="btn_area"><a href="" class="btn btn_red">保存图片</a></div>
+								</div>
+							</div>
+							<!-- 以下是select中选中bar plot切换图片及参数  start -->
+							<div class="result_chart clear">
+								<div class="chart_l">
+									<img src="images/example/img_20.png" />	
+								</div>
+								<div class="chart_r">
+									<ul class="edit_data">
+										<li><select><option>-显示方式-</option><option>Bar plot</option><option>Box plot</option><option>Extanded error bar</option></select></li>
+										<li><select><option>选择颜色方案</option><option>方案一</option><option>方案二</option></select></li
+									</ul>
+									<div class="btn_area"><a href="" class="btn btn_red">保存图片</a></div>
+								</div>
+							</div>
+							<!-- 以上是select中选中bar plot切换图片及参数  end -->
+							<!-- 以下是select中选中Extanded error bar切换图片及参数  start -->
+							<div class="result_chart clear">
+								<div class="chart_l">
+									<img src="images/example/img_21.png" />	
+								</div>
+								<div class="chart_r">
+									<ul class="edit_data">
+										<li><select><option>-显示方式-</option><option>Bar plot</option><option>Box plot</option><option>Extanded error bar</option></select></li>
+										<li><select><option>选择颜色方案</option><option>方案一</option><option>方案二</option></select></li
+									</ul>
+									<div class="btn_area"><a href="" class="btn btn_red">保存图片</a></div>
+								</div>
+							</div>
+							<!-- 以上是select中选中Extanded error bar切换图片及参数  end -->
+						</div>
+					</div>
+				</div>
+				<!-- 以上切换到选项卡two samples下的内容 end-->
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

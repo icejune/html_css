@@ -1,0 +1,26 @@
+.myCarousel{width: 100%;height: 100%;position: relative;overflow: hidden;}
+.myCarousel .wrap{height: 100%;position:absolute;z-index:3;top:0;left:0;width:9999999999px;}
+.myCarousel .carousel-item{height: 100%;position:absolute;overflow:hidden;}
+
+.myCarousel .carousel-arrow{width:42px;height:80px;position:absolute;top:50%;margin-top:-40px;z-index:5;display:inline-block;text-decoration:none;}
+.myCarousel .carousel-arrow.carousel-arrow-left{background:url(../images/icon-arrow.png) no-repeat left center;left:3%;}
+.myCarousel .carousel-arrow.carousel-arrow-right{background:url(../images/icon-arrow.png) no-repeat right center;right:3%;}
+
+.myCarousel .carousel-dots{width:100%;position:absolute;bottom:60px;left:0;text-align:center;z-index:5;}
+.myCarousel .carousel-dots .dots{
+	transition:all .25s;-webkit-transition:all .25s;-moz-transition:all .25s;-ms-transition:all .25s;-o-transition:all .25s;
+	display:inline-block;width:10px;height:10px;border-radius:50%;background:#fff;margin:0 5px;cursor:pointer;
+}
+.myCarousel .carousel-dots .dots.current{background:#dbe000;
+     -webkit-transform: scale(1.5);   
+     -moz-transform: scale(1.5);   
+     -ms-transform: scale(1.5);   
+     -o-transform: scale(1.5);   
+     transform: scale(1.5); 
+}
+
+
+
+
+
+

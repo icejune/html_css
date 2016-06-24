@@ -1,0 +1,65 @@
+.ico_zs1,.ico_zs2,.ico_list,.ico_out,.ico_arrow,.ico_home{-moz-inline-stack;display:inline-block;*display:inline;*zoom:1;width:23px;height:25px;vertical-align:middle;background:url(images/ico.gif) no-repeat;text-indent:-5000px;_text-indent:0;overflow:hidden;}
+.ico_zs2{width:155px;height:73px;background-position:0 -53px;}
+.ico_out{width:22px;height:22px;background-position:-85px 0;}
+.ico_arrow{width:14px;height:24px;background-position:-133px 0;}
+.ico_home{width:20px;height:20px;background-position:-180px 0;}
+body.passport{background:url(images/welcome.png) no-repeat #474654 center 50px;}
+.passport_main{position:relative;margin:180px auto 0;width:500px;min-height:360px;height:auto !important;height:360px;background:#fff;border-radius:10px;box-shadow:0 10px 10px rgba(0,0,0,0.5);}
+.passport_main .ico_zs1{position:absolute;top:-20px;left:50%;margin-left:-20px;display:block;width:43px;height:32px;}
+.welcome{padding:50px 0 0;}
+.welcome h2{font-size:20px;color:#e0c9a7;text-align:center;}
+.welcome h2 strong{font-weight:normal;color:#948278;}
+.welcome h2 i{position:absolute;top:35px;right:100px;}
+.passport .wide{margin:50px 0 0;text-align:left;}
+.passport_main div.form label{font-weight:normal;}
+.passport_main div.form div.success input,.passport_main div.form div.success textarea,.passport_main div.form div.success select,.passport_main div.form input.success,.passport_main div.form textarea.success,.passport_main div.form select.success,.passport_main div.form input,.passport_main div.form textarea,.passport_main div.form select{background-color:#fff;border-color:#e2e2e2;padding:5px;}
+.passport_main div.wide.form{width:360px;margin:40px auto 0;padding-bottom:20px;}
+.passport_main div.wide.form label{margin-top:7px;width:80px;text-align:left;}
+.passport_main div.wide.form .buttons{text-align:center;padding:0;margin:20px 0 0;}
+.passport_main div.wide.form .buttons input{background:#ef572e;width:100%;height:40px;border-radius:5px;margin:0 auto;cursor:pointer;border:none;color:#fff;font-size:20px;font-weight:bold;font-family:"Microsoft YaHei";font-weight:norma;}
+.passport_main div.wide.form .hint,.passport_main div.wide.form .errorMessage{text-align:left;padding-left:90px;}
+.header{position:relative;width:100%;height:70px;background:linear-gradient(#E17839,#D74723);background-color:#DB5B2C;border-bottom:2px solid #B02A08;text-align:left;}
+.header .left_top{float:left;}
+.header .left_top h1{float:left;top:0;width:222px;height:70px;margin:0;background-color:#000;background:rgba(0,0,0,0.1);filter:alpha(opacity=10);border-bottom:2px solid #C1411F;}
+.header .left_top h1 a{position:relative;margin:5px 0 0 15px;display:block;width:190px;height:60px;background:url(images/logo.png) no-repeat;text-indent:-5000px;overflow:hidden;}
+.header .left_top h2{float:left;margin:20px 0 0 20px;display:inline;width:268px;height:28px;background:url(images/title.png) no-repeat;text-indent:-5000px;overflow:hidden;}
+.header .login_info{float:right;margin:25px 20px 0;display:inline;color:#F8BE99;font-size:14px;text-decoration:none;}
+.header .login_info a{margin:0 5px;color:#fff;}
+.header .login_info i{margin-right:3px;}
+.header .login_info .btn_web{padding:8px 10px;border:1px solid #D74723;border-color:#B02A08 #C44120 #C44120 #B02A08;background:#D03C18;border-radius:10px;text-decoration:none;color:#F8BE99;box-shadow:inset 1px 1px 2px rgba(0,0,0,0.2);margin-right:10px;}
+.header .login_info .btn_web:hover{box-shadow:inset 1px 1px 2px rgba(250,250,250,0.2);}
+.header .login_info .btn_web .ico_home{position:relative;top:-2px;}
+.left_nav{float:left;padding-bottom:50px;width:220px;background:#F8F8F8;border-right:2px solid #c8c8c8;text-align:left; min-height: 450px; height: auto !important; height: 450px;}
+.left_nav ul,.left_nav li{margin:0;padding:0;list-style:none;}
+.left_nav li a{display:block;color:#8c8b91;text-decoration:none;}
+.left_nav li a:hover{color:#666;}
+.left_nav li .link{position:relative;font-size:16px;padding-left:25px;height:50px;line-height:50px;background:linear-gradient(#D6D6D6,#E6E6E6);background-color:#DEDEDE;color:#666;border-bottom:1px solid #D6D6D6;}
+.left_nav li .link .ico_arrow{position:absolute;top:20px;right:15px;width:23px;height:23px;background-position:-110px -5px;}
+.left_nav li .link .ico_list{width:20px;height:20px;margin-right:5px;background-position:-65px -5px;text-indent:0;}
+.left_nav li.current .link{background:linear-gradient(#DE6B34,#DE6B34);background-color:#DE6B34;color:#fff;}
+.left_nav li.current .link .ico_list{background-position:-44px -5px;}
+.left_nav li ul{padding:0 20px;background:#f9f9f9;}
+.left_nav li li a{display:block;height:40px;line-height:40px;padding-left:50px;font-size:14px;border-bottom:1px dashed #e2e2e2;}
+.left_nav li li.current a{font-weight:bold;color:orange;}
+.left_nav li.fold ul{display:none;}
+.left_nav li.fold .link .ico_arrow{top:15px;background-position:-130px 0;}
+.left_nav li.current .link .ico_arrow{top:15px;right:-10px;background-position:-155px 0;}
+.right_body{margin-left:240px;}
+#mj-content h2{margin:150px auto 0;display:block;width:500px;text-align:center;background:url(images/face.gif) no-repeat center top;color:#9C9CAE;padding-top:150px;}
+.footer{background:#474654;padding:20px 0;text-align:center;color:#B0AFC1;}
+.main_404{margin:150px auto 0;padding-top:250px;width:500px;background:url(images/404.gif) no-repeat center top;color:#9c9cae;font-size:20px;text-align:center;}
+.main_404 p a{color:orange;text-decoration:none;}
+.main_404 p a:hover{color:#00AEF0;}
+/* reset */
+body{font-family:"Microsoft YaHei" !important;}
+.grid-view table.items th{padding:1em 0;background:url(images/bg.gif) repeat-x;}
+.grid-view table.items th a{color:#DCF4FF;}
+.grid-view table.items td{padding:0.5em;}
+.grid-view table.items tr.odd{background:#F5FBFE;}
+.grid-view table.items tr.even{background:#FEFEFE;}
+.grid-view table.items tr.selected,.grid-view table.items tr.selected:hover{background:#EAF4AF;}
+.grid-view table.items tbody tr:hover{background:#F9FFD5;}
+div.form fieldset.searchform{border-style:dashed;border-radius:5px;background:#F7F7F7;}
+.grid-view table.items th a.asc{background-image:url(images/up.gif);padding-right:15px;}
+.grid-view table.items th a.desc{background-image:url(images/down.gif);padding-right:15px;}
+.grid-view .button-column{width:90px;}

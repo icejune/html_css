@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<link href="style/report.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="js/base.js" type="text/javascript"></script>
+<title>报告_alpha多样性研究_稀释性曲线</title>
+</head>
+<body>
+<div class="top_bar">
+	<div class="logo"><h1>美吉生物</h1><h2>您身边的测序专家</h2></div>
+</div>
+<div class="main">
+	<div class="main_left">
+		<div class="search"><i class="ico ico_search"></i><input type="text" value="搜索" /></div>
+		<ul class="nav">
+			<li class="help"><a href="" class="link"><i class="ico ico_help"></i>帮助</a></li>
+			<li><a href="数据质控.html" class="link">数据质控<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="数据质控_样本信息统计.html">样本信息统计</a></li>
+					<li><a href="数据质控_样本碱基分布.html">样本碱基分布</a></li>
+					<li><a href="数据质控_样本的reads长度分布.html">样本的reads长度分布</a></li>
+				</ul>
+			</li>
+			<li><a href="OTU聚类.html" class="link">OTU聚类<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="OTU聚类_OTU表格.html">OTU表格</a></li>
+					<li><a href="OTU聚类_OTU venn分析.html">OTU Venn分析</a></li>
+					<li><a href="OTU聚类_pan-OTU and core-OTU.html">pan-OTU and core-OTU</a></li>
+					<li><a href="OTU聚类_OTU组分图.html">OTU组分图</a></li>
+				</ul>
+			</li>
+			<li class="current"><a href="alpha多样性研究.html" class="link">Alpha多样性研究<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="alpha多样性研究_多样性指数多样化展示.html">多样性指数多样化展示</a></li>
+					<li class="current"><a href="alpha多样性研究_稀释性曲线.html">稀释性曲线</a></li>
+					<li><a href="alpha多样性研究_Rank-Abundance曲线.html">Rank-AbundanRce曲线</a></li>
+					<li><a href="alpha多样性研究_OTU物种累积曲线.html">OTU物种累积曲线</a></li>
+				</ul>
+			</li>
+			<li><a href="beta多样性研究.html" class="link">beta多样性研究<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="beta多样性研究_距离矩阵及可视化.html">距离矩阵及可视化</a></li>
+					<li><a href="beta多样性研究_多元分析及可视化.html">多元分析及可视化</a></li>
+				</ul>
+			</li>
+			<li><a href="丰度差异分析.html" class="link">丰度差异分析<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="丰度差异分析_丰度差异可视化.html">丰度差异可视化</a></li>
+					<li><a href="丰度差异分析_Ternary三元相图.html">Ternary三元相图</a></li>
+					<li><a href="丰度差异分析_Lesfe分析.html">Lesfe分析</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="main_right">
+		<div class="report_detail">
+			<div class="introduction"><p>稀释性曲线是从样本中随机抽取一定数量的个体，统计这些个体所代表的物种数目，并以个体数与物种数来构建曲线。它可以用来比较测序数据量不同的样本中物种的丰富度，也可以用来说明样本的测序数据量是否合理。采用对序列进行随机抽样的方法，以抽到的序列数与它们所能代表OTU的数目构建rarefaction curve，当曲线趋向平坦时，说明测序数据量合理，更多的数据量只会产生少量新的OTU，反之则表明继续测序还可能产生较多新的OTU。因此，通过作稀释性曲线，可得出样品的测序深度情况。</p></div>
+			<div class="set_option">
+				<div class="choose_index">
+					<div class="title"><h6>指数类型：</h6><span>(可多选)</span></div>
+					<ul>
+						<li><input type="checkbox" />全选</li><li><input type="checkbox" />chao指数</li><li><input type="checkbox" />shannon指数</li><li><input type="checkbox" />simpson指数</li><li><input type="checkbox" />Ace指数</li><li><input type="checkbox" />evenness指数</li><li><input type="checkbox" />coverage指数</li>
+					</ul>
+				</div>
+				<div class="choose_box">
+					<div class="select_bar">
+						<div class="select_input">
+							<input type="text" value="table" />
+							<a href="" class="r"><i class="arrow arrow_down"></i></a>
+						</div>
+						<div class="popup">
+							<ul class="normal_list">						
+								<li><a href=""><span title="源table">源table</span></a></li>
+								<li><a href=""><span title="table1">table1</span><i class="ico ico_edit"></i></a></li>
+								<li><a href=""><span title="table2">table2</span><i class="ico ico_edit"></i></a></li>
+							</ul>
+							<div class="btn_area"><a href="" class="btn btn_red"><i class="ico ico_add"></i>新建</a></div>
+						</div>
+					</div>
+					<div class="select_bar">
+						<div class="select_input">
+							<input type="text" value="level" />
+							<a href="" class="r"><i class="arrow arrow_down"></i></a>
+						</div>
+						<div class="popup">
+							<ul class="normal_list">						
+								<li><a href=""><span title="table1">OTU(默认)</span></a></li>
+								<li><a href=""><span title="种">种</span></a></li>
+								<li><a href=""><span title="属">属</span></a></li>
+								<li><a href=""><span title="科">科</span></a></li>
+							</ul>
+						</div>
+					</div>						
+					<div class="select_bar">
+						<div class="select_input">
+							<input type="text" value="随机取样数" />
+							<a href="" class="r"><i class="arrow arrow_down"></i></a>
+						</div>
+						<div class="popup">
+							<ul class="normal_list">						
+								<li><a href=""><span title="100">100</span></a></li>
+								<li><a href=""><span title="200">200</span></a></li>
+								<li><input type="text" value="自定义" class="diy" /></li>
+							</ul>
+						</div>
+					</div>			
+					<div class="select_bar">
+						<div class="select_input">
+							<input type="text" value="分组方案" />
+							<a href="" class="r"><i class="arrow arrow_down"></i></a>
+						</div>
+						<div class="popup">
+							<ul class="normal_list">						
+								<li><a href=""><span title="group1">group1</span><i class="ico ico_edit"></i></a></li>
+								<li><a href=""><span title="group2">group2</span></span><i class="ico ico_edit"></i></a></li>
+								<li><a href=""><span title="group3">group3</span><i class="ico ico_edit"></i></a></li>
+								<li><a href=""><span title="group4">group4</span><i class="ico ico_edit"></i></a></li>
+							</ul>
+							<div class="btn_area"><a href="" class="btn btn_red"><i class="ico ico_add"></i>新建分组</a></div>
+						</div>
+					</div>		
+				</div>
+				<!-- 选择T检验选项时出现 start -->
+				<div class="choose_index">
+					<div class="title"><h6>请选择T检验组：</h6></div>
+					<ul>
+						<li><input type="checkbox" />Group1</li><li><input type="checkbox" />Group2</li><li><input type="checkbox" />Group3</li>
+					</ul>
+				</div>
+				<!-- 选择T检验选项时出现 end -->
+				<div class="btn_area"><a href="" class="btn btn_blue btn_bigger">确定</a></div>
+			</div>
+			<div class="result_area">
+				<div class="result_title"><h6>结果输出区域</h6></div>
+				<div class="result_contain">
+					<div class="top_act clear"><div class="btn_area"><a href="" class="act_border"><em class="arrow arrow_up"><i></i></em>收起表格<!-- <em class="arrow arrow_down"><i></i></em>展开表格 --></a></div></div>
+					<div class="table_box">
+						<div class="table_contain">
+							<table class="common_table">
+							  <tr>
+							    <th>&nbsp;</th>
+							    <th>样本1</th>
+							    <th>&nbsp;</th>
+							    <th>&nbsp;</th>
+							    <th>样本2</th>
+							    <th>&nbsp;</th>
+							    <th>&nbsp;</th>
+							  </tr>
+							  <tr>
+							    <td>numsampled</td>
+							    <td>0.97</td>
+							    <td>lci</td>
+							    <td>hci</td>
+							    <td>0.97</td>
+							    <td>lci</td>
+							    <td>hci</td>
+							  </tr>
+							  <tr>
+							    <td>1</td>
+							    <td>1</td>
+							    <td>1</td>
+							    <td>1</td>
+							    <td>1</td>
+							    <td>1</td>
+							    <td>1</td>
+							  </tr>
+							  <tr>
+							    <td>100</td>
+							    <td>89.63</td>
+							    <td>83.9778</td>
+							    <td>95.2822</td>
+							    <td>89.63</td>
+							    <td>83.9778</td>
+							    <td>95.2822</td>
+							  </tr>
+							  <tr>
+							    <td>200</td>
+							    <td>163.91</td>
+							    <td>153.8074</td>
+							    <td>174.0126</td>
+							    <td>163.91</td>
+							    <td>153.8074</td>
+							    <td>174.0126</td>
+							  </tr>
+							  <tr>
+							    <td>300</td>
+							    <td>230.24</td>
+							    <td>217.2087</td>
+							    <td>243.2713</td>
+							    <td>230.24</td>
+							    <td>217.2087</td>
+							    <td>243.2713</td>
+							  </tr>
+							  <tr>
+							    <td>400</td>
+							    <td>291.36</td>
+							    <td>275.0837</td>
+							    <td>307.6363</td>
+							    <td>291.36</td>
+							    <td>275.0837</td>
+							    <td>307.6363</td>
+							  </tr>
+							  <tr>
+							    <td>500</td>
+							    <td>346.59</td>
+							    <td>327.2509</td>
+							    <td>365.9291</td>
+							    <td>346.59</td>
+							    <td>327.2509</td>
+							    <td>365.9291</td>
+							  </tr>
+							  <tr>
+							    <td>600</td>
+							    <td>398.51</td>
+							    <td>376.4871</td>
+							    <td>420.5329</td>
+							    <td>398.51</td>
+							    <td>376.4871</td>
+							    <td>420.5329</td>
+							  </tr>
+							  <tr>
+							    <td>700</td>
+							    <td>448.51</td>
+							    <td>426.4624</td>
+							    <td>470.5576</td>
+							    <td>448.51</td>
+							    <td>426.4624</td>
+							    <td>470.5576</td>
+							  </tr>
+							</table>
+						</div>
+						<div class="bottom_act clear">
+							<div class="btn_area"><a href="" class="btn">撤销</a><a href="" class="btn btn_green">保存</a><!-- <a href="" class="btn btn_gray disabled">保存</a> --><a href="" class="btn btn_red">下载此表格</a></div>
+						</div>
+					</div>
+					<div class="result_chart clear">
+						<div class="chart_l">
+							<img src="images/example/img_2.png" />
+						</div>
+						<div class="chart_r">
+							<ul class="edit_data">
+								<li><select><option>选择颜色方案</option><option>方案一</option><option>方案二</option></select></li>
+								<li>
+									<div class="select_bar">
+										<div class="select_input">
+											<input type="text" value="显示" />
+											<a href="" class="r"><i class="arrow arrow_down"></i></a>
+										</div>
+										<div class="popup">
+											<form>
+											<ul class="normal_list multiselect_list">						
+												<li><label><input type="checkbox" />全选</label></li>
+												<li><label><input type="checkbox" />MJ01</label></li>
+												<li><label><input type="checkbox" />MJ02</label></li>
+											</ul>
+											</form>
+										</div>
+									</div>			
+								</li>
+							</ul>
+							<div class="btn_area"><a href="" class="btn btn_red btn_bigest">保存图片</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

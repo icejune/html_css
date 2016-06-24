@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<head>
+	<link href="css/oa.css" rel="stylesheet" type="text/css" />
+	<script src="js/circleProgress.js" type="text/javascript"></script>
+	<script src="js/base.js" type="text/javascript"></script>
+</head>
+<html>
+<body>
+	<header>
+		<h2><i class="arrow_left"></i><span>项目</span></h2>
+	</header>
+	<div class="container">
+		<div class="project_top">
+			<h3>某某目标</h3>
+			<canvas id="circle-progress-custom"></canvas>
+			<div class="info clear">
+				<div class="fl"><span>负责人：高文慧</span></div>
+				<div class="fr"><span>参与人：<strong>5</strong></span><span>共享人：<strong>0</strong></span></div>
+			</div>
+		</div>
+		<div class="project_item">
+			<ul>
+				<li>
+					<div class="wrap">
+						<i class="ico ico_dynamic_dark"></i>
+						<p>最新动态</p>
+					</div>
+				</li>
+				<li>
+					<div class="wrap">
+						<i class="ico ico_task_dark"></i>
+						<p>任务</p>
+					</div>
+				</li>
+				<li>
+					<div class="wrap">
+						<i class="ico ico_file_dark"></i>
+						<p>文档</p>
+					</div>
+				</li>
+				<li>
+					<div class="wrap">
+						<i class="ico ico_detail_dark"></i>
+						<p>详情</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>		
+</body>
+<script type="text/javascript">	
+	window.onload=function(){
+		var project_item=document.getElementsByClassName('project_item')[0],
+			li=project_item.getElementsByTagName('li');
+		for(i=0;i<li.length;i++){
+			li[i].style.height=li[i].offsetWidth+'px';
+		}	
+	}    
+</script>
+</html>

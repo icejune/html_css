@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/project.css" rel="stylesheet" type="text/css" />
+<script src="javascript/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="javascript/base.js" type="text/javascript"></script>
+<script src="javascript/jquery.raty.js" type="text/javascript"></script>
+<title>i-sanger工作流详细页</title>
+</head>
+<body class="full_screen">
+<div class="top_bar">
+	<div class="header con clear">
+		<ul class="contact">
+			<li>客服热线：400-660-1216</li>
+			<li><a href=""><i class="ico_qq"></i>在线客服</a></li>
+			<li><a href=""><i class="ico_email"></i>marketing@majorbio.com</a></li>
+		</ul>
+<!-- 		<ul class="login">
+			<li><a href="">登录</a></li>
+			<li class="last"><a href="">注册</a></li>
+		</ul> -->
+		<ul class="menu right_menu">
+			<li class="">
+				<a class="link" href=""><em class="avatar_wrap"><img width="30" height="30" src="images/global/avatar_u.gif"></em><u>冰蓝之玄</u><i class="ico_arrow">&nbsp;</i></a>
+				<div class="popup_item">
+					<div class="item_info user_info">
+						<div class="contain clear">
+							<ul>
+								<li><a href="">个人信息</a></li>
+								<li><a href="">账户信息</a></li>
+								<li><a href="">我的项目</a></li>
+							</ul>						
+						</div>
+						<div class="con_footer"><a class="btn btn_bigest" href="">退出账号</a></div>
+					</div>		
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="top_header">
+	<div class="con clear">
+		<h1><a href=""></a><strong>国内首家开放式生物信息云</strong></h1>
+		<ul class="nav">
+			<li class="current"><a href="">首页</a></li>
+			<li><a href="">公共Pipeline</a></li>
+			<li><a href="">新手引导</a></li>
+			<li><a href="">帮助中心</a></li>
+		</ul>
+	</div>
+</div>
+<div class="main clear">
+	<div class="crumb"><a href="" class="return"><i class="arrow"></i>返回公共工作流</a></div>
+	<div class="pp_title_top">
+		<h3>宏基因组序列工作流</h3>
+		<div class="act_area"><select><option>V1.0</option><option>V2.0</option></select><div class="btn_area"><a href="" class="btn">复制到项目</a><a href="" class="btn btn_green">运行</a></div></div>
+		<p>宏基因组学(metagenomics)就是取样---一勺泥土或一杯海水---然后对样品内所有DNA进行测序。这种技术有助于研究人员评估在给定环境发现的生物多样性，但是直到现在它不能有效地对单个物种进行测序，因为没有办法对测得的数据进行解析而区别开每种物种基因组DNA序列。</p>
+		<p class="date">创建于2014-10-22 15:33:22</p>
+	</div>
+	<div class="pp_box">
+		<div class="pp_act_area"><ul class="act_list clear"><li><a href="" class="act_border"><i class="ico_fullscreen">点击全屏显示</i></a></li></ul></div>
+		<img src="images/project/img_2.png" />
+	</div>
+	<div class="ppbox_info">
+		<h3>基本信息</h3>
+		<div class="contain">
+			<ul class="base_data">
+				<li><div class="w_1">应用领域：</div>RNA-Seq</li>
+				<li><div class="w_1">测序平台：</div>Illumina HiSeq，Illumina MiSeq,质子离子激流</li>
+				<li><div class="w_1">物种：</div>人类</li>
+			</ul>
+		</div>
+	</div>
+	<div class="ppbox_info">
+		<h3>描述</h3>
+		<div class="contain"><p>融合基因或基因嵌合体是改变造成染色体重组结合外显子基因位于同一或不同的染色体。融合基因的产品可能会有一个新的或不同的函数比两个融合的合作伙伴。融合记录经常被发现在不同类型的癌包括乳腺癌、肺癌、前列腺癌,及黑素瘤和淋巴瘤。检测已知的基因融合和识别的小说,可以导致更好的理解致癌作用的触发机制和进展。此外,最近的研究表明,融合基因产品可能代表一个新颖的治疗人类癌症的治疗目标<a herf="">(1)</a>。</p>
+			<p>有几种融合仪工具,我们已经测试了一组RNA-Seq数据<a herf="">(2)</a>。在这个管道我们使用ChimeraScan软件包,旨在检测融合基因<a herf="">(3)</a>。而找到ChimeraScan展示强劲表现一些假阳性融合检测,该管道只接受<strong>paired-end RNA-Seq数据</strong>。我们还开发了一种融合检测记录-明星+妄想管道,可以提供快速、充分的性能与循环paired-end读取。更多信息融合发现者,我们测试和用于管道可以在我们的博客很快就会发现。</p>
+			<p><strong>嵌合体</strong>的管道,作为融合的控制记录检测、验证与拉斐尔Calogero教授密切协作的分子生物技术和健康科学,都灵大学(嵌合体作者)。
+			</p>
+		</div>
+	</div>
+	<div class="ppbox_info">
+		<h3>方法</h3>
+		<div class="contain"><p>融合记录检测是使用ChimeraScan软件包包括执行主程序检测融合基因,一个辅助工具,准备参考适当的索引在上游的分析,和工具准备输出HTML表格格式的文件以及格式适用于(3)可视化表示。此外,妄想已添加到这个管道来提供额外的控制检测融合基因(4)。最后,标识的图形表示形式融合基因是由基因组提供的坐标可视化工具Circos(5)。</p>
+		</div>
+	</div>
+	<div class="ppbox_info">
+		<h3>输入</h3>
+		<div class="contain">
+			<ul class="list_disc">
+				<li>读(paired-end):该管道接受一对paired-end RNA-Seq FASTQ格式的数据(纯文本或压缩文件)。如果样品中存在多个文件读取,合并FASTQ文件公共管道可用于巩固前对齐。阅读对元数据字段必须设置为1和2。</li>
+				<li>基因组参考:FASTA文件包含参考基因组。我们建议ucsc.hg19.fasta人类样本。</li>
+				<li>转录参考:转录参考文件,其中包含所有已知的记录在一个自定义的格式类似于床上。我们建议hg19.ucsc_genes.txt人类样本。</li>
+				<li>假阳性嵌合体(可选):已知假阳性嵌合体的列表。我们建议hg19_bodymap_false_positive_chimeras.txt人类样本。</li>
+			</ul>
+		</div>
+	</div>
+	<div class="ppbox_info">
+		<h3>工具和建议的参数设置</h3>
+		<div class="contain">
+			<ul class="list_disc">
+				<li>ChimeraScan v0.4.5——软件包旨在检测基因融合paired-end RNA-Seq数据集(3)。ChimeraScan使用领结对齐paired-end读结合基因组,转录参考,旨在发现不和谐的读取,预测最优融合断点位置和检测嵌合体。软件包包括一个索引程序,ChimeraScan指数创建组合索引从基因组参考序列(FASTA格式)和自定义转录参考格式(UCSC的GenePred格式)。注意:当使用GTF转录文件,ChimeraScan GTF genePred工具可以被添加到这个管道将这个文件的格式可以接受由ChimeraScan指数。ChimeraScan HTML表,允许输出生成的HTML页面的链接嵌合基因的详细描述。此外,Circos suitab /名称生成器生成输出文件的链接
+					<ul class="list_disc">
+						<li>参数设置为默认值基于ChimeraScan作者建议的最佳实践。</li>
+						<li>参数设置为默认值基于ChimeraScan作者建议的最佳实践。
+							<ul class="list_disc">
+								<li>参数设置为默认值基于ChimeraScan作者建议的最佳实践。</li>
+								<li>参数设置为默认值基于ChimeraScan作者建议的最佳实践。</li>
+							</ul>
+						</li>
+					</ul>
+				</li>				
+			</ul>
+		</div>
+		<div class="ppbox_info">
+			<h3>参考文献</h3>
+			<div class="contain">
+				<ol class="list_decimal">
+					<li>1.卡拉拉,m . et al。先进的敏感性和特异性Fusion-Finder算法。生物医学研究国际,2013卷,ID 340620条,6页,340620。</li>
+					<li>2.Mitelman,f . et al .易位的影响,癌症基因融合因果关系。Nat。启癌症233 - 245(2007)。</li>
+					<li>3.艾耶m . k . et al . ChimeraScan:识别嵌合转录测序数据的工具。生物信息学27,2903 - 2904(2011)。</li>
+					<li>4.Calogero r . A等人嵌合体:一个包融合产品的二次分析。(2014)。在bioconductor.org</li>
+					<li>5.Krzywinski m . et al . Circos:比较基因组学的审美信息。基因组研究》19日1639 - 1645(2009)。</li>
+				</ol>
+			</div>
+		</div>
+		<div class="suggest">
+			<h4>发表建议</h4>
+			<div class="contain">
+				<div class="textarea_wrap"><textarea></textarea></div>
+				<div class="btn_area"><a href="" class="btn">提交</a></div>
+			</div>
+		</div>
+		<div class="ppbox_info stars_info">
+			<h3>发表评价</h3>
+			<div class="contain">
+				<div class="stars_box clear">
+					<dl class="star_title">
+				 		<dd>执行效率：</dd>
+				 		<dd>工作流科学合理性：</dd>
+				 		<dd>操作复杂度：</dd>
+				 		<dd>分析报告可读性：</dd>
+				 	</dl>
+					<div id="star">
+					 	<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+					 	</ul>
+					</div>
+				</div>
+				<script type="text/javascript">
+				 	$('#star li').raty({
+				 		hints: ['1分，很不满意', '2分，不满意', '3分，一般', '4分，满意', '5分，很满意'],
+				 		path:"images/project",
+					 	starOff: 'star-off-big.png',
+					 	starOn: 'star-on-big.png',
+					 	size:24,
+					 });				 	
+				 </script>
+				<!-- 	<ul class="stars_list clear">
+						<li><div class="w_1">执行效率</div><div class="w_2"><i class="ico_star0"></i></div></li>
+						<li><div class="w_1">工作流科学合理性</div><div class="w_2"><i class="ico_star1"></i></div></li>
+						<li><div class="w_1">操作复杂度</div><div class="w_2"><i class="ico_star2"></i></div></li>
+						<li><div class="w_1">分析报告可读性</div><div class="w_2"><i class="ico_star0"></i></div></li>
+					</ul> -->
+				<div class="btn_area"><a href="" class="btn">提交</a></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer_simple"><p>Copyright@2003-2013,SeaBig Inc. All Rights Reserved . 隐私保护 联系 版权 条款</p></div>
+</body>
+</html>

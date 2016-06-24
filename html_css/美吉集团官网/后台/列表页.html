@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<!-- blueprint CSS framework -->
+<link rel="stylesheet" type="text/css" href="login_files/screen.css" media="screen, projection">
+<link rel="stylesheet" type="text/css" href="login_files/print.css" media="print">
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="/css/admin/ie.css" media="screen, projection" />
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" href="login_files/main.css">
+<link rel="stylesheet" type="text/css" href="login_files/form.css">
+<link rel="stylesheet" type="text/css" href="login_files/searchform.css">
+
+<link rel="stylesheet" type="text/css" href="login_files/mbmenu.css" media="screen">
+<link rel="stylesheet" type="text/css" href="login_files/new_add.css" media="screen" />
+<script src="login_files/jquery-2.1.1.min.js" type="text/javascript"></script>
+<title>美吉生物管理系统_列表页</title>
+</head>
+<body>
+<div class="header clearfix">
+	<div class="left_top"><h1><a href="">美吉生物</a></h1><h2>美吉生物管理系统</h2></div>
+	<p class="login_info"><a href="" class="btn_web"><i class="ico_home"></i>美吉生物官网</a>欢迎你，icejune<a href="">修改密码</a><a href=""><i class="ico_out"></i>退出登录</a></p>
+</div>
+<div class="main clearfix">
+	<div class="left_nav">
+		<ul>
+			<li class="current"><a href="" class="link"><i class="ico_list"></i>新闻资讯管理<i class="ico_arrow"></i></a>
+				<ul>
+					<li><a href="">新闻资讯</a></li>
+					<li><a href="">新闻分类</a></li>
+				</ul>
+			</li>
+			<li><a href="" class="link"><i class="ico_list"></i>招聘信息管理<i class="ico_arrow"></i></a>
+				<ul>
+					<li><a href="">招聘信息</a></li>
+					<li><a href="">招聘分类</a></li>
+				</ul>
+			</li>
+			<li><a href="" class="link"><i class="ico_list"></i>公司/员工<i class="ico_arrow"></i></a>
+				<ul>
+					<li><a href="">办公环境</a></li>
+					<li><a href="">员工心声</a></li>
+					<li><a href="">公司活动</a></li>
+				</ul>
+			</li>
+			<li><a href="" class="link"><i class="ico_list"></i>荣誉/历程<i class="ico_arrow"></i></a>
+				<ul>
+					<li><a href="">企业荣誉</a></li>
+					<li><a href="">企业历程</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="right_body">
+		<div style="width:99%;  overflow: auto;" class="container" id="mj-container">
+			<div style="width:100%;" class="span-19">
+				<div id="mj-content">
+					<h2>欢迎光临美吉后台管理系统</h2>
+				</div><!-- content -->
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer">版权所有&copyright 2015 美吉科技</div>
+<script>
+$(leftNav);
+function leftNav(){
+	var link=$('.left_nav li .link');
+	link.click(function(e){
+		e.preventDefault();
+	});
+	toggleThis();
+	function toggleThis(){
+		var count = 0;
+		link.click(
+			function(){
+				$(this).parent('li').toggleClass('fold',count++ % 2 == 0);
+			}
+		)
+	}
+}
+</script>
+</body>
+</html>

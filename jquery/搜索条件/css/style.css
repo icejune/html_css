@@ -1,0 +1,67 @@
+html{color:#333333;background-color:#fff;}
+body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}
+a div,a p,a h1,a h2,a h3,a h4,a h5,a h6{*cursor:pointer}
+body,button,input,select,textarea{font:12px/1.5 'microsoft yahei',tahoma,arial,sans-serif}
+h1,h2,h3,h4,h5,h6{font-size:1em}
+a{text-decoration:none;color: #333}
+a:hover{color: #00599E}.right{float: right;}
+small,cite,code,em,th,i,b{font-size:1em;font-style:normal;font-weight:500}
+input,select,textarea,button{font-size:1em;}
+button,input[type=button],input[type=submit]{cursor:pointer}
+button[disabled],input[disabled]{cursor:default}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0 none;padding:0}
+textarea{overflow:auto;vertical-align:top}
+input[type=text]:focus,textarea:focus{outline:0 none}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img,iframe{border:0 none}
+img{display:inline-block;vertical-align:top;-ms-interpolation-mode:bicubic}
+iframe{display:block}
+ul,ol{list-style:none}
+li{vertical-align:top}
+.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden}
+.clearfix {*zoom: 1;}
+.searchSort{border:1px solid #d0dbe6;line-height: 23px;font-size: 13px;background: #fff}
+.searchSort h2{background: #e8e8e8;font:normal 18px 'microsoft yahei';padding:8px 10px;margin-bottom: 10px;}
+.searchSort dl{border-bottom:1px dashed #e9e9e9;padding:3px 0;margin:0 15px;}
+.searchSort dl:last-child{border-bottom: none}
+.searchSort dt{float:left;text-align:right;width:65px;margin-right: 5px}
+.searchSort dd{float:left;width:89%;position:relative}
+.searchSort dd a{padding:0px 6px;margin-right: 5px;color: #444;display:inline-block}
+.searchSort dd a.hover{background:#12b2e0;color:#fff;}
+.searchSort dd a.accur{background:#f8faff;border:1px solid #d9e8ff;border-top:2px solid #50a2f0;position:relative;border-bottom:0}
+.searchSort dd label{display: inline-block;padding:0px 5px;}
+.searchSort dd label:hover{background:#8db7d9;}
+.searchSort2{padding-top: 15px}
+.searchSort2 dl{border-bottom:none;}
+.searchSort2 dt{font-size:14px;font-weight: bold;margin-right: 30px;}
+.searchSort2 .sortWay{background: #fbfbfb;border-top: 1px solid #e1e1e1;padding:10px 20px;margin-top: 10px;}
+.searchSort2 .sortWay a{background: none;border:none;border-right: 1px solid #ccc;height: 15px;line-height: 15px;padding-right: 20px;}
+.searchSort2 .sortWay a.accur{background: none;border:none;border-right: 1px solid #ccc;}
+.searchSort2 .sortWay a i{margin-top: 3px;}
+.selectOpt{border-bottom: 1px dashed #ccc;padding:0 10px 10px;margin:0 10px 10px;display: none}
+.selectOpt span{display: inline-block;margin-right: 10px;position: relative;cursor:pointer;}
+.selectOpt span label{display: inline-block;padding:0px 5px;background: #087797;color: #fff}
+.selectOpt span em{display: inline-block;background: #12b2e0;color: #fff;padding:0px 13px 0 5px;}
+.selectOpt span:hover em{background: #087797}
+.selectOpt span:hover i{color: #fff604}
+.selectOpt span i{display: inline-block;position: absolute;right: 3px;top:0px;font-style: normal;color: #fff;font:bold 18px 'arial';}
+.selectOpt a{color: #109dc5}
+.tag{padding:15px;}
+.tag a{display: inline-block;padding:3px 8px;color: #fff;margin:8px 5px 0 0;}
+
+.sortWay{background: #f5f5f5;padding:7px 15px;}
+.sortWay a{background:#eee;display:inline-block;padding:0 8px;height:28px;line-height:28px;border:1px solid #d4d4d4;margin-right:10px}
+.sortWay a i{background:url(../images/sort.gif) no-repeat 0 -24px;display:inline-block;vertical-align:top;width:9px;height:11px;margin:9px 0 0 3px}
+.sortWay a.accur{background:#fffdeb;border:1px solid #aa905e;color: #d51e00}
+.sortWay a.accur i.up{background-position:0 0;}
+.sortWay a.accur i.down{background-position:0 -12px;}
+.shipBrand{overflow: hidden;padding-bottom: 10px}
+.shipBrand li{float: left;display:inline;border: 1px solid #e4e4e4;width:125px;height: 74px;margin:10px 0 0 8px;text-align: center;}
+.shipBrand li img,.shipBrand i{display: inline-block;vertical-align: middle;}
+.shipBrand i{width:0;height: 100%}
+.question{padding:7px;}
+.question dt,.question dd{font-size:13px;padding-left: 35px;position: relative;}
+.question dt i,.question dd i{display: block;width:16px;height: 16px;background: url(../images/question.gif) no-repeat;position: absolute;left: 10px;top:3px; }
+.question dd i{background-position: 0 -17px;top:5px;}
+.question dt{font-weight: bold;margin-top: 10px}
+.question dd{line-height: 22px;margin-top: 5px}

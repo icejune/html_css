@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<script charset="utf-8"  type="text/javascript" src="javascript/jquery-2.1.1.min.js"></script>
+<script charset="utf-8"  type="text/javascript" src="javascript/jquery.makeCir.js"></script>
+<script charset="utf-8"  type="text/javascript" src="javascript/index.js"></script>
+<link rel="stylesheet" href="style/index.css">
+<title>报告展示</title>
+</head>
+<body class="changjiang">
+<!--通用头部   开始-->
+   <div class="header gray">
+        <div class="center clear">
+              <h1 class="logo fl"><a href="#">家基因</a></h1>
+              <ul class="nv clear">
+                  <li><a href="#">首页</a></li>
+                  <li class="current"><a href="#">获取查询码</a></li>
+                  <li><a href="#">示例报告</a></li>
+                  <li><a href="#">应用场景</a></li>
+                  <li><a href="#">平台指南</a></li>
+              </ul>
+              <a class="user" href="#">1861237XXXX</a>
+        </div>
+    </div>
+<!--通用头部   结束    -->
+    
+<div class="example-nv center clear">
+    <a class="current" href="#">报告展示</a>
+    <a href="#">检测人信息</a>
+    <a href="#">站内信</a>
+    
+   <select name="" id="" class="fr">
+       <option value="">报告选择</option>
+       <option value="">报告选择1</option>
+       <option value="">报告选择2</option>
+       <option value="">报告选择3</option>
+   </select>
+</div>    
+    
+    
+<div class="example-title center"><img src="images/t1.png" alt=""></div>                         
+
+
+<div class="example-cont rel">
+    <div class="center rel makeCir">
+           <div class="makeCir-cont abs">
+
+           </div>
+         <div class="txt abs">
+                <p>第一圈：全同胞</p>
+                <p>第二圈：亲子</p>
+                <p>第三圈：半同胞/叔侄/祖孙</p>
+                <p>第四圈：堂表兄</p>
+                <p>外圈：陌生人</p>
+         </div>
+         <img class="img-bg abs" src="images/s.png" alt="">
+    </div>
+</div>
+  
+       
+<script>
+$(function(){
+        var data = {
+            c4:[
+               {
+                    photo : 'images/photo.png',
+                    name : '张',
+                    year : '30',
+                    number : '110226ACD226',
+                    pos:[415,170],
+                    scale:1.2
+                }
+            ],
+        c3:[
+               {
+                    photo : 'images/photo.png',
+                    name : 'vf5t',
+                    year : '25',
+                    number : '110226ACD227',
+                    pos:[325,110],
+                    scale:0.62
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'vfg',
+                    year : '25',
+                    number : '110226EDG600',
+                    pos:[270,160],
+                    scale:0.65
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'ujik',
+                    year : '25',
+                    number : '110226EDG600',
+                    pos:[280,215],
+                    scale:0.63
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'iklo',
+                    year : '25',
+                    number : '110226EDG600',
+                    pos:[335,250],
+                    scale:0.7
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'uuuu',
+                    year : '25',
+                    number : '110226EDG600',
+                    pos:[390,260],
+                    scale:0.6
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'ffff',
+                    year : '25',
+                    number : '110226EDG600',
+                    pos:[460,260],
+                    scale:0.8
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'kkkk',
+                    year : '25',
+                    number : '110226EDG600',
+                    pos:[520,240],
+                    scale:0.6
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'ppp',
+                    year : '25',
+                    number : '110226EDG600',
+                    pos:[560,200],
+                    scale:0.9
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'aaa',
+                    year : '25',
+                    number : '110226EDG600',
+                    pos:[555,145],
+                    scale:0.64
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'vvv',
+                    year : '25',
+                    number : '110226EDG600',
+                    pos:[500,110],
+                    scale:0.62
+               }
+        ],
+        c2:[
+               {
+                    photo : 'images/photo.png',
+                    name : 'fv',
+                    year : '25',
+                    number : '110226ACD228',
+                    pos:[265,110],
+                    scale:0.6
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'hn',
+                    year : '25',
+                    number : '710226EDG600',
+                    pos:[220,165],
+                    scale:0.7
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'yh',
+                    year : '25',
+                    number : '710226EDG600',
+                    pos:[225,235],
+                    scale:0.75
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'ik',
+                    year : '25',
+                    number : '710226EDG600',
+                    pos:[290,285],
+                    scale:0.75
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'ded',
+                    year : '15',
+                    number : '090226EDG600',
+                    pos:[365,310],
+                    scale:0.84
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'olp',
+                    year : '75',
+                    number : '290226EDG600',
+                    pos:[450,310],
+                    scale:0.9
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'rftg',
+                    year : '75',
+                    number : '290226EDG600',
+                    pos:[535,290],
+                    scale:1
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'dd',
+                    year : '75',
+                    number : '290226EDG600',
+                    pos:[610,235],
+                    scale:1
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'sw',
+                    year : '55',
+                    number : '170226EDG600',
+                    pos:[610,150],
+                    scale:0.7
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'cdvg',
+                    year : '55',
+                    number : '170226EDG600',
+                    pos:[550,100],
+                    scale:0.6
+               }
+           ],
+           c1:[
+               {
+                    photo : 'images/photo.png',
+                    name : 'hnj',
+                    year : '25',
+                    number : '110226EDG600',
+                    pos:[195,120],
+                    scale:0.6
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'mki',
+                    year : '25',
+                    number : '710226EDG600',
+                    pos:[160,190],
+                    scale:0.7
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'qws',
+                    year : '25',
+                    number : '710226EDG600',
+                    pos:[180,260],
+                    scale:0.75
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'vft',
+                    year : '25',
+                    number : '710226EDG600',
+                    pos:[240,320],
+                    scale:0.75
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'yhjik',
+                    year : '15',
+                    number : '090226EDG600',
+                    pos:[330,350],
+                    scale:0.84
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'frgt',
+                    year : '75',
+                    number : '290226EDG600',
+                    pos:[415,360],
+                    scale:0.9
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'cc',
+                    year : '75',
+                    number : '290226EDG600',
+                    pos:[510,345],
+                    scale:1
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'hyju',
+                    year : '75',
+                    number : '290226EDG600',
+                    pos:[610,310],
+                    scale:1
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'hji',
+                    year : '55',
+                    number : '170226EDG600',
+                    pos:[665,245],
+                    scale:0.8
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'vfbh',
+                    year : '55',
+                    number : '110226ACD226',
+                    pos:[670,180],
+                    scale:0.6
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'vfbh',
+                    year : '55',
+                    number : '110226ACD226',
+                    pos:[480,56],
+                    scale:0.45
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'vfvgbghb',
+                    year : '55',
+                    number : '110226ACD226',
+                    pos:[335,60],
+                    scale:0.4
+               }
+           ],
+           c0:[
+               {
+                    photo : 'images/photo.png',
+                    name : '王',
+                    year : '25',
+                    number : '210226EDG600',
+                    pos:[125,150],
+                    scale:0.65
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : '礼',
+                    year : '20',
+                    number : '580226SDC230',
+                   pos:[100,235],
+                   scale:0.85
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'gtg',
+                    year : '25',
+                    number : '700226SDC230',
+                   pos:[700,305],
+                   scale:0.75
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'wsdefr',
+                    year : '25',
+                    number : '100226SDC230',
+                    pos:[615,375],
+                    scale:0.95
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'gthy',
+                    year : '21',
+                    number : '450226SDC230',
+                    pos:[500,410],
+                    scale:0.65
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'hyju',
+                    year : '29',
+                    number : '120226SDC230',
+                    pos:[390,415],
+                    scale:0.88
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'gtnjm',
+                    year : '29',
+                    number : '670226SDC230',
+                    pos:[265,390],
+                    scale:0.8
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'juki',
+                    year : '59',
+                    number : '110226ACD229',
+                    pos:[160,335],
+                    scale:0.8
+               },
+               {
+                    photo : 'images/photo.png',
+                    name : 'juki',
+                    year : 'rr9',
+                    number : '110226ACD229',
+                    pos:[415,30],
+                    scale:0.35
+               }
+           ]
+        };
+     $(".makeCir").makeCir({
+        cir : [300,250,200,150],
+        highlight:true,
+        data:data
+     });   
+    
+});    
+</script> 
+       
+  <div class="center example-table clear">
+      <div class="left box">
+            <div class="title">等级排序</div>
+            <div class="cont">
+                  <table border="0" cellpadding="0"cellspacing="0">
+                        <tr class="t"><td></td><td>编号</td><td> 全同胞指数</td></tr>
+                        <tr data-num="110226ACD226"><td class="t"> 全同胞</td><td>110226ACD226  </td><td>3000</td></tr>
+                        <tr data-num="110226ACD227"><td class="t">亲子</td><td>110226ACD227  </td><td> 3000</td></tr>
+                        <tr data-num="110226ACD228"><td class="t">半同胞/叔侄/祖孙</td><td>110226ACD228  </td><td> 3000</td></tr>
+                        <tr data-num="110226ACD229"><td class="t">堂表兄</td><td>110226ACD229  </td><td> 3000</td></tr>
+                  </table>
+            </div>
+      </div>
+      <div class="right box">
+          <div class="title">他们是谁</div>
+          <div class="cont">
+              <p>编号110216ACD226，与您的关系是全同胞，公布的信息有：姓名、年龄、籍贯……    <a href="#">>>> 点击了解更多信息：</a></p>
+              <p>编号110216ACD226，与您的关系是全同胞，公布的信息有：姓名、年龄、籍贯……    <a href="#">>>> 点击了解更多信息：</a></p>
+          </div>
+      </div>
+  </div>                                                                                
+                                                                                                                                                                         
+<!--通用页脚   结束    -->                           
+<div class="footer" style="background:#56c242;">
+    <div class="center">Copyright © 2004-2015 美吉Majorbio.com 版权所有</div>
+</div>                
+
+</body>
+</html>

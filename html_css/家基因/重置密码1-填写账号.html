@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <script charset="utf-8"  type="text/javascript" src="javascript/jquery-2.1.1.min.js"></script>
+    <script charset="utf-8"  type="text/javascript" src="javascript/index.js"></script>
+    <script charset="utf-8"  type="text/javascript" src="javascript/passport.js"></script>
+    <link rel="stylesheet" href="style/index.css">
+    <title>重置密码-填写账号</title>
+</head>
+<body>
+<!--通用头部   开始    -->
+   <div class="header gray">
+        <div class="center clear">
+              <h1 class="logo fl"><a href="#">家基因</a></h1>
+              <ul class="nv clear">
+                  <li><a href="#">首页</a></li>
+                  <li class="current"><a href="#">获取查询码</a></li>
+                  <li><a href="#">示例报告</a></li>
+                  <li><a href="#">应用场景</a></li>
+                  <li><a href="#">平台指南</a></li>
+              </ul>
+              <a class="user" href="#">1861237XXXX</a>
+        </div>
+    </div>
+    
+<!--通用头部   结束    -->
+    
+    
+       
+ <div class="userpage report-manage clear">
+    <ul class="list">
+        <li><a href="#">报告管理</a></li>
+        <li><a href="#">订单管理</a></li>
+        <li class="current"><a href="#">账户设置</a></li>
+    </ul>
+    <div class="cont">
+            <div class="top">
+                 <select name="" id="">
+                     <option value="">选择报告</option>
+                 </select>
+            </div>
+            <div class="table report-manage-table">
+        
+<!--                设置新密码-->
+                <div class="setTitle clear">
+                    <span>设置新密码</span>
+                    <a class="fr" href="javascript:history.back();">返回</a>
+                </div>
+                <div class="setCont clear">
+                            <ul class="switch">
+                                <li class="active"><i><img src="images/icon_user.png"></i>填写账户名</li>
+                                <li><i><img src="images/icon_yz1.png"></i>验证身份</li>
+                                <li><i><img src="images/icon_ys.png"></i>重置密码</li>
+                                <li><i><img src="images/icon_over.png"></i>完成</li>
+                            </ul>
+               
+                            <form id="retrieve" method="post" action="/user/retrieve.html" onsubmit="return checkRetrieveForm();">
+                                <ul class="setpassword user clear">
+                                    <li>
+                                        <span>用户名：</span>
+                                        <span><input type="text" id="user_name_re" name="user_name" size="30"></span>
+                                        <div id="tip_user_name" class="t_m txt"></div>
+                                    </li>
+                                    <li>
+                                        <span>验证码：</span>
+                                        <span><input type="text" size="15" name="verify" id="verify_re" onkeyup="this.value=this.value.toUpperCase()">
+
+                                        <img id="verifyImg" src="/user/verify.html" border="0" onclick="javascript:fleshVerify()" style=" cursor:pointer;width:120px; margin:0 auto;">
+                                        <a href="javascript:void(0)" onclick="javascript:fleshVerify();" class="change">换一个</a>
+                                        </span>
+                                        <div class="t_m txt" id="tip_verify"></div>
+                                    </li>
+                                </ul>
+                                <button>下一步</button>
+                            </form>
+               
+                </div>
+                
+                
+                
+            </div>
+    </div>
+ </div>                                 
+                                       
+         
+
+      
+                                        
+<!--通用页脚   结束    -->                           
+<div class="footer">
+    <div class="center">Copyright © 2004-2015 美吉Majorbio.com 版权所有</div>
+</div>                
+
+</body>
+</html>

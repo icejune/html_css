@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<link href="style/report.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="js/base.js" type="text/javascript"></script>
+<title>报告_丰度差异分析_Ternary三元相图</title>
+</head>
+<body>
+<div class="top_bar">
+	<div class="logo"><h1>美吉生物</h1><h2>您身边的测序专家</h2></div>
+</div>
+<div class="main">
+	<div class="main_left">
+		<div class="search"><i class="ico ico_search"></i><input type="text" value="搜索" /></div>
+		<ul class="nav">
+			<li class="help"><a href="" class="link"><i class="ico ico_help"></i>帮助</a></li>
+			<li><a href="数据质控.html" class="link">数据质控<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="数据质控_样本信息统计.html">样本信息统计</a></li>
+					<li><a href="数据质控_样本碱基分布.html">样本碱基分布</a></li>
+					<li><a href="数据质控_样本的reads长度分布.html">样本的reads长度分布</a></li>
+				</ul>
+			</li>
+			<li><a href="OTU聚类.html" class="link">OTU聚类<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="OTU聚类_OTU表格.html">OTU表格</a></li>
+					<li><a href="OTU聚类_OTU venn分析.html">OTU Venn分析</a></li>
+					<li><a href="OTU聚类_pan-OTU and core-OTU.html">pan-OTU and core-OTU</a></li>
+					<li><a href="OTU聚类_OTU组分图.html">OTU组分图</a></li>
+				</ul>
+			</li>
+			<li><a href="alpha多样性研究.html" class="link">Alpha多样性研究<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="alpha多样性研究_多样性指数多样化展示.html">多样性指数多样化展示</a></li>
+					<li><a href="alpha多样性研究_稀释性曲线.html">稀释性曲线</a></li>
+					<li><a href="alpha多样性研究_Rank-Abundance曲线.html">Rank-AbundanRce曲线</a></li>
+					<li><a href="alpha多样性研究_OTU物种累积曲线.html">OTU物种累积曲线</a></li>
+				</ul>
+			</li>
+			<li><a href="beta多样性研究.html" class="link">beta多样性研究<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="beta多样性研究_距离矩阵及可视化.html">距离矩阵及可视化</a></li>
+					<li><a href="beta多样性研究_多元分析及可视化.html">多元分析及可视化</a></li>
+				</ul>
+			</li>
+			<li class="current"><a href="丰度差异分析.html" class="link">丰度差异分析<i class="ico ico_arrow"></i></a>
+				<ul>
+					<li><a href="丰度差异分析_丰度差异可视化.html">丰度差异可视化</a></li>
+					<li class="current"><a href="丰度差异分析_Ternary三元相图.html">Ternary三元相图</a></li>
+					<li><a href="丰度差异分析_Lesfe分析.html">Lesfe分析</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="main_right">
+		<div class="report_detail">
+			<div class="introduction"><p>暂无介绍</p></div>
+			<div class="set_option special_option">
+				<div class="choose_box">
+					<ul class="edit_data clear">
+						<li><div class="w_1">样品分组：</div>
+							<div class="w_2">
+								<div class="select_bar">
+									<div class="select_input">
+										<input type="text" value="请选择">
+										<a class="r" href=""><i class="arrow arrow_down"></i></a>
+									</div>
+									<div class="popup">
+										<ul class="normal_list">						
+											<li><a href=""><span title="group1">group1</span><i class="ico ico_edit"></i></a></li>
+											<li><a href=""><span title="group2">group2</span><i class="ico ico_edit"></i></a></li>
+											<li><a href=""><span title="group3">group3</span><i class="ico ico_edit"></i></a></li>
+											<li><a href=""><span title="group4">group4</span><i class="ico ico_edit"></i></a></li>
+										</ul>
+										<div class="btn_area"><a class="btn btn_red" href=""><i class="ico ico_add"></i>新建分组</a></div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="btn_area"><a href="" class="btn btn_blue btn_bigger">确定</a></div>
+				</div>	
+			</div>
+			<div class="result_area">
+				<div class="result_title"><h6>结果输出区域</h6></div>
+				<div class="result_contain">
+					<div class="result_chart clear">
+						<div class="chart_l">
+							<img src="images/example/img_22.png" />
+							<p class="tip">注：三个角分别代表三个样品，图例中彩色圆代表丰度最高的5个门水平（可选其它水平）的物种分类，三角图中的圆圈代表某一门水平下包含的所有种水平（可选其它水平）的物种分类，圆圈大小代表物种的平均相对丰度。该分析仅限3个样品或3组样本之间的比较分析。</p>
+						</div>
+						<div class="chart_r">
+							<ul class="edit_data">
+								<li><select><option>选择颜色方案</option><option>方案一</option><option>方案二</option></select></li>
+							</ul>
+							<div class="btn_area"><a href="" class="btn btn_red">保存图片</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

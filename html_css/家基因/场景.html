@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<script charset="utf-8"  type="text/javascript" src="javascript/jquery-2.1.1.min.js"></script>
+<script charset="utf-8"  type="text/javascript" src="javascript/index.js"></script>
+<script charset="utf-8"  type="text/javascript" src="javascript/jquery-ui-1.10.3.min.js"></script>
+<script charset="utf-8"  type="text/javascript" src="javascript/jquery.fullPage.min.js"></script>
+<link rel="stylesheet" href="style/index.css">
+<link rel="stylesheet" href="style/jquery.fullPage.css">
+<script>
+$(function(){
+	$.fn.fullpage({
+		slidesColor: ['#3eb134','#3eb134', '#3eb134', '#3eb134', '#3eb134'],
+		anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+		navigation: true,
+        afterLoad: function(anchorLink, index){
+                    if(index == 2){
+                            $(".page1 .center .left .girl").animate({"left":"30","opacity":"1"},500);
+                            $(".page1 .center .left .boy").animate({"right":"30","opacity":"1"},500);
+                    }
+                    if(index == 3){
+                            $(".page2 .center .left .girl3").animate({"left":"90","opacity":"1"},500);
+                            $(".page2 .center .left .girl2").animate({"right":"40","opacity":"1"},500);
+                    }
+                    if(index == 4){
+                            $(".page3 .center .left .ground").animate({"bottom":"20","opacity":"1"},300);
+                            $(".page3 .center .left .people2").animate({"left":"50","opacity":"1"},500);
+                    }
+
+                    if(index == 5){
+                        $(".page4 .center .left").addClass("show");
+                    }
+                },
+                onLeave: function(index, direction){
+                    if(index == 2){
+                            $(".page1 .center .left .girl").animate({"left":"-30","opacity":"0"},500);
+                            $(".page1 .center .left .boy").animate({"right":"-30","opacity":"0"},500);
+                    }
+                    if(index == 3){
+                            $(".page2 .center .left .girl3").animate({"left":"-90","opacity":"0"},500);
+                            $(".page2 .center .left .girl2").animate({"right":"-40","opacity":"0"},500);
+                    }
+                    if(index == 4){
+                            $(".page3 .center .left .ground").animate({"bottom":"-50","opacity":"0"},500);
+                            $(".page3 .center .left .people2").animate({"left":"-100","opacity":"0"},500);
+                    }
+                    if(index == 5){
+                        $(".page4 .center .left").removeClass("show");
+                    }
+                }
+	});
+});    
+</script>
+<title>场景</title>
+</head>
+<body>
+<!--通用头部   开始    -->
+   <div class="header fixed">
+        <div class="center clear">
+              <h1 class="logo fl"><a href="#">家基因</a></h1>
+              <ul class="nv clear">
+                  <li><a href="#">首页</a></li>
+                  <li class="current"><a href="#">获取查询码</a></li>
+                  <li><a href="#">示例报告</a></li>
+                  <li><a href="#">应用场景</a></li>
+                  <li><a href="#">平台指南</a></li>
+              </ul>
+              
+<!--              <a class="user" href="#">1861237XXXX</a>-->
+        </div>
+    </div>
+<!--通用头部   结束    -->
+    
+                              
+<div id="superContainer">
+
+    <div class="section page1" data-anchor="page1">
+        <div class="changjiang_bg"></div>
+    </div>
+   
+   
+    <div class="section page1" data-anchor="page2">
+            <div class="center clear">
+                <div class="left">
+                        <img class="boy" src="images/boy.png" alt="">
+                        <img class="link" src="images/link.png" alt="">
+                        <img class="girl" src="images/girl.png" alt="">
+                </div>
+                <div class="right">
+                    <img src="images/word.png" alt="">
+                    <p><a href="javascript:;" class="view">点击查看案例</a></p>
+                </div>
+                <div class="txt">
+                    <i class="arrow"></i>
+                    <h3>求助人兰可寻找自己失踪了25年的弟弟</h3>
+                    <p>25年前，年仅6岁的弟弟走失了，从此改变了原本幸福的家庭。父亲多年寻找兰可的弟弟，却一直渺无结果。父亲临终前跟兰可说不要再找了，但兰可为了让父亲安息，更加迫切地寻找着弟弟。</p>
+                    <p>兰可通过家基因平台，将自己的基因信息上传，经过2年时间寻亲和等待，终于在今年春天的一个早晨，收到家基因发来的亲人联络信息。在兰可的基因图谱中，同胞级别出现了一个点。后经司法鉴定检测，确定就是她的弟弟。</p>
+                </div>
+            </div>
+    </div>
+
+    <div class="section page2" data-anchor="page3">
+            <div class="center clear">
+                <div class="left">
+                        <img class="girl3" src="images/girl2.png" alt="">
+                        <img class="link" src="images/link.png" alt="">
+                        <img class="girl2" src="images/girl3.png" alt="">
+                </div>
+                <div class="right">
+                    <img src="images/word2.png" alt="">
+                    <p><a href="javascript:;" class="view">点击查看案例</a></p>
+                </div>
+                <div class="txt">
+                    <i class="arrow"></i>
+                    <h3>被拐儿童顺利回家</h3>
+                    <p>两年前，小男孩冬冬和两个姐姐正在玩耍，被一个中年妇女以买东西哄骗走，之后就再没回来。家长苦苦找寻十几年，到现在没有任何音讯。</p>
+                    <p>后来冬冬的母亲通过家基因平台，将自己的基因信息上传，经过1年时间的等待，公安机关发现了一个乞讨儿童并将他的基因信息上传平台，最终成功在平台上匹配上了亲人信息，经司法鉴定该乞讨儿童就是被拐走的冬冬。</p>
+                </div>
+            </div>
+    </div>
+
+    <div class="section page3" data-anchor="page4">
+            <div class="center clear">
+                <div class="left">
+                        <img class="people2" src="images/people2.png" alt="">
+                        <img class="ground" src="images/ground.png" alt="">
+                </div>
+                <div class="right">
+                    <img src="images/word2.png" alt="">
+                    <p><a href="javascript:;" class="view">点击查看案例</a></p>
+                </div>
+                <div class="txt">
+                    <i class="arrow"></i>
+                    <h3>怀疑医院抱错儿童，父子亲子鉴定</h3>
+                    <p>张先生有一个其乐融融的幸福三口家庭，只是随着儿子渐渐长大，总被人说和长得和张先生夫妇都不像。后来了解到儿子出生的当天，同一产房还有一个男婴出生，张先生总是怀疑是不是医院抱错了孩子。</p>
+                    <p>这件事在张先生心里一直别扭着，但又不好意思张扬。后来张先生听人介绍，把自己的基因信息和儿子的基因信息上传，结果报告中张先生与儿子显示为亲子关系。看到这样的结果，张先生终于可以放心了。</p>
+                </div>
+            </div>
+    </div>
+
+    <div class="section page4" data-anchor="page5">
+            <div class="center clear">
+                <div class="left">
+                        <img class="people3" src="images/people3.png" alt="">
+                        <img class="people4" src="images/people4.png" alt="">
+                        <img class="people5" src="images/people5.png" alt="">
+                </div>
+                <div class="right">
+                    <img src="images/word4.png" alt="">
+                    <p><a href="javascript:;" class="view">点击查看案例</a></p>
+                </div>
+                <div class="txt">
+                    <i class="arrow"></i>
+                    <h3>全家人上传，构架家族基因图谱</h3>
+                    <p>福建人阿三，家族人口众多，父亲还有兄弟在海峡对岸的台湾，阿三了解到家基因平台可以帮助构建家庭成员的基因关系，包括父子、母子、叔侄等关系，于是先检测了自己和妻子孩子的家基因信息，并上传，很快构建了一家三口的基因图谱，之后，又邀请父母和自己兄妹及对岸的亲戚提供唾液，最终获得了一个很全面的家族基因图谱。</p>
+                </div>
+            </div>
+    </div>
+
+</div>
+
+  
+                             
+                                                                                   
+<!--通用页脚   结束    -->                           
+<div class="footer" style="position:fixed;bottom:0;width:100%;background:#4bbf3f;">
+    <div class="center">Copyright © 2004-2015 美吉Majorbio.com 版权所有</div>
+</div>                
+
+</body>
+</html>
